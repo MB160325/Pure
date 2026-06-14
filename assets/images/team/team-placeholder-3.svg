@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100">
+  <defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#2f4736"/><stop offset="1" stop-color="#d9b47e"/></linearGradient></defs>
+  <rect width="900" height="1100" fill="#fff7eb"/>
+  <rect x="60" y="60" width="780" height="980" rx="34" fill="url(#g)"/>
+  <circle cx="450" cy="370" r="150" fill="#fff7eb" opacity=".86"/>
+  <path d="M200 917c43-210 148-315 250-315s207 105 250 315" fill="#fff7eb" opacity=".86"/>
+  <text x="450" y="1000" text-anchor="middle" font-family="Arial, sans-serif" font-size="42" fill="#2b1b13" font-weight="800">TEAM PHOTO</text>
+</svg>

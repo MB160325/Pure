@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180">
+  <rect width="320" height="180" rx="18" fill="#fffaf1"/>
+  <rect x="54" y="58" width="64" height="64" rx="18" fill="#b8783c"/>
+  <path d="M72 104 86 76l14 28h-10l-4-9-4 9H72Z" fill="#21140f"/>
+  <text x="141" y="83" font-family="Arial, sans-serif" font-size="31" font-weight="800" fill="#231610">NOVA</text>
+  <text x="143" y="111" font-family="Arial, sans-serif" font-size="15" fill="#7d6a5b">Healthcare Staffing</text>
+</svg>

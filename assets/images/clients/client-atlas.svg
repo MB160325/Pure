@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180">
+  <rect width="320" height="180" rx="18" fill="#fffaf1"/>
+  <path d="M83 48 124 120H42L83 48Z" fill="#1f3541"/>
+  <path d="M83 77 99 106H67L83 77Z" fill="#d9b47e"/>
+  <text x="143" y="83" font-family="Arial, sans-serif" font-size="30" font-weight="800" fill="#231610">ATLAS</text>
+  <text x="145" y="111" font-family="Arial, sans-serif" font-size="15" fill="#7d6a5b">Industrial Supply</text>
+</svg>
