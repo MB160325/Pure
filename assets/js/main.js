@@ -257,19 +257,19 @@ const translations = {
 
 /* ── Static Data ──────────────────────────────────────────── */
 const clientProfiles = [
-  { name: "Aldar Facilities Partner",   logo: "assets/images/clients/client-aldar.svg",   sector: "Facilities Management", summary: "Sample client profile for facilities staffing, supervisory support, and operational workforce coordination." },
-  { name: "Emirates Operations Group",  logo: "assets/images/clients/client-emirates.svg", sector: "Operations",            summary: "Sample client profile for volume recruitment, workforce continuity, and project staffing requirements." },
-  { name: "Nova Healthcare Staffing",   logo: "assets/images/clients/client-nova.svg",     sector: "Healthcare",            summary: "Sample client profile for screened support staff, onboarding coordination, and compliant documentation." },
-  { name: "Atlas Industrial Supply",    logo: "assets/images/clients/client-atlas.svg",    sector: "Industrial",            summary: "Sample client profile for technical helpers, site teams, and manpower ramp-up planning." },
-  { name: "Oasis Hospitality Network",  logo: "assets/images/clients/client-oasis.svg",    sector: "Hospitality",           summary: "Sample client profile for hospitality support, guest-service staffing, and seasonal workforce planning." },
-  { name: "Prime Contracting LLC",      logo: "assets/images/clients/client-prime.svg",    sector: "Contracting",           summary: "Sample client profile for construction support manpower and project-based staffing." }
+  { name: "Aldar Facilities Partner",   logo: "assets/images/clients/client-aldar.jpg",   sector: "Facilities Management", summary: "Sample client profile for facilities staffing, supervisory support, and operational workforce coordination." },
+  { name: "Emirates Operations Group",  logo: "assets/images/clients/client-emirates.jpg", sector: "Operations",            summary: "Sample client profile for volume recruitment, workforce continuity, and project staffing requirements." },
+  { name: "Nova Healthcare Staffing",   logo: "assets/images/clients/client-nova.jpg",     sector: "Healthcare",            summary: "Sample client profile for screened support staff, onboarding coordination, and compliant documentation." },
+  { name: "Atlas Industrial Supply",    logo: "assets/images/clients/client-atlas.jpg",    sector: "Industrial",            summary: "Sample client profile for technical helpers, site teams, and manpower ramp-up planning." },
+  { name: "Oasis Hospitality Network",  logo: "assets/images/clients/client-oasis.jpg",    sector: "Hospitality",           summary: "Sample client profile for hospitality support, guest-service staffing, and seasonal workforce planning." },
+  { name: "Prime Contracting LLC",      logo: "assets/images/clients/client-prime.jpg",    sector: "Contracting",           summary: "Sample client profile for construction support manpower and project-based staffing." }
 ];
 
 const teamMembers = [
-  { name: "Aisha Rahman",    title: "Managing Director",    image: "assets/images/team/team-placeholder-1.svg", bio: "Leads strategic partnerships and client service standards with a focus on ethical recruitment, delivery discipline, and long-term trust.",                                                                                linkedin: "#" },
-  { name: "Ravi Kumar",      title: "Head of Recruitment",  image: "assets/images/team/team-placeholder-2.svg", bio: "Oversees sourcing, candidate assessment, and placement quality across multiple sectors and high-volume workforce programs.",                                                                                    linkedin: "#" },
-  { name: "Maya Perera",     title: "Operations Manager",   image: "assets/images/team/team-placeholder-3.svg", bio: "Coordinates workforce mobilization, documentation workflows, and client communication to keep manpower delivery smooth and reliable.",                                                                          linkedin: "#" },
-  { name: "Bishal Shrestha", title: "Client Relations Lead",image: "assets/images/team/team-placeholder-4.svg", bio: "Supports employers with responsive account management, service reviews, and practical staffing plans aligned with business needs.",                                                                             linkedin: "#" }
+  { name: "Saleem Bakheet",    title: "Chief Executive Officer",     image: "assets/images/team/WhatsApp Image 2026-06-11 at 2.05.59 PM.jpeg", bio: "Leads strategic partnerships and client service standards with a focus on ethical recruitment, delivery discipline, and long-term trust.", linkedin: "https://www.linkedin.com/in/mohamed-mahmoud-el-shahat-795974406?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+  { name: "Ravi Kumar",      title: "Head of Recruitment",   image: "assets/images/team/team-placeholder-2.jpg", bio: "Oversees sourcing, candidate assessment, and placement quality across multiple sectors and high-volume workforce programs.", linkedin: "#" },
+  { name: "Maya Perera",     title: "Operations Manager",    image: "assets/images/team/team-placeholder-3.jpg", bio: "Coordinates workforce mobilization, documentation workflows, and client communication to keep manpower delivery smooth and reliable.", linkedin: "#" },
+  { name: "Bishal Shrestha", title: "Client Relations Lead", image: "assets/images/team/team-placeholder-4.jpg", bio: "Supports employers with responsive account management, service reviews, and practical staffing plans aligned with business needs.", linkedin: "#" }
 ];
 
 /* ── Language Helpers ─────────────────────────────────────── */
