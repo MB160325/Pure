@@ -29,8 +29,8 @@ const translations = {
     aboutNoteTitle: "Reliable by design",
     aboutNoteCopy: "From sourcing to onboarding, every step is handled with clarity, discretion, and professional care.",
     ceoEyebrow: "CEO Message",
-    ceoTitle: "People remain the strongest foundation of every successful organization.",
-    ceoCopy: "Our commitment is to provide clients with dependable manpower solutions while treating every candidate with respect and opportunity. Pure Talent exists to make recruitment more transparent, responsive, and aligned with real business needs.",
+    ceoTitle: "Building stronger teams through trusted talent solutions.",
+    ceoCopy: "At Pure Talent, our mission is to provide dependable manpower recruitment solutions that help businesses build capable teams with confidence. We are committed to making the recruitment process transparent, responsive, and truly aligned with what employers need—while ensuring every candidate is treated with respect, fairness, and equal opportunity. As a trusted recruitment partner, we focus on understanding each client’s workforce goals and connecting them with the right talent in a way that is efficient, ethical, and impact-driven. Ultimately, we aim to support long-term growth by matching the right people to the right opportunities—creating stronger teams, better outcomes, and lasting success for both employers and candidates.",
     ceoName: "Chief Executive Officer",
     visionTitle: "Vision",
     visionCopy: "To become a trusted regional leader in recruitment and manpower supply, recognized for quality, integrity, and long-term workforce value.",
@@ -111,8 +111,8 @@ const translations = {
     aboutNoteTitle: "موثوقية مصممة باحتراف",
     aboutNoteCopy: "من البحث إلى الانضمام، تتم كل خطوة بوضوح وسرية ورعاية مهنية.",
     ceoEyebrow: "رسالة الرئيس التنفيذي",
-    ceoTitle: "يبقى الإنسان أساس نجاح كل مؤسسة.",
-    ceoCopy: "نلتزم بتقديم حلول قوى عاملة موثوقة مع احترام كل مرشح ومنحه فرصة عادلة.",
+    ceoTitle:"نبني فرقًا أقوى من خلال حلول توظيف موثوقة.",
+    ceoCopy: "في بيور تالنت، تتمثل مهمتنا في توفير حلول توظيف موثوقة تساعد الشركات على بناء فرق عمل متميزة بثقة. ونحن ملتزمون بجعل عملية التوظيف شفافة وسريعة الاستجابة ومتوافقة تمامًا مع احتياجات أصحاب العمل، مع ضمان معاملة كل مرشح باحترام وإنصاف وتكافؤ الفرص. بصفتنا شريكًا موثوقًا في مجال التوظيف، نركز على فهم أهداف القوى العاملة لكل عميل وربطها بالمواهب المناسبة بطريقة تتسم بالكفاءة والأخلاق والتركيز على تحقيق التأثير. وفي النهاية، نهدف إلى دعم النمو على المدى الطويل من خلال مطابقة الأشخاص المناسبين مع الفرص المناسبة، مما يساهم في تكوين فرق أقوى ونتائج أفضل ونجاح دائم لكل من أصحاب العمل والمرشحين.",
     ceoName: "الرئيس التنفيذي",
     visionTitle: "الرؤية",
     visionCopy: "أن نصبح شريكا إقليميا موثوقا في التوظيف وتوريد القوى العاملة، معروفا بالجودة والنزاهة.",
@@ -193,8 +193,8 @@ const translations = {
     aboutNoteTitle: "Надёжность — в основе",
     aboutNoteCopy: "От поиска до адаптации — каждый этап выполняется чётко, конфиденциально и профессионально.",
     ceoEyebrow: "Слово генерального директора",
-    ceoTitle: "Люди остаются главной основой любой успешной организации.",
-    ceoCopy: "Наша цель — предоставлять клиентам надёжные кадровые решения, уважительно относясь к каждому кандидату и открывая перед ним реальные возможности. Pure Talent создана для того, чтобы сделать рекрутмент более прозрачным, отзывчивым и соответствующим реальным потребностям бизнеса.",
+    ceoTitle: "Создаём сильные команды с помощью надёжных решений в области подбора персонала.",
+    ceoCopy: "В Pure Talent наша миссия заключается в предоставлении надёжных решений по подбору персонала, которые помогают компаниям уверенно создавать эффективные команды. Мы стремимся сделать процесс найма прозрачным, оперативным и полностью соответствующим потребностям работодателей, гарантируя при этом, что каждый кандидат получает уважительное и справедливое отношение и равные возможности. Как надёжный партнёр в сфере подбора персонала, мы уделяем особое внимание пониманию целей каждого клиента в области кадрового обеспечения и соединению их с подходящими талантами эффективным, этичным и ориентированным на результат способом. В конечном итоге мы стремимся поддерживать долгосрочный рост, подбирая правильных людей для правильных возможностей, создавая более сильные команды, лучшие результаты и устойчивый успех как для работодателей, так и для кандидатов.",
     ceoName: "Генеральный директор",
     visionTitle: "Видение",
     visionCopy: "Стать признанным региональным лидером в рекрутменте, известным качеством, честностью и долгосрочной ценностью персонала.",
@@ -266,10 +266,10 @@ const clientProfiles = [
 ];
 
 const teamMembers = [
-  { name: "Saleem Bakheet",    title: "Chief Executive Officer",     image: "assets/images/team/WhatsApp Image 2026-06-11 at 2.05.59 PM.jpeg", bio: "Leads strategic partnerships and client service standards with a focus on ethical recruitment, delivery discipline, and long-term trust.", linkedin: "https://www.linkedin.com/in/mohamed-mahmoud-el-shahat-795974406?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-  { name: "Ravi Kumar",      title: "Head of Recruitment",   image: "assets/images/team/team-placeholder-2.jpg", bio: "Oversees sourcing, candidate assessment, and placement quality across multiple sectors and high-volume workforce programs.", linkedin: "#" },
-  { name: "Maya Perera",     title: "Operations Manager",    image: "assets/images/team/team-placeholder-3.jpg", bio: "Coordinates workforce mobilization, documentation workflows, and client communication to keep manpower delivery smooth and reliable.", linkedin: "#" },
-  { name: "Bishal Shrestha", title: "Client Relations Lead", image: "assets/images/team/team-placeholder-4.jpg", bio: "Supports employers with responsive account management, service reviews, and practical staffing plans aligned with business needs.", linkedin: "#" }
+  { name: "Saleem Bakheet",  title: "Chief Executive Officer",  image: "assets/images/team/WhatsApp Image 2026-06-11 at 2.05.59 PM.jpeg", bio: "Leads strategic partnerships and client service standards with a focus on ethical recruitment, delivery discipline, and long-term trust.", linkedin: "#" },
+  { name: "Ravi Kumar",      title: "Head of Recruitment",      image: "assets/images/team/team-placeholder-2.jpg", bio: "Oversees sourcing, candidate assessment, and placement quality across multiple sectors and high-volume workforce programs.", linkedin: "#" },
+  { name: "Maya Perera",     title: "Operations Manager",       image: "assets/images/team/team-placeholder-3.jpg", bio: "Coordinates workforce mobilization, documentation workflows, and client communication to keep manpower delivery smooth and reliable.", linkedin: "#" },
+  { name: "Bishal Shrestha", title: "Client Relations Lead",    image: "assets/images/team/team-placeholder-4.jpg", bio: "Supports employers with responsive account management, service reviews, and practical staffing plans aligned with business needs.", linkedin: "#" }
 ];
 
 /* ── Language Helpers ─────────────────────────────────────── */
