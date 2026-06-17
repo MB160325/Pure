@@ -54,7 +54,6 @@
     <a href="#home" title="Home" aria-label="Home"><i data-lucide="home"></i></a>
     <a href="#services" title="Services" aria-label="Services"><i data-lucide="briefcase-business"></i></a>
     <a class="dock-primary" href="#careers" title="Apply" aria-label="Apply"><i data-lucide="send"></i></a>
-    <button type="button" title="Client request" aria-label="Client request" data-bs-toggle="modal" data-bs-target="#clientRequestModal"><i data-lucide="building-2"></i></button>
     <a href="team.html" title="Team" aria-label="Team"><i data-lucide="users"></i></a>
     <a href="#contact" title="Contact" aria-label="Contact"><i data-lucide="map-pin"></i></a>
   </nav>
@@ -69,7 +68,6 @@
           <div class="hero-actions">
             <a class="btn-lux" href="#careers"><i data-lucide="send"></i><span data-i18n="ctaApply">Apply Now</span></a>
             <a class="btn-ghost" href="#services"><i data-lucide="arrow-down-right"></i><span data-i18n="ctaExplore">Explore Services</span></a>
-            <button class="btn-ghost btn-request" type="button" data-bs-toggle="modal" data-bs-target="#clientRequestModal"><i data-lucide="building-2"></i><span data-i18n="ctaClientRequest">Client Request</span></button>
           </div>
           <div class="hero-proof" aria-label="Company highlights">
             <div><strong>12+</strong><span data-i18n="proofYears">Years of Experience</span></div>
@@ -187,53 +185,6 @@ As a trusted recruitment partner, we focus on understanding each client’s work
       </div>
     </section>
 
-    <section id="testimonials" class="section pt-0">
-      <div class="container">
-        <div class="row mb-4 align-items-end">
-          <div class="col-lg-8" data-aos="fade-up">
-            <span class="eyebrow" data-i18n="testimonialsEyebrow">Client Reviews</span>
-            <h2 class="section-title" data-i18n="testimonialsTitle">What our clients say about working with Pure Talent.</h2>
-            <p class="section-copy" data-i18n="testimonialsCopy">A simple view of the service standards our partners value most: responsiveness, clarity, and dependable delivery.</p>
-          </div>
-        </div>
-        <div class="swiper testimonial-slider" data-aos="fade-up">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <article class="testimonial-card">
-                <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                <p data-i18n="testimonial1Copy">Pure Talent understood our staffing needs quickly and prepared a reliable shortlist with excellent communication throughout the process.</p>
-                <div>
-                  <strong data-i18n="testimonial1Name">Ahmed Al Mansoori</strong>
-                  <span data-i18n="testimonial1Role">Operations Manager</span>
-                </div>
-              </article>
-            </div>
-            <div class="swiper-slide">
-              <article class="testimonial-card">
-                <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                <p data-i18n="testimonial2Copy">Their team made our manpower request clear, organized, and efficient. The follow-up was professional from the first call to mobilization.</p>
-                <div>
-                  <strong data-i18n="testimonial2Name">Natalia Petrova</strong>
-                  <span data-i18n="testimonial2Role">HR Director</span>
-                </div>
-              </article>
-            </div>
-            <div class="swiper-slide">
-              <article class="testimonial-card">
-                <div class="testimonial-stars" aria-label="5 out of 5 stars">★★★★★</div>
-                <p data-i18n="testimonial3Copy">We value Pure Talent for their fast response, respectful candidate handling, and practical understanding of urgent workforce requirements.</p>
-                <div>
-                  <strong data-i18n="testimonial3Name">Omar Hassan</strong>
-                  <span data-i18n="testimonial3Role">Project Lead</span>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section>
-
     <section id="careers" class="section pt-0">
       <div class="container">
         <div class="application-wrap">
@@ -343,40 +294,6 @@ As a trusted recruitment partner, we focus on understanding each client’s work
           <strong id="clientModalSector" class="d-block mb-2"></strong>
           <p id="clientModalSummary" class="mb-0 text-muted"></p>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal fade client-request-modal" id="clientRequestModal" tabindex="-1" aria-labelledby="clientRequestModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <div>
-            <span class="eyebrow" data-i18n="clientRequestEyebrow">Business Enquiry</span>
-            <h3 class="modal-title fs-4" id="clientRequestModalLabel" data-i18n="clientRequestTitle">Send a client request</h3>
-          </div>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <form id="clientRequestForm" class="modal-body p-4 p-md-5">
-          <p class="section-copy mt-0" data-i18n="clientRequestCopy">Tell us what your company needs and your email app will open with a polished message ready to send.</p>
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label class="form-label" for="companyName" data-i18n="companyName">Company Name</label>
-              <input class="form-control" id="companyName" name="companyName" required>
-            </div>
-            <div class="col-md-6">
-              <label class="form-label" for="clientEmail" data-i18n="clientEmail">Business Email</label>
-              <input class="form-control" id="clientEmail" name="clientEmail" type="email" required>
-            </div>
-            <div class="col-12">
-              <label class="form-label" for="clientMessage" data-i18n="clientMessage">Request Details</label>
-              <textarea class="form-control" id="clientMessage" name="clientMessage" rows="6" required></textarea>
-            </div>
-          </div>
-          <div class="form-actions">
-            <button class="btn-lux" type="submit"><i data-lucide="mail-plus"></i><span data-i18n="sendClientRequest">Send Request</span></button>
-          </div>
-        </form>
       </div>
     </div>
   </div>
