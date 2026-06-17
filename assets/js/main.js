@@ -20,6 +20,7 @@ const translations = {
     heroCopy: "Pure Talent connects leading organizations with reliable people across recruitment, staffing, outsourcing, and manpower supply.",
     ctaApply: "Apply Now",
     ctaExplore: "Explore Services",
+    ctaClientRequest: "Client Request",
     proofYears: "Years of Experience",
     proofClients: "Clients Served",
     proofTalent: "Employees Supplied",
@@ -60,6 +61,18 @@ const translations = {
     clientsEyebrow: "Clients",
     clientsTitle: "Trusted by organizations that value consistency.",
     clientsCopy: "Replace these sample logos with your JPG, JPEG, PNG, or WEBP client logos. Click any logo to view editable client details.",
+    testimonialsEyebrow: "Client Reviews",
+    testimonialsTitle: "What our clients say about working with Pure Talent.",
+    testimonialsCopy: "A simple view of the service standards our partners value most: responsiveness, clarity, and dependable delivery.",
+    testimonial1Copy: "Pure Talent understood our staffing needs quickly and prepared a reliable shortlist with excellent communication throughout the process.",
+    testimonial1Name: "Ahmed Al Mansoori",
+    testimonial1Role: "Operations Manager",
+    testimonial2Copy: "Their team made our manpower request clear, organized, and efficient. The follow-up was professional from the first call to mobilization.",
+    testimonial2Name: "Natalia Petrova",
+    testimonial2Role: "HR Director",
+    testimonial3Copy: "We value Pure Talent for their fast response, respectful candidate handling, and practical understanding of urgent workforce requirements.",
+    testimonial3Name: "Omar Hassan",
+    testimonial3Role: "Project Lead",
     applicationEyebrow: "Career Application",
     applicationTitle: "Apply for your next opportunity.",
     applicationCopy: "Complete the form and your email app will open with a prepared message. Attach your CV manually before sending.",
@@ -70,6 +83,13 @@ const translations = {
     position: "Position Applying For",
     message: "Message",
     submitApplication: "Prepare Email",
+    clientRequestEyebrow: "Business Enquiry",
+    clientRequestTitle: "Send a client request",
+    clientRequestCopy: "Tell us what your company needs and your email app will open with a polished message ready to send.",
+    companyName: "Company Name",
+    clientEmail: "Business Email",
+    clientMessage: "Request Details",
+    sendClientRequest: "Send Request",
     contactEyebrow: "Visit Us",
     contactTitle: "Pure Talent Recruitment & Manpower Supply",
     contactCopy: "For business enquiries, manpower requests, recruitment partnerships, or applications, contact our team directly.",
@@ -81,8 +101,9 @@ const translations = {
     privacy: "Privacy Policy",
     terms: "Terms & Conditions",
     chatbotTitle: "Pure Talent Assistant",
-    chatbotSub: "Offline knowledge search",
+    chatbotSub: "Online knowledge search",
     chatPlaceholder: "Ask about services, careers, or contact...",
+    visaRequestPrompt: "I opened the client request form so our team can guide you on visa types and the right process for your requirement.",
     teamHeroEyebrow: "Our Team",
     teamHeroTitle: "Leadership with discipline, empathy, and market insight.",
     teamHeroCopy: "Meet the people guiding Pure Talent's client service, recruitment quality, and workforce delivery.",
@@ -102,6 +123,7 @@ const translations = {
     heroCopy: "تربط بيور تالنت المؤسسات الرائدة بالكفاءات الموثوقة عبر التوظيف والتعهيد وتوريد القوى العاملة.",
     ctaApply: "قدم الآن",
     ctaExplore: "استكشف الخدمات",
+    ctaClientRequest: "طلب عميل",
     proofYears: "سنوات الخبرة",
     proofClients: "عميل تم خدمته",
     proofTalent: "موظف تم توفيره",
@@ -142,6 +164,18 @@ const translations = {
     clientsEyebrow: "العملاء",
     clientsTitle: "موثوقون لدى مؤسسات تقدّر الاستمرارية.",
     clientsCopy: "استبدل الشعارات التجريبية بشعارات JPG أو JPEG أو PNG أو WEBP. انقر على أي شعار لعرض التفاصيل.",
+    testimonialsEyebrow: "تقييمات العملاء",
+    testimonialsTitle: "ماذا يقول عملاؤنا عن العمل مع بيور تالنت.",
+    testimonialsCopy: "عرض بسيط لمعايير الخدمة التي يقدّرها شركاؤنا: سرعة الاستجابة، الوضوح، والالتزام بالتنفيذ.",
+    testimonial1Copy: "فهمت بيور تالنت احتياجاتنا بسرعة وقدمت قائمة مرشحين موثوقة مع تواصل ممتاز طوال العملية.",
+    testimonial1Name: "أحمد المنصوري",
+    testimonial1Role: "مدير العمليات",
+    testimonial2Copy: "جعل فريقهم طلب القوى العاملة واضحًا ومنظمًا وفعالًا. كانت المتابعة احترافية من أول اتصال حتى بدء العمل.",
+    testimonial2Name: "ناتاليا بيتروفا",
+    testimonial2Role: "مديرة الموارد البشرية",
+    testimonial3Copy: "نقدّر بيور تالنت لسرعة الاستجابة، واحترام التعامل مع المرشحين، وفهم المتطلبات العاجلة للقوى العاملة.",
+    testimonial3Name: "عمر حسن",
+    testimonial3Role: "قائد مشروع",
     applicationEyebrow: "طلب توظيف",
     applicationTitle: "قدم لفرصتك التالية.",
     applicationCopy: "املأ النموذج وسيتم فتح تطبيق البريد برسالة جاهزة. أرفق سيرتك الذاتية قبل الإرسال.",
@@ -152,6 +186,13 @@ const translations = {
     position: "الوظيفة المطلوبة",
     message: "الرسالة",
     submitApplication: "تحضير البريد",
+    clientRequestEyebrow: "استفسار تجاري",
+    clientRequestTitle: "إرسال طلب عميل",
+    clientRequestCopy: "أخبرنا بما تحتاجه شركتك وسيتم فتح تطبيق البريد برسالة منسقة وجاهزة للإرسال.",
+    companyName: "اسم الشركة",
+    clientEmail: "البريد الإلكتروني للشركة",
+    clientMessage: "تفاصيل الطلب",
+    sendClientRequest: "إرسال الطلب",
     contactEyebrow: "قم بزيارتنا",
     contactTitle: "بيور تالنت للتوظيف وتوريد القوى العاملة",
     contactCopy: "للاستفسارات التجارية وطلبات القوى العاملة والشراكات أو التقديم، تواصل مع فريقنا.",
@@ -163,8 +204,9 @@ const translations = {
     privacy: "سياسة الخصوصية",
     terms: "الشروط والأحكام",
     chatbotTitle: "مساعد بيور تالنت",
-    chatbotSub: "بحث معرفي دون اتصال",
+    chatbotSub: "بحث معرفي متصل",
     chatPlaceholder: "اسأل عن الخدمات أو الوظائف أو التواصل...",
+    visaRequestPrompt: "فتحت لك نموذج طلب العميل حتى يتمكن فريقنا من إرشادك حول أنواع الفيزا والإجراء الأنسب لطلبك.",
     teamHeroEyebrow: "فريقنا",
     teamHeroTitle: "قيادة تجمع الانضباط والتعاطف وفهم السوق.",
     teamHeroCopy: "تعرف إلى الفريق الذي يقود جودة التوظيف وخدمة العملاء وتنفيذ القوى العاملة.",
@@ -184,6 +226,7 @@ const translations = {
     heroCopy: "Pure Talent связывает ведущие организации с надёжными специалистами в сфере рекрутмента, аутсорсинга и обеспечения персоналом.",
     ctaApply: "Подать заявку",
     ctaExplore: "Наши услуги",
+    ctaClientRequest: "Запрос клиента",
     proofYears: "Лет опыта",
     proofClients: "Клиентов обслужено",
     proofTalent: "Сотрудников предоставлено",
@@ -224,6 +267,18 @@ const translations = {
     clientsEyebrow: "Клиенты",
     clientsTitle: "Доверие организаций, ценящих стабильность.",
     clientsCopy: "Замените образцы логотипов своими файлами JPG, JPEG, PNG или WEBP. Нажмите на любой логотип для просмотра деталей клиента.",
+    testimonialsEyebrow: "Отзывы клиентов",
+    testimonialsTitle: "Что клиенты говорят о работе с Pure Talent.",
+    testimonialsCopy: "Краткий взгляд на стандарты сервиса, которые ценят наши партнёры: оперативность, ясность и надёжное выполнение.",
+    testimonial1Copy: "Pure Talent быстро поняли наши кадровые потребности и подготовили надёжный список кандидатов с отличной коммуникацией на каждом этапе.",
+    testimonial1Name: "Ахмед Аль Мансури",
+    testimonial1Role: "Операционный менеджер",
+    testimonial2Copy: "Команда сделала наш запрос на персонал понятным, организованным и эффективным. Сопровождение было профессиональным от первого звонка до мобилизации.",
+    testimonial2Name: "Наталья Петрова",
+    testimonial2Role: "HR-директор",
+    testimonial3Copy: "Мы ценим Pure Talent за быстрый отклик, уважительное отношение к кандидатам и практическое понимание срочных потребностей в персонале.",
+    testimonial3Name: "Омар Хасан",
+    testimonial3Role: "Руководитель проекта",
     applicationEyebrow: "Заявка на работу",
     applicationTitle: "Подайте заявку на следующую возможность.",
     applicationCopy: "Заполните форму — откроется почтовое приложение с готовым письмом. Прикрепите резюме перед отправкой.",
@@ -234,6 +289,13 @@ const translations = {
     position: "Желаемая должность",
     message: "Сообщение",
     submitApplication: "Подготовить письмо",
+    clientRequestEyebrow: "Деловой запрос",
+    clientRequestTitle: "Отправить запрос клиента",
+    clientRequestCopy: "Расскажите, что нужно вашей компании, и почтовое приложение откроется с готовым профессиональным письмом.",
+    companyName: "Название компании",
+    clientEmail: "Рабочая почта",
+    clientMessage: "Детали запроса",
+    sendClientRequest: "Отправить запрос",
     contactEyebrow: "Посетите нас",
     contactTitle: "Pure Talent Recruitment & Manpower Supply",
     contactCopy: "По вопросам сотрудничества, запросам персонала, партнёрству или трудоустройству — свяжитесь с нашей командой напрямую.",
@@ -247,6 +309,7 @@ const translations = {
     chatbotTitle: "Ассистент Pure Talent",
     chatbotSub: "Поиск по базе знаний",
     chatPlaceholder: "Спросите об услугах, карьере или контактах...",
+    visaRequestPrompt: "Я открыл(а) форму запроса клиента, чтобы наша команда помогла вам с типами виз и подходящим процессом для вашего запроса.",
     teamHeroEyebrow: "Наша команда",
     teamHeroTitle: "Лидерство, основанное на дисциплине, эмпатии и знании рынка.",
     teamHeroCopy: "Познакомьтесь с людьми, обеспечивающими качество сервиса, рекрутмента и предоставления персонала Pure Talent.",
@@ -257,12 +320,12 @@ const translations = {
 
 /* ── Static Data ──────────────────────────────────────────── */
 const clientProfiles = [
-  { name: "Aldar Facilities Partner",   logo: "assets/images/clients/client-aldar.jpg",   sector: "Facilities Management", summary: "Sample client profile for facilities staffing, supervisory support, and operational workforce coordination." },
-  { name: "Emirates Operations Group",  logo: "assets/images/clients/client-emirates.jpg", sector: "Operations",            summary: "Sample client profile for volume recruitment, workforce continuity, and project staffing requirements." },
-  { name: "Nova Healthcare Staffing",   logo: "assets/images/clients/client-nova.jpg",     sector: "Healthcare",            summary: "Sample client profile for screened support staff, onboarding coordination, and compliant documentation." },
-  { name: "Atlas Industrial Supply",    logo: "assets/images/clients/client-atlas.jpg",    sector: "Industrial",            summary: "Sample client profile for technical helpers, site teams, and manpower ramp-up planning." },
-  { name: "Oasis Hospitality Network",  logo: "assets/images/clients/client-oasis.jpg",    sector: "Hospitality",           summary: "Sample client profile for hospitality support, guest-service staffing, and seasonal workforce planning." },
-  { name: "Prime Contracting LLC",      logo: "assets/images/clients/client-prime.jpg",    sector: "Contracting",           summary: "Sample client profile for construction support manpower and project-based staffing." }
+  { name: "Aldar Facilities Partner",   logo: "assets/images/clients/client-aldar.svg",   sector: "Facilities Management", summary: "Sample client profile for facilities staffing, supervisory support, and operational workforce coordination." },
+  { name: "Emirates Operations Group",  logo: "assets/images/clients/client-emirates.svg", sector: "Operations",            summary: "Sample client profile for volume recruitment, workforce continuity, and project staffing requirements." },
+  { name: "Nova Healthcare Staffing",   logo: "assets/images/clients/client-nova.svg",     sector: "Healthcare",            summary: "Sample client profile for screened support staff, onboarding coordination, and compliant documentation." },
+  { name: "Atlas Industrial Supply",    logo: "assets/images/clients/client-atlas.svg",    sector: "Industrial",            summary: "Sample client profile for technical helpers, site teams, and manpower ramp-up planning." },
+  { name: "Oasis Hospitality Network",  logo: "assets/images/clients/client-oasis.svg",    sector: "Hospitality",           summary: "Sample client profile for hospitality support, guest-service staffing, and seasonal workforce planning." },
+  { name: "Prime Contracting LLC",      logo: "assets/images/clients/client-prime.svg",    sector: "Contracting",           summary: "Sample client profile for construction support manpower and project-based staffing." }
 ];
 
 const teamMembers = [
@@ -271,6 +334,63 @@ const teamMembers = [
   { name: "Maya Perera",     title: "Operations Manager",       image: "assets/images/team/team-placeholder-3.jpg", bio: "Coordinates workforce mobilization, documentation workflows, and client communication to keep manpower delivery smooth and reliable.", linkedin: "#" },
   { name: "Bishal Shrestha", title: "Client Relations Lead",    image: "assets/images/team/team-placeholder-4.jpg", bio: "Supports employers with responsive account management, service reviews, and practical staffing plans aligned with business needs.", linkedin: "#" }
 ];
+
+const clientRequestEmailTemplates = {
+  en: {
+    subject: (company) => `Client Request - ${company || "Pure Talent"}`,
+    body: (data) => [
+      "Dear Pure Talent Recruitment & Manpower Supply Team,",
+      "",
+      "I would like to submit a business enquiry with the details below:",
+      "",
+      `Company Name: ${data.companyName || ""}`,
+      `Business Email: ${data.clientEmail || ""}`,
+      "",
+      "Request Details:",
+      data.clientMessage || "",
+      "",
+      "Please contact me to discuss the next steps.",
+      "",
+      "Kind regards,"
+    ].join("\n")
+  },
+  ar: {
+    subject: (company) => `طلب عميل - ${company || "بيور تالنت"}`,
+    body: (data) => [
+      "إلى فريق بيور تالنت للتوظيف وتوريد القوى العاملة،",
+      "",
+      "أود إرسال استفسار تجاري بالتفاصيل التالية:",
+      "",
+      `اسم الشركة: ${data.companyName || ""}`,
+      `البريد الإلكتروني للشركة: ${data.clientEmail || ""}`,
+      "",
+      "تفاصيل الطلب:",
+      data.clientMessage || "",
+      "",
+      "يرجى التواصل معي لمناقشة الخطوات التالية.",
+      "",
+      "مع خالص التحية،"
+    ].join("\n")
+  },
+  ru: {
+    subject: (company) => `Запрос клиента - ${company || "Pure Talent"}`,
+    body: (data) => [
+      "Уважаемая команда Pure Talent Recruitment & Manpower Supply,",
+      "",
+      "Я хотел(а) бы отправить деловой запрос со следующими деталями:",
+      "",
+      `Название компании: ${data.companyName || ""}`,
+      `Рабочая почта: ${data.clientEmail || ""}`,
+      "",
+      "Детали запроса:",
+      data.clientMessage || "",
+      "",
+      "Пожалуйста, свяжитесь со мной, чтобы обсудить следующие шаги.",
+      "",
+      "С уважением,"
+    ].join("\n")
+  }
+};
 
 /* ── Language Helpers ─────────────────────────────────────── */
 function currentLanguage() {
@@ -375,6 +495,20 @@ function initLibraries() {
       }
     });
   }
+
+  if (window.Swiper && document.querySelector(".testimonial-slider")) {
+    new Swiper(".testimonial-slider", {
+      slidesPerView: 1,
+      spaceBetween: 18,
+      loop: true,
+      autoplay: { delay: 3200, disableOnInteraction: false },
+      pagination: { el: ".testimonial-slider .swiper-pagination", clickable: true },
+      breakpoints: {
+        780:  { slidesPerView: 2 },
+        1180: { slidesPerView: 3 }
+      }
+    });
+  }
 }
 
 /* ── Client cards ─────────────────────────────────────────── */
@@ -473,6 +607,52 @@ function initApplicationForm() {
   });
 }
 
+/* ── Client request form ──────────────────────────────────── */
+function initClientRequestForm() {
+  const form = document.querySelector("#clientRequestForm");
+  if (!form) return;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(form).entries());
+    const template = clientRequestEmailTemplates[currentLanguage()] || clientRequestEmailTemplates.en;
+    const subject = template.subject(data.companyName);
+    const body = template.body(data);
+
+    window.location.href = `mailto:info@puretalent.ae?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+}
+
+function isVisaTypesQuestion(query) {
+  const normalized = query.toLowerCase();
+  const visaTerms = [
+    "visa", "visas", "work permit",
+    "فيزا", "الفيزا", "تأشيرة", "تأشيرات", "تاشيرة", "تاشيرات",
+    "виза", "визы", "виз", "разрешение на работу"
+  ];
+  const typeTerms = [
+    "type", "types", "kind", "kinds", "category", "categories",
+    "نوع", "انواع", "أنواع", "نوعية", "اصناف", "أصناف",
+    "тип", "типы", "вид", "виды", "категория", "категории"
+  ];
+
+  return visaTerms.some((term) => normalized.includes(term)) &&
+    typeTerms.some((term) => normalized.includes(term));
+}
+
+function openClientRequestModalFromChat(query) {
+  const modal = document.querySelector("#clientRequestModal");
+  const message = document.querySelector("#clientMessage");
+
+  if (message && !message.value.trim()) {
+    message.value = query;
+  }
+
+  if (modal && window.bootstrap) {
+    bootstrap.Modal.getOrCreateInstance(modal).show();
+  }
+}
+
 /* ── Team page render ─────────────────────────────────────── */
 function renderTeam() {
   const target = document.querySelector("#teamList");
@@ -525,6 +705,13 @@ function initChatbot() {
 
   const answerFor = (query) => {
     const lang  = currentLanguage();
+    const dictionary = translations[lang] || translations.en;
+
+    if (isVisaTypesQuestion(query)) {
+      openClientRequestModalFromChat(query);
+      return dictionary.visaRequestPrompt || translations.en.visaRequestPrompt;
+    }
+
     const words = query.toLowerCase().split(/\s+/).filter(Boolean);
     let best = null, bestScore = 0;
 
@@ -581,6 +768,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeader();
   initCounters();
   initApplicationForm();
+  initClientRequestForm();
   initChatbot();
   initLibraries();
 

@@ -601,6 +601,52 @@ body[dir="rtl"] .eyebrow::before {
   background: var(--copper);
 }
 
+.testimonial-slider {
+  padding: 12px 4px 58px;
+}
+
+.testimonial-card {
+  min-height: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 22px;
+  padding: clamp(26px, 4vw, 38px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(245, 249, 255, 0.96), rgba(232, 242, 255, 0.92));
+  box-shadow: 0 18px 52px rgba(10, 25, 41, 0.1);
+}
+
+.testimonial-stars {
+  color: #2f6ede;
+  font-size: 1.18rem;
+  letter-spacing: 0;
+}
+
+.testimonial-card p {
+  color: var(--ink-2);
+  font-size: clamp(1rem, 1.4vw, 1.12rem);
+  line-height: 1.8;
+  margin: 0;
+}
+
+.testimonial-card strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.24rem;
+  color: var(--ink);
+}
+
+.testimonial-card span {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
 .application-wrap {
   display: grid;
   grid-template-columns: 0.92fr 1.08fr;
@@ -871,10 +917,38 @@ body[dir="rtl"] .map-action {
   background: #f5f9ff;
 }
 
-.client-modal .modal-header {
+.client-modal .modal-header,
+.client-request-modal .modal-header {
   color: #f5f9ff;
   background: linear-gradient(135deg, var(--ink), var(--coffee));
   border: 0;
+}
+
+.client-request-modal .modal-content {
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f5f9ff;
+  box-shadow: var(--shadow);
+}
+
+.client-request-modal .modal-header {
+  align-items: flex-start;
+  padding: 26px clamp(24px, 4vw, 40px);
+}
+
+.client-request-modal .eyebrow {
+  color: var(--gold);
+}
+
+.client-request-modal .modal-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  margin-top: 8px;
+}
+
+.client-request-modal .section-copy {
+  max-width: 100%;
 }
 
 .chat-toggle {
@@ -1053,6 +1127,18 @@ body[dir="rtl"] .chat-window {
     width: min(100% - 20px, 1180px);
   }
 
+  .mobile-orbit-nav {
+    gap: 6px;
+    padding: 8px;
+    max-width: calc(100% - 16px);
+  }
+
+  .mobile-orbit-nav a,
+  .mobile-orbit-nav button {
+    width: 40px;
+    height: 40px;
+  }
+
   .brand img {
     width: 164px;
   }
@@ -1069,6 +1155,25 @@ body[dir="rtl"] .chat-window {
 
   .hero h1 {
     font-size: clamp(2.8rem, 15vw, 4.4rem);
+  }
+
+  .hero {
+    padding-bottom: 150px;
+  }
+
+  .hero-actions {
+    gap: 10px;
+  }
+
+  .hero-actions .btn-ghost:not(.btn-request) {
+    display: none;
+  }
+
+  .hero-actions .btn-lux,
+  .hero-actions .btn-request {
+    min-height: 46px;
+    padding: 10px 14px;
+    font-size: 0.92rem;
   }
 
   .hero-proof,
