@@ -56,7 +56,7 @@ a {
 .site-shell {
   min-height: 100vh;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.86), rgba(245, 249, 255, 0.92)),
+    linear-gradient(135deg, rgba(175, 223, 255, 0.993), rgba(245, 249, 255, 0.92)),
     radial-gradient(circle at 12% 0%, rgba(217, 182, 107, 0.2), transparent 28rem),
     radial-gradient(circle at 88% 18%, rgba(140, 198, 176, 0.18), transparent 24rem),
     linear-gradient(180deg, #ffffff 0%, #eef5ff 45%, #f5f9ff 100%);
