@@ -60,7 +60,7 @@ const translations = {
     statSectors: "Industry Sectors",
     clientsEyebrow: "Clients",
     clientsTitle: "Trusted by organizations that value consistency.",
-    clientsCopy: "Replace these sample logos with your JPG, JPEG, PNG, or WEBP client logos. Click any logo to view editable client details.",
+    clientsCopy: "A selection of client profiles representing the sectors we support with dependable recruitment and manpower supply.",
     testimonialsEyebrow: "Client Reviews",
     testimonialsTitle: "What our clients say about working with Pure Talent.",
     testimonialsCopy: "A simple view of the service standards our partners value most: responsiveness, clarity, and dependable delivery.",
@@ -108,7 +108,7 @@ const translations = {
     teamHeroTitle: "Leadership with discipline, empathy, and market insight.",
     teamHeroCopy: "Meet the people guiding Pure Talent's client service, recruitment quality, and workforce delivery.",
     teamIntroTitle: "A team built around trust and delivery.",
-    teamIntroCopy: "Replace these profile images and biographies with final approved team content. The alternating layout is designed for premium executive presentation."
+    teamIntroCopy: "Our leadership team combines recruitment discipline, operational follow-through, and responsive client communication across every engagement."
   },
   ar: {
     navHome: "الرئيسية",
@@ -163,7 +163,7 @@ const translations = {
     statSectors: "قطاعات",
     clientsEyebrow: "العملاء",
     clientsTitle: "موثوقون لدى مؤسسات تقدّر الاستمرارية.",
-    clientsCopy: "استبدل الشعارات التجريبية بشعارات JPG أو JPEG أو PNG أو WEBP. انقر على أي شعار لعرض التفاصيل.",
+    clientsCopy: "نماذج من ملفات العملاء والقطاعات التي ندعمها من خلال حلول توظيف وتوريد قوى عاملة موثوقة.",
     testimonialsEyebrow: "تقييمات العملاء",
     testimonialsTitle: "ماذا يقول عملاؤنا عن العمل مع بيور تالنت.",
     testimonialsCopy: "عرض بسيط لمعايير الخدمة التي يقدّرها شركاؤنا: سرعة الاستجابة، الوضوح، والالتزام بالتنفيذ.",
@@ -211,7 +211,7 @@ const translations = {
     teamHeroTitle: "قيادة تجمع الانضباط والتعاطف وفهم السوق.",
     teamHeroCopy: "تعرف إلى الفريق الذي يقود جودة التوظيف وخدمة العملاء وتنفيذ القوى العاملة.",
     teamIntroTitle: "فريق مبني على الثقة والتنفيذ.",
-    teamIntroCopy: "استبدل الصور والسير الذاتية بالمحتوى النهائي المعتمد. التخطيط المتناوب مصمم لعرض تنفيذي فاخر."
+    teamIntroCopy: "يجمع فريق القيادة لدينا بين الانضباط في التوظيف والمتابعة التشغيلية والتواصل السريع مع العملاء في كل مشروع."
   },
   ru: {
     navHome: "Главная",
@@ -266,7 +266,7 @@ const translations = {
     statSectors: "Отраслей",
     clientsEyebrow: "Клиенты",
     clientsTitle: "Доверие организаций, ценящих стабильность.",
-    clientsCopy: "Замените образцы логотипов своими файлами JPG, JPEG, PNG или WEBP. Нажмите на любой логотип для просмотра деталей клиента.",
+    clientsCopy: "Подборка клиентских профилей и отраслей, которые мы поддерживаем надёжными решениями по подбору и предоставлению персонала.",
     testimonialsEyebrow: "Отзывы клиентов",
     testimonialsTitle: "Что клиенты говорят о работе с Pure Talent.",
     testimonialsCopy: "Краткий взгляд на стандарты сервиса, которые ценят наши партнёры: оперативность, ясность и надёжное выполнение.",
@@ -314,18 +314,18 @@ const translations = {
     teamHeroTitle: "Лидерство, основанное на дисциплине, эмпатии и знании рынка.",
     teamHeroCopy: "Познакомьтесь с людьми, обеспечивающими качество сервиса, рекрутмента и предоставления персонала Pure Talent.",
     teamIntroTitle: "Команда, построенная на доверии и результатах.",
-    teamIntroCopy: "Замените фотографии профилей и биографии утверждённым финальным контентом. Чередующийся макет разработан для премиального представления руководства."
+    teamIntroCopy: "Наша руководящая команда объединяет дисциплину в рекрутинге, операционную точность и внимательную коммуникацию с клиентами на каждом этапе."
   }
 };
 
 /* ── Static Data ──────────────────────────────────────────── */
 const clientProfiles = [
-  { name: "Aldar Facilities Partner",   logo: "assets/images/clients/client-aldar.jpg",   sector: "Facilities Management", summary: "Sample client profile for facilities staffing, supervisory support, and operational workforce coordination." },
-  { name: "Emirates Operations Group",  logo: "assets/images/clients/client-emirates.jpg", sector: "Operations",            summary: "Sample client profile for volume recruitment, workforce continuity, and project staffing requirements." },
-  { name: "Nova Healthcare Staffing",   logo: "assets/images/clients/client-nova.jpg",     sector: "Healthcare",            summary: "Sample client profile for screened support staff, onboarding coordination, and compliant documentation." },
-  { name: "Atlas Industrial Supply",    logo: "assets/images/clients/client-atlas.jpg",    sector: "Industrial",            summary: "Sample client profile for technical helpers, site teams, and manpower ramp-up planning." },
-  { name: "Oasis Hospitality Network",  logo: "assets/images/clients/client-oasis.jpg",    sector: "Hospitality",           summary: "Sample client profile for hospitality support, guest-service staffing, and seasonal workforce planning." },
-  { name: "Prime Contracting LLC",      logo: "assets/images/clients/client-prime.jpg",    sector: "Contracting",           summary: "Sample client profile for construction support manpower and project-based staffing." }
+  { name: "Aldar Facilities Partner",   logo: "assets/images/clients/client-aldar.jpg",   sector: "Facilities Management", summary: "Facilities staffing, supervisory support, and operational workforce coordination for consistent site delivery." },
+  { name: "Emirates Operations Group",  logo: "assets/images/clients/client-emirates.jpg", sector: "Operations",            summary: "Volume recruitment, workforce continuity, and project staffing support for active operational teams." },
+  { name: "Nova Healthcare Staffing",   logo: "assets/images/clients/client-nova.jpg",     sector: "Healthcare",            summary: "Screened support staff, onboarding coordination, and compliant documentation for healthcare environments." },
+  { name: "Atlas Industrial Supply",    logo: "assets/images/clients/client-atlas.jpg",    sector: "Industrial",            summary: "Technical helpers, site teams, and manpower ramp-up planning for industrial requirements." },
+  { name: "Oasis Hospitality Network",  logo: "assets/images/clients/client-oasis.jpg",    sector: "Hospitality",           summary: "Hospitality support, guest-service staffing, and seasonal workforce planning for service-led businesses." },
+  { name: "Prime Contracting LLC",      logo: "assets/images/clients/client-prime.jpg",    sector: "Contracting",           summary: "Construction support manpower and project-based staffing aligned with site schedules and compliance needs." }
 ];
 
 const teamMembers = [

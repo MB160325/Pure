@@ -31,7 +31,7 @@
         teamHeroTitle:    "Leadership with discipline, empathy, and market insight.",
         teamHeroCopy:     "Meet the people guiding Pure Talent's client service, recruitment quality, and workforce delivery.",
         teamIntroTitle:   "A team built around trust and delivery.",
-        teamIntroCopy:    "Replace these profile images and biographies with final approved team content. The alternating layout is designed for premium executive presentation.",
+        teamIntroCopy:    "Our leadership team combines recruitment discipline, operational follow-through, and responsive client communication across every engagement.",
         footerCopy:       "Premium recruitment and manpower supply solutions for dependable organizations.",
         footerContact:    "Contact Information",
         footerLinks:      "Footer Links",
@@ -53,7 +53,7 @@
         teamHeroTitle:    "قيادة بانضباط وتعاطف ورؤية سوقية.",
         teamHeroCopy:     "تعرّف على الأشخاص الذين يوجّهون خدمات Pure Talent وجودة التوظيف وتوريد القوى العاملة.",
         teamIntroTitle:   "فريق مبني على الثقة والإنجاز.",
-        teamIntroCopy:    "استبدل صور الملفات الشخصية والسير الذاتية بالمحتوى المعتمد النهائي للفريق.",
+        teamIntroCopy:    "يجمع فريق القيادة لدينا بين الانضباط في التوظيف والمتابعة التشغيلية والتواصل السريع مع العملاء في كل مشروع.",
         footerCopy:       "حلول توظيف وتوريد قوى عاملة متميزة للمؤسسات الموثوقة.",
         footerContact:    "معلومات التواصل",
         footerLinks:      "روابط سريعة",
@@ -75,7 +75,7 @@
         teamHeroTitle:    "Лидерство с дисциплиной, эмпатией и знанием рынка.",
         teamHeroCopy:     "Познакомьтесь с людьми, которые руководят сервисом для клиентов, качеством подбора персонала и поставкой рабочей силы в Pure Talent.",
         teamIntroTitle:   "Команда, построенная на доверии и результате.",
-        teamIntroCopy:    "Замените фотографии и биографии финальным утверждённым контентом команды.",
+        teamIntroCopy:    "Наша руководящая команда объединяет дисциплину в рекрутинге, операционную точность и внимательную коммуникацию с клиентами на каждом этапе.",
         footerCopy:       "Профессиональные решения в области рекрутинга и поставки рабочей силы.",
         footerContact:    "Контактная информация",
         footerLinks:      "Ссылки",
@@ -106,7 +106,7 @@
       });
 
       /* Persist choice */
-      try { localStorage.setItem("pt_lang", lang); } catch(e) {}
+      try { localStorage.setItem("pureTalentLanguage", lang); } catch(e) {}
     }
 
     /* ── Run on DOMContentLoaded ── */
@@ -115,7 +115,7 @@
 
       /* Restore saved language */
       let saved = "en";
-      try { saved = localStorage.getItem("pt_lang") || "en"; } catch(e) {}
+      try { saved = localStorage.getItem("pureTalentLanguage") || "en"; } catch(e) {}
       /* Only allow en / ar / ru on this page */
       if (!["en","ar","ru"].includes(saved)) saved = "en";
 
@@ -188,10 +188,15 @@
           <div class="col-lg-8" data-aos="fade-up">
             <span class="eyebrow" data-i18n="teamHeroEyebrow">Our Team</span>
             <h2 class="section-title" data-i18n="teamIntroTitle">A team built around trust and delivery.</h2>
-            <p class="section-copy" data-i18n="teamIntroCopy">Replace these profile images and biographies with final approved team content. The alternating layout is designed for premium executive presentation.</p>
+            <p class="section-copy" data-i18n="teamIntroCopy">Our leadership team combines recruitment discipline, operational follow-through, and responsive client communication across every engagement.</p>
           </div>
         </div>
         <div id="teamList"></div>
+        <div class="leadership-values" data-aos="fade-up">
+          <article><i data-lucide="shield-check"></i><strong>Compliance-minded</strong><span>Clear hiring, documentation, and manpower processes.</span></article>
+          <article><i data-lucide="messages-square"></i><strong>Responsive service</strong><span>Direct communication from enquiry to deployment.</span></article>
+          <article><i data-lucide="target"></i><strong>Quality focused</strong><span>Shortlisting and workforce planning shaped around client needs.</span></article>
+        </div>
       </div>
     </section>
   </main>
