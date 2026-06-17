@@ -84,12 +84,12 @@ const translations = {
     message: "Message",
     submitApplication: "Prepare Email",
     clientRequestEyebrow: "Business Enquiry",
-    clientRequestTitle: "Send a client request",
-    clientRequestCopy: "Tell us what your company needs and your email app will open with a polished message ready to send.",
+    clientRequestTitle: "Send a client request or offer",
+    clientRequestCopy: "Tell us what your company needs or share your offer, and your email app will open with a polished message ready to send.",
     companyName: "Company Name",
     clientEmail: "Business Email",
-    clientMessage: "Request Details",
-    sendClientRequest: "Send Request",
+    clientMessage: "Request or Offer Details",
+    sendClientRequest: "Send Message",
     contactEyebrow: "Visit Us",
     contactTitle: "Pure Talent Recruitment & Manpower Supply",
     contactCopy: "For business enquiries, manpower requests, recruitment partnerships, or applications, contact our team directly.",
@@ -187,12 +187,12 @@ const translations = {
     message: "الرسالة",
     submitApplication: "تحضير البريد",
     clientRequestEyebrow: "استفسار تجاري",
-    clientRequestTitle: "إرسال طلب عميل",
-    clientRequestCopy: "أخبرنا بما تحتاجه شركتك وسيتم فتح تطبيق البريد برسالة منسقة وجاهزة للإرسال.",
+    clientRequestTitle: "إرسال طلب أو عرض",
+    clientRequestCopy: "أخبرنا بما تحتاجه شركتك أو شاركنا عرضك، وسيتم فتح تطبيق البريد برسالة منسقة وجاهزة للإرسال.",
     companyName: "اسم الشركة",
     clientEmail: "البريد الإلكتروني للشركة",
-    clientMessage: "تفاصيل الطلب",
-    sendClientRequest: "إرسال الطلب",
+    clientMessage: "تفاصيل الطلب أو العرض",
+    sendClientRequest: "إرسال الرسالة",
     contactEyebrow: "قم بزيارتنا",
     contactTitle: "بيور تالنت للتوظيف وتوريد القوى العاملة",
     contactCopy: "للاستفسارات التجارية وطلبات القوى العاملة والشراكات أو التقديم، تواصل مع فريقنا.",
@@ -290,12 +290,12 @@ const translations = {
     message: "Сообщение",
     submitApplication: "Подготовить письмо",
     clientRequestEyebrow: "Деловой запрос",
-    clientRequestTitle: "Отправить запрос клиента",
-    clientRequestCopy: "Расскажите, что нужно вашей компании, и почтовое приложение откроется с готовым профессиональным письмом.",
+    clientRequestTitle: "Отправить запрос или предложение",
+    clientRequestCopy: "Расскажите, что нужно вашей компании, или отправьте предложение, и почтовое приложение откроется с готовым профессиональным письмом.",
     companyName: "Название компании",
     clientEmail: "Рабочая почта",
-    clientMessage: "Детали запроса",
-    sendClientRequest: "Отправить запрос",
+    clientMessage: "Детали запроса или предложения",
+    sendClientRequest: "Отправить сообщение",
     contactEyebrow: "Посетите нас",
     contactTitle: "Pure Talent Recruitment & Manpower Supply",
     contactCopy: "По вопросам сотрудничества, запросам персонала, партнёрству или трудоустройству — свяжитесь с нашей командой напрямую.",
@@ -320,12 +320,12 @@ const translations = {
 
 /* ── Static Data ──────────────────────────────────────────── */
 const clientProfiles = [
-  { name: "Aldar Facilities Partner",   logo: "assets/images/clients/client-aldar.svg",   sector: "Facilities Management", summary: "Sample client profile for facilities staffing, supervisory support, and operational workforce coordination." },
-  { name: "Emirates Operations Group",  logo: "assets/images/clients/client-emirates.svg", sector: "Operations",            summary: "Sample client profile for volume recruitment, workforce continuity, and project staffing requirements." },
-  { name: "Nova Healthcare Staffing",   logo: "assets/images/clients/client-nova.svg",     sector: "Healthcare",            summary: "Sample client profile for screened support staff, onboarding coordination, and compliant documentation." },
-  { name: "Atlas Industrial Supply",    logo: "assets/images/clients/client-atlas.svg",    sector: "Industrial",            summary: "Sample client profile for technical helpers, site teams, and manpower ramp-up planning." },
-  { name: "Oasis Hospitality Network",  logo: "assets/images/clients/client-oasis.svg",    sector: "Hospitality",           summary: "Sample client profile for hospitality support, guest-service staffing, and seasonal workforce planning." },
-  { name: "Prime Contracting LLC",      logo: "assets/images/clients/client-prime.svg",    sector: "Contracting",           summary: "Sample client profile for construction support manpower and project-based staffing." }
+  { name: "Aldar Facilities Partner",   logo: "assets/images/clients/client-aldar.jpg",   sector: "Facilities Management", summary: "Sample client profile for facilities staffing, supervisory support, and operational workforce coordination." },
+  { name: "Emirates Operations Group",  logo: "assets/images/clients/client-emirates.jpg", sector: "Operations",            summary: "Sample client profile for volume recruitment, workforce continuity, and project staffing requirements." },
+  { name: "Nova Healthcare Staffing",   logo: "assets/images/clients/client-nova.jpg",     sector: "Healthcare",            summary: "Sample client profile for screened support staff, onboarding coordination, and compliant documentation." },
+  { name: "Atlas Industrial Supply",    logo: "assets/images/clients/client-atlas.jpg",    sector: "Industrial",            summary: "Sample client profile for technical helpers, site teams, and manpower ramp-up planning." },
+  { name: "Oasis Hospitality Network",  logo: "assets/images/clients/client-oasis.jpg",    sector: "Hospitality",           summary: "Sample client profile for hospitality support, guest-service staffing, and seasonal workforce planning." },
+  { name: "Prime Contracting LLC",      logo: "assets/images/clients/client-prime.jpg",    sector: "Contracting",           summary: "Sample client profile for construction support manpower and project-based staffing." }
 ];
 
 const teamMembers = [
@@ -337,16 +337,16 @@ const teamMembers = [
 
 const clientRequestEmailTemplates = {
   en: {
-    subject: (company) => `Client Request - ${company || "Pure Talent"}`,
+    subject: (company) => `Client Request / Offer - ${company || "Pure Talent"}`,
     body: (data) => [
       "Dear Pure Talent Recruitment & Manpower Supply Team,",
       "",
-      "I would like to submit a business enquiry with the details below:",
+      "I would like to submit a business enquiry or offer with the details below:",
       "",
       `Company Name: ${data.companyName || ""}`,
       `Business Email: ${data.clientEmail || ""}`,
       "",
-      "Request Details:",
+      "Request / Offer Details:",
       data.clientMessage || "",
       "",
       "Please contact me to discuss the next steps.",
@@ -355,16 +355,16 @@ const clientRequestEmailTemplates = {
     ].join("\n")
   },
   ar: {
-    subject: (company) => `طلب عميل - ${company || "بيور تالنت"}`,
+    subject: (company) => `طلب أو عرض - ${company || "بيور تالنت"}`,
     body: (data) => [
       "إلى فريق بيور تالنت للتوظيف وتوريد القوى العاملة،",
       "",
-      "أود إرسال استفسار تجاري بالتفاصيل التالية:",
+      "أود إرسال طلب أو عرض تجاري بالتفاصيل التالية:",
       "",
       `اسم الشركة: ${data.companyName || ""}`,
       `البريد الإلكتروني للشركة: ${data.clientEmail || ""}`,
       "",
-      "تفاصيل الطلب:",
+      "تفاصيل الطلب أو العرض:",
       data.clientMessage || "",
       "",
       "يرجى التواصل معي لمناقشة الخطوات التالية.",
@@ -373,16 +373,16 @@ const clientRequestEmailTemplates = {
     ].join("\n")
   },
   ru: {
-    subject: (company) => `Запрос клиента - ${company || "Pure Talent"}`,
+    subject: (company) => `Запрос или предложение - ${company || "Pure Talent"}`,
     body: (data) => [
       "Уважаемая команда Pure Talent Recruitment & Manpower Supply,",
       "",
-      "Я хотел(а) бы отправить деловой запрос со следующими деталями:",
+      "Я хотел(а) бы отправить деловой запрос или предложение со следующими деталями:",
       "",
       `Название компании: ${data.companyName || ""}`,
       `Рабочая почта: ${data.clientEmail || ""}`,
       "",
-      "Детали запроса:",
+      "Детали запроса или предложения:",
       data.clientMessage || "",
       "",
       "Пожалуйста, свяжитесь со мной, чтобы обсудить следующие шаги.",
@@ -487,7 +487,7 @@ function initLibraries() {
       spaceBetween: 18,
       loop: true,
       autoplay: { delay: 2600, disableOnInteraction: false },
-      pagination: { el: ".swiper-pagination", clickable: true },
+      pagination: { el: ".client-slider .swiper-pagination", clickable: true },
       breakpoints: {
         640:  { slidesPerView: 2.2 },
         900:  { slidesPerView: 3   },
