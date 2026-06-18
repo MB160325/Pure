@@ -320,12 +320,12 @@ const translations = {
 
 /* ── Static Data ──────────────────────────────────────────── */
 const clientProfiles = [
-  { name: "Aldar Facilities Partner",   logo: "assets/images/clients/client-aldar.jpg",   sector: "Facilities Management", summary: "Facilities staffing, supervisory support, and operational workforce coordination for consistent site delivery." },
-  { name: "Emirates Operations Group",  logo: "assets/images/clients/client-emirates.jpg", sector: "Operations",            summary: "Volume recruitment, workforce continuity, and project staffing support for active operational teams." },
-  { name: "Nova Healthcare Staffing",   logo: "assets/images/clients/client-nova.jpg",     sector: "Healthcare",            summary: "Screened support staff, onboarding coordination, and compliant documentation for healthcare environments." },
-  { name: "Atlas Industrial Supply",    logo: "assets/images/clients/client-atlas.jpg",    sector: "Industrial",            summary: "Technical helpers, site teams, and manpower ramp-up planning for industrial requirements." },
-  { name: "Oasis Hospitality Network",  logo: "assets/images/clients/client-oasis.jpg",    sector: "Hospitality",           summary: "Hospitality support, guest-service staffing, and seasonal workforce planning for service-led businesses." },
-  { name: "Prime Contracting LLC",      logo: "assets/images/clients/client-prime.jpg",    sector: "Contracting",           summary: "Construction support manpower and project-based staffing aligned with site schedules and compliance needs." }
+  { name: "Majid Al Futtaim",           logo: "assets/images/clients/Majid_Al_Futtaim_logo.svg.png",    sector: "Facilities Management", summary: "Facilities staffing, supervisory support, and operational workforce coordination for consistent site delivery." },
+  { name: "Taqa Distribution",          logo: "assets/images/clients/TAQA logo.png",                    sector: "Operations",            summary: "Volume recruitment, workforce continuity, and project staffing support for active operational teams." },
+  { name: "Siemens",                    logo: "assets/images/clients/Siemens-logo.svg.png",             sector: "Healthcare",            summary: "Screened support staff, onboarding coordination, and compliant documentation for healthcare environments." },
+  { name: "Atlas Industrial Supply",    logo: "assets/images/clients/client-atlas.jpg",                 sector: "Industrial",            summary: "Technical helpers, site teams, and manpower ramp-up planning for industrial requirements." },
+  { name: "Oasis Hospitality Network",  logo: "assets/images/clients/client-oasis.jpg",                 sector: "Hospitality",           summary: "Hospitality support, guest-service staffing, and seasonal workforce planning for service-led businesses." },
+  { name: "Prime Contracting LLC",      logo: "assets/images/clients/client-prime.jpg",                 sector: "Contracting",           summary: "Construction support manpower and project-based staffing aligned with site schedules and compliance needs." }
 ];
 
 const teamMembers = [

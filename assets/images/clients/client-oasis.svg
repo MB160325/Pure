@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180">
-  <rect width="320" height="180" rx="18" fill="#fffaf1"/>
-  <circle cx="86" cy="90" r="38" fill="#2f4736"/>
-  <path d="M65 92c13-27 33-27 44 0-14-9-30-9-44 0Z" fill="#d9b47e"/>
-  <text x="139" y="83" font-family="Arial, sans-serif" font-size="29" font-weight="800" fill="#231610">OASIS</text>
-  <text x="141" y="111" font-family="Arial, sans-serif" font-size="15" fill="#7d6a5b">Hospitality Network</text>
-</svg>

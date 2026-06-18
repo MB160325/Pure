@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180">
-  <rect width="320" height="180" rx="18" fill="#fffaf1"/>
-  <rect x="51" y="51" width="76" height="76" rx="12" fill="#21140f"/>
-  <path d="M73 106V72h20c8 0 13 4.7 13 11.5S101 95 93 95h-8v11H73Z" fill="#d9b47e"/>
-  <text x="145" y="83" font-family="Arial, sans-serif" font-size="29" font-weight="800" fill="#231610">PRIME</text>
-  <text x="147" y="111" font-family="Arial, sans-serif" font-size="15" fill="#7d6a5b">Contracting LLC</text>
-</svg>
