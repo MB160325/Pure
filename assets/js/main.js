@@ -11,7 +11,7 @@ const translations = {
     navHome: "Home",
     navAbout: "About",
     navServices: "Services",
-    navClients: "Clients",
+    navDelivery: "Delivery",
     navCareers: "Careers",
     navTeam: "Our Team",
     navContact: "Contact",
@@ -20,9 +20,9 @@ const translations = {
     heroCopy: "Pure Talent connects leading organizations with reliable people across recruitment, staffing, outsourcing, and manpower supply.",
     ctaApply: "Apply Now",
     ctaExplore: "Explore Services",
-    ctaClientRequest: "Client Request",
+    ctaClientRequest: "Business Request",
     proofYears: "Years of Experience",
-    proofClients: "Clients Served",
+    proofMobilizations: "Workforce Mobilizations",
     proofTalent: "Employees Supplied",
     aboutEyebrow: "About Us",
     aboutTitle: "A premium workforce partner built for dependable business growth.",
@@ -31,12 +31,12 @@ const translations = {
     aboutNoteCopy: "From sourcing to onboarding, every step is handled with clarity, discretion, and professional care.",
     ceoEyebrow: "CEO Message",
     ceoTitle: "Building stronger teams through trusted talent solutions.",
-    ceoCopy: "At Pure Talent, our mission is to provide dependable manpower recruitment solutions that help businesses build capable teams with confidence. We are committed to making the recruitment process transparent, responsive, and truly aligned with what employers need—while ensuring every candidate is treated with respect, fairness, and equal opportunity. As a trusted recruitment partner, we focus on understanding each client’s workforce goals and connecting them with the right talent in a way that is efficient, ethical, and impact-driven. Ultimately, we aim to support long-term growth by matching the right people to the right opportunities—creating stronger teams, better outcomes, and lasting success for both employers and candidates.",
+    ceoCopy: "At Pure Talent, our mission is to provide dependable manpower recruitment solutions that help businesses build capable teams with confidence. We are committed to making the recruitment process transparent, responsive, and truly aligned with what employers need—while ensuring every candidate is treated with respect, fairness, and equal opportunity. As a trusted recruitment partner, we focus on understanding each organization's workforce goals and connecting them with the right talent in a way that is efficient, ethical, and impact-driven. Ultimately, we aim to support long-term growth by matching the right people to the right opportunities—creating stronger teams, better outcomes, and lasting success for both employers and candidates.",
     ceoName: "Chief Executive Officer",
     visionTitle: "Vision",
     visionCopy: "To become a trusted regional leader in recruitment and manpower supply, recognized for quality, integrity, and long-term workforce value.",
     missionTitle: "Mission",
-    missionCopy: "To deliver skilled, reliable, and compliant workforce solutions that help clients operate efficiently while creating meaningful employment pathways.",
+    missionCopy: "To deliver skilled, reliable, and compliant workforce solutions that help businesses operate efficiently while creating meaningful employment pathways.",
     offerEyebrow: "What We Offer",
     offerTitle: "Complete manpower solutions for modern companies.",
     service1Title: "Manpower Supply",
@@ -54,25 +54,32 @@ const translations = {
     statsEyebrow: "Performance",
     statsTitle: "Numbers that reflect disciplined delivery.",
     statYears: "Years of Experience",
-    statClients: "Clients Served",
+    statMobilizations: "Workforce Mobilizations",
     statEmployees: "Employees Supplied",
     statPlacements: "Successful Placements",
     statSectors: "Industry Sectors",
-    clientsEyebrow: "Clients",
-    clientsTitle: "Trusted by organizations that value consistency.",
-    clientsCopy: "A selection of client profiles representing the sectors we support with dependable recruitment and manpower supply.",
-    testimonialsEyebrow: "Client Reviews",
-    testimonialsTitle: "What our clients say about working with Pure Talent.",
-    testimonialsCopy: "A simple view of the service standards our partners value most: responsiveness, clarity, and dependable delivery.",
-    testimonial1Copy: "Pure Talent understood our staffing needs quickly and prepared a reliable shortlist with excellent communication throughout the process.",
-    testimonial1Name: "Ahmed Al Mansoori",
-    testimonial1Role: "Operations Manager",
-    testimonial2Copy: "Their team made our manpower request clear, organized, and efficient. The follow-up was professional from the first call to mobilization.",
-    testimonial2Name: "Natalia Petrova",
-    testimonial2Role: "HR Director",
-    testimonial3Copy: "We value Pure Talent for their fast response, respectful candidate handling, and practical understanding of urgent workforce requirements.",
-    testimonial3Name: "Omar Hassan",
-    testimonial3Role: "Project Lead",
+    deliveryEyebrow: "Delivery Engine",
+    deliveryTitle: "A modern workforce operating system for dependable deployment.",
+    deliveryCopy: "A clearer view of how Pure Talent moves from workforce requirement to qualified people, compliant documents, and site-ready mobilization.",
+    deliverySignalOne: "Response Mapping",
+    deliverySignalTwo: "Delivery Visibility",
+    processOneTitle: "Requirement Mapping",
+    processOneCopy: "Roles, volume, timelines, documents, and deployment conditions are clarified before sourcing begins.",
+    processTwoTitle: "Talent Screening",
+    processTwoCopy: "Candidates are assessed for role fit, availability, communication, and practical readiness.",
+    processThreeTitle: "Compliance Control",
+    processThreeCopy: "Documentation and onboarding steps are tracked with clear responsibility and professional follow-through.",
+    processFourTitle: "Mobilization Support",
+    processFourCopy: "Deployment updates, replacements, and service coordination stay visible after selection.",
+    dashboardEyebrow: "Operational Dashboard",
+    dashboardTitle: "Structured coordination without noise.",
+    dashboardCopy: "Instead of static showcases, the service experience is organized around live priorities: urgency, readiness, compliance, and continuity.",
+    dashboardCardOneTitle: "Priority Intake",
+    dashboardCardOneCopy: "Every enquiry is shaped into a clear hiring brief with urgency, quantity, and constraints.",
+    dashboardCardTwoTitle: "Pipeline Clarity",
+    dashboardCardTwoCopy: "Shortlists, backup options, and documentation status stay aligned for faster decisions.",
+    dashboardCardThreeTitle: "Continuity Watch",
+    dashboardCardThreeCopy: "Service follow-up keeps deployment stable when requirements change or scale.",
     applicationEyebrow: "Career Application",
     applicationTitle: "Apply for your next opportunity.",
     applicationCopy: "Complete the form and your email app will open with a prepared message. Attach your CV manually before sending.",
@@ -84,7 +91,7 @@ const translations = {
     message: "Message",
     submitApplication: "Prepare Email",
     clientRequestEyebrow: "Business Enquiry",
-    clientRequestTitle: "Send a client request or offer",
+    clientRequestTitle: "Send a business request or offer",
     clientRequestCopy: "Tell us what your company needs or share your offer, and your email app will open with a polished message ready to send.",
     companyName: "Company Name",
     clientEmail: "Business Email",
@@ -103,18 +110,25 @@ const translations = {
     chatbotTitle: "Pure Talent Assistant",
     chatbotSub: "Online knowledge search",
     chatPlaceholder: "Ask about services, careers, or contact...",
-    visaRequestPrompt: "I opened the client request form so our team can guide you on visa types and the right process for your requirement.",
+    visaRequestPrompt: "I opened the business enquiry form so our team can guide you on visa types and the right process for your requirement.",
     teamHeroEyebrow: "Our Team",
     teamHeroTitle: "Leadership with discipline, empathy, and market insight.",
-    teamHeroCopy: "Meet the people guiding Pure Talent's client service, recruitment quality, and workforce delivery.",
+    teamHeroCopy: "Meet the people guiding Pure Talent's service quality, recruitment standards, and workforce delivery.",
     teamIntroTitle: "A team built around trust and delivery.",
-    teamIntroCopy: "Our leadership team combines recruitment discipline, operational follow-through, and responsive client communication across every engagement."
+    teamIntroCopy: "Our leadership team combines recruitment discipline, operational follow-through, and responsive business communication across every engagement.",
+    teamValueOneTitle: "Compliance-minded",
+    teamValueOneCopy: "Clear hiring, documentation, and manpower processes.",
+    teamValueTwoTitle: "Responsive service",
+    teamValueTwoCopy: "Direct communication from enquiry to deployment.",
+    teamValueThreeTitle: "Quality focused",
+    teamValueThreeCopy: "Shortlisting and workforce planning shaped around business needs.",
+    teamLinkedIn: "LinkedIn"
   },
   ar: {
     navHome: "الرئيسية",
     navAbout: "من نحن",
     navServices: "الخدمات",
-    navClients: "العملاء",
+    navDelivery: "منظومة العمل",
     navCareers: "الوظائف",
     navTeam: "فريقنا",
     navContact: "تواصل",
@@ -123,9 +137,9 @@ const translations = {
     heroCopy: "تربط بيور تالنت المؤسسات الرائدة بالكفاءات الموثوقة عبر التوظيف والتعهيد وتوريد القوى العاملة.",
     ctaApply: "قدم الآن",
     ctaExplore: "استكشف الخدمات",
-    ctaClientRequest: "طلب عميل",
+    ctaClientRequest: "طلب تجاري",
     proofYears: "سنوات الخبرة",
-    proofClients: "عميل تم خدمته",
+    proofMobilizations: "عملية تعبئة قوى عاملة",
     proofTalent: "موظف تم توفيره",
     aboutEyebrow: "من نحن",
     aboutTitle: "شريك قوى عاملة فاخر يدعم نمو الأعمال بثقة.",
@@ -134,12 +148,12 @@ const translations = {
     aboutNoteCopy: "من البحث إلى الانضمام، تتم كل خطوة بوضوح وسرية ورعاية مهنية.",
     ceoEyebrow: "رسالة الرئيس التنفيذي",
     ceoTitle:"نبني فرقًا أقوى من خلال حلول توظيف موثوقة.",
-    ceoCopy: "في بيور تالنت، تتمثل مهمتنا في توفير حلول توظيف موثوقة تساعد الشركات على بناء فرق عمل متميزة بثقة. ونحن ملتزمون بجعل عملية التوظيف شفافة وسريعة الاستجابة ومتوافقة تمامًا مع احتياجات أصحاب العمل، مع ضمان معاملة كل مرشح باحترام وإنصاف وتكافؤ الفرص. بصفتنا شريكًا موثوقًا في مجال التوظيف، نركز على فهم أهداف القوى العاملة لكل عميل وربطها بالمواهب المناسبة بطريقة تتسم بالكفاءة والأخلاق والتركيز على تحقيق التأثير. وفي النهاية، نهدف إلى دعم النمو على المدى الطويل من خلال مطابقة الأشخاص المناسبين مع الفرص المناسبة، مما يساهم في تكوين فرق أقوى ونتائج أفضل ونجاح دائم لكل من أصحاب العمل والمرشحين.",
+    ceoCopy: "في بيور تالنت، تتمثل مهمتنا في توفير حلول توظيف موثوقة تساعد الشركات على بناء فرق عمل متميزة بثقة. ونحن ملتزمون بجعل عملية التوظيف شفافة وسريعة الاستجابة ومتوافقة تمامًا مع احتياجات أصحاب العمل، مع ضمان معاملة كل مرشح باحترام وإنصاف وتكافؤ الفرص. بصفتنا شريكًا موثوقًا في مجال التوظيف، نركز على فهم أهداف القوى العاملة لكل مؤسسة وربطها بالمواهب المناسبة بطريقة تتسم بالكفاءة والأخلاق والتركيز على تحقيق التأثير. وفي النهاية، نهدف إلى دعم النمو على المدى الطويل من خلال مطابقة الأشخاص المناسبين مع الفرص المناسبة، مما يساهم في تكوين فرق أقوى ونتائج أفضل ونجاح دائم لكل من أصحاب العمل والمرشحين.",
     ceoName: "الرئيس التنفيذي",
     visionTitle: "الرؤية",
     visionCopy: "أن نصبح شريكا إقليميا موثوقا في التوظيف وتوريد القوى العاملة، معروفا بالجودة والنزاهة.",
     missionTitle: "الرسالة",
-    missionCopy: "تقديم حلول قوى عاملة ماهرة وملتزمة تساعد العملاء على العمل بكفاءة وتفتح مسارات توظيف هادفة.",
+    missionCopy: "تقديم حلول قوى عاملة ماهرة وملتزمة تساعد الشركات على العمل بكفاءة وتفتح مسارات توظيف هادفة.",
     offerEyebrow: "ماذا نقدم",
     offerTitle: "حلول قوى عاملة متكاملة للشركات الحديثة.",
     service1Title: "توريد القوى العاملة",
@@ -157,25 +171,32 @@ const translations = {
     statsEyebrow: "الأداء",
     statsTitle: "أرقام تعكس الانضباط في التنفيذ.",
     statYears: "سنوات الخبرة",
-    statClients: "عملاء",
+    statMobilizations: "عمليات تعبئة قوى عاملة",
     statEmployees: "موظفون تم توفيرهم",
     statPlacements: "تعيينات ناجحة",
     statSectors: "قطاعات",
-    clientsEyebrow: "العملاء",
-    clientsTitle: "موثوقون لدى مؤسسات تقدّر الاستمرارية.",
-    clientsCopy: "نماذج من ملفات العملاء والقطاعات التي ندعمها من خلال حلول توظيف وتوريد قوى عاملة موثوقة.",
-    testimonialsEyebrow: "تقييمات العملاء",
-    testimonialsTitle: "ماذا يقول عملاؤنا عن العمل مع بيور تالنت.",
-    testimonialsCopy: "عرض بسيط لمعايير الخدمة التي يقدّرها شركاؤنا: سرعة الاستجابة، الوضوح، والالتزام بالتنفيذ.",
-    testimonial1Copy: "فهمت بيور تالنت احتياجاتنا بسرعة وقدمت قائمة مرشحين موثوقة مع تواصل ممتاز طوال العملية.",
-    testimonial1Name: "أحمد المنصوري",
-    testimonial1Role: "مدير العمليات",
-    testimonial2Copy: "جعل فريقهم طلب القوى العاملة واضحًا ومنظمًا وفعالًا. كانت المتابعة احترافية من أول اتصال حتى بدء العمل.",
-    testimonial2Name: "ناتاليا بيتروفا",
-    testimonial2Role: "مديرة الموارد البشرية",
-    testimonial3Copy: "نقدّر بيور تالنت لسرعة الاستجابة، واحترام التعامل مع المرشحين، وفهم المتطلبات العاجلة للقوى العاملة.",
-    testimonial3Name: "عمر حسن",
-    testimonial3Role: "قائد مشروع",
+    deliveryEyebrow: "محرك التنفيذ",
+    deliveryTitle: "منظومة تشغيل حديثة للقوى العاملة تضمن تعبئة موثوقة.",
+    deliveryCopy: "نظرة أوضح على طريقة انتقال بيور تالنت من احتياج القوى العاملة إلى كوادر مؤهلة ووثائق مكتملة وتعبئة جاهزة للموقع.",
+    deliverySignalOne: "تخطيط الاستجابة",
+    deliverySignalTwo: "وضوح التنفيذ",
+    processOneTitle: "تحليل الاحتياج",
+    processOneCopy: "نحدد الأدوار والأعداد والجداول الزمنية والوثائق وشروط التعبئة قبل بدء البحث.",
+    processTwoTitle: "فرز الكفاءات",
+    processTwoCopy: "نقيّم المرشحين من حيث ملاءمة الدور والتوفر والتواصل والجاهزية العملية.",
+    processThreeTitle: "ضبط الامتثال",
+    processThreeCopy: "تتم متابعة الوثائق وخطوات الانضمام بمسؤوليات واضحة وتنفيذ مهني.",
+    processFourTitle: "دعم التعبئة",
+    processFourCopy: "تبقى تحديثات الانتشار والبدائل وتنسيق الخدمة واضحة بعد الاختيار.",
+    dashboardEyebrow: "لوحة التشغيل",
+    dashboardTitle: "تنسيق منظم بلا ازدحام.",
+    dashboardCopy: "بدلاً من العروض الثابتة، تُبنى تجربة الخدمة حول أولويات حية: السرعة، الجاهزية، الامتثال، والاستمرارية.",
+    dashboardCardOneTitle: "استقبال الأولويات",
+    dashboardCardOneCopy: "يتحول كل استفسار إلى موجز توظيف واضح يحدد العجلة والعدد والقيود.",
+    dashboardCardTwoTitle: "وضوح المسار",
+    dashboardCardTwoCopy: "تبقى القوائم المختصرة والخيارات البديلة وحالة الوثائق متوافقة لتسريع القرار.",
+    dashboardCardThreeTitle: "متابعة الاستمرارية",
+    dashboardCardThreeCopy: "تحافظ المتابعة التشغيلية على استقرار التعبئة عند تغير الاحتياجات أو توسعها.",
     applicationEyebrow: "طلب توظيف",
     applicationTitle: "قدم لفرصتك التالية.",
     applicationCopy: "املأ النموذج وسيتم فتح تطبيق البريد برسالة جاهزة. أرفق سيرتك الذاتية قبل الإرسال.",
@@ -206,18 +227,25 @@ const translations = {
     chatbotTitle: "مساعد بيور تالنت",
     chatbotSub: "بحث معرفي متصل",
     chatPlaceholder: "اسأل عن الخدمات أو الوظائف أو التواصل...",
-    visaRequestPrompt: "فتحت لك نموذج طلب العميل حتى يتمكن فريقنا من إرشادك حول أنواع الفيزا والإجراء الأنسب لطلبك.",
+    visaRequestPrompt: "فتحت لك نموذج الاستفسار التجاري حتى يتمكن فريقنا من إرشادك حول أنواع الفيزا والإجراء الأنسب لطلبك.",
     teamHeroEyebrow: "فريقنا",
     teamHeroTitle: "قيادة تجمع الانضباط والتعاطف وفهم السوق.",
-    teamHeroCopy: "تعرف إلى الفريق الذي يقود جودة التوظيف وخدمة العملاء وتنفيذ القوى العاملة.",
+    teamHeroCopy: "تعرف إلى الفريق الذي يقود جودة الخدمة ومعايير التوظيف وتنفيذ القوى العاملة.",
     teamIntroTitle: "فريق مبني على الثقة والتنفيذ.",
-    teamIntroCopy: "يجمع فريق القيادة لدينا بين الانضباط في التوظيف والمتابعة التشغيلية والتواصل السريع مع العملاء في كل مشروع."
+    teamIntroCopy: "يجمع فريق القيادة لدينا بين الانضباط في التوظيف والمتابعة التشغيلية والتواصل المهني السريع في كل مشروع.",
+    teamValueOneTitle: "وعي كامل بالامتثال",
+    teamValueOneCopy: "عمليات توظيف ووثائق وقوى عاملة واضحة ومنظمة.",
+    teamValueTwoTitle: "خدمة سريعة الاستجابة",
+    teamValueTwoCopy: "تواصل مباشر من مرحلة الاستفسار حتى التعبئة.",
+    teamValueThreeTitle: "تركيز على الجودة",
+    teamValueThreeCopy: "قوائم مختصرة وتخطيط قوى عاملة مبنيان حول احتياجات العمل.",
+    teamLinkedIn: "لينكدإن"
   },
   ru: {
     navHome: "Главная",
     navAbout: "О нас",
     navServices: "Услуги",
-    navClients: "Клиенты",
+    navDelivery: "Процесс",
     navCareers: "Карьера",
     navTeam: "Наша команда",
     navContact: "Контакты",
@@ -226,9 +254,9 @@ const translations = {
     heroCopy: "Pure Talent связывает ведущие организации с надёжными специалистами в сфере рекрутмента, аутсорсинга и обеспечения персоналом.",
     ctaApply: "Подать заявку",
     ctaExplore: "Наши услуги",
-    ctaClientRequest: "Запрос клиента",
+    ctaClientRequest: "Бизнес-запрос",
     proofYears: "Лет опыта",
-    proofClients: "Клиентов обслужено",
+    proofMobilizations: "Мобилизаций персонала",
     proofTalent: "Сотрудников предоставлено",
     aboutEyebrow: "О нас",
     aboutTitle: "Премиальный партнёр по подбору персонала для стабильного роста бизнеса.",
@@ -237,12 +265,12 @@ const translations = {
     aboutNoteCopy: "От поиска до адаптации — каждый этап выполняется чётко, конфиденциально и профессионально.",
     ceoEyebrow: "Слово генерального директора",
     ceoTitle: "Создаём сильные команды с помощью надёжных решений в области подбора персонала.",
-    ceoCopy: "В Pure Talent наша миссия заключается в предоставлении надёжных решений по подбору персонала, которые помогают компаниям уверенно создавать эффективные команды. Мы стремимся сделать процесс найма прозрачным, оперативным и полностью соответствующим потребностям работодателей, гарантируя при этом, что каждый кандидат получает уважительное и справедливое отношение и равные возможности. Как надёжный партнёр в сфере подбора персонала, мы уделяем особое внимание пониманию целей каждого клиента в области кадрового обеспечения и соединению их с подходящими талантами эффективным, этичным и ориентированным на результат способом. В конечном итоге мы стремимся поддерживать долгосрочный рост, подбирая правильных людей для правильных возможностей, создавая более сильные команды, лучшие результаты и устойчивый успех как для работодателей, так и для кандидатов.",
+    ceoCopy: "В Pure Talent наша миссия заключается в предоставлении надёжных решений по подбору персонала, которые помогают компаниям уверенно создавать эффективные команды. Мы стремимся сделать процесс найма прозрачным, оперативным и полностью соответствующим потребностям работодателей, гарантируя при этом, что каждый кандидат получает уважительное и справедливое отношение и равные возможности. Как надёжный партнёр в сфере подбора персонала, мы уделяем особое внимание пониманию кадровых целей каждой организации и соединению их с подходящими талантами эффективным, этичным и ориентированным на результат способом. В конечном итоге мы стремимся поддерживать долгосрочный рост, подбирая правильных людей для правильных возможностей, создавая более сильные команды, лучшие результаты и устойчивый успех как для работодателей, так и для кандидатов.",
     ceoName: "Генеральный директор",
     visionTitle: "Видение",
     visionCopy: "Стать признанным региональным лидером в рекрутменте, известным качеством, честностью и долгосрочной ценностью персонала.",
     missionTitle: "Миссия",
-    missionCopy: "Предоставлять квалифицированные и соответствующие нормативам кадровые решения, помогающие клиентам работать эффективно и создавать значимые пути трудоустройства.",
+    missionCopy: "Предоставлять квалифицированные и соответствующие нормативам кадровые решения, помогающие компаниям работать эффективно и создавать значимые пути трудоустройства.",
     offerEyebrow: "Что мы предлагаем",
     offerTitle: "Комплексные кадровые решения для современных компаний.",
     service1Title: "Обеспечение персоналом",
@@ -260,25 +288,32 @@ const translations = {
     statsEyebrow: "Показатели",
     statsTitle: "Цифры, отражающие дисциплинированную работу.",
     statYears: "Лет опыта",
-    statClients: "Клиентов обслужено",
+    statMobilizations: "Мобилизаций персонала",
     statEmployees: "Сотрудников предоставлено",
     statPlacements: "Успешных трудоустройств",
     statSectors: "Отраслей",
-    clientsEyebrow: "Клиенты",
-    clientsTitle: "Доверие организаций, ценящих стабильность.",
-    clientsCopy: "Подборка клиентских профилей и отраслей, которые мы поддерживаем надёжными решениями по подбору и предоставлению персонала.",
-    testimonialsEyebrow: "Отзывы клиентов",
-    testimonialsTitle: "Что клиенты говорят о работе с Pure Talent.",
-    testimonialsCopy: "Краткий взгляд на стандарты сервиса, которые ценят наши партнёры: оперативность, ясность и надёжное выполнение.",
-    testimonial1Copy: "Pure Talent быстро поняли наши кадровые потребности и подготовили надёжный список кандидатов с отличной коммуникацией на каждом этапе.",
-    testimonial1Name: "Ахмед Аль Мансури",
-    testimonial1Role: "Операционный менеджер",
-    testimonial2Copy: "Команда сделала наш запрос на персонал понятным, организованным и эффективным. Сопровождение было профессиональным от первого звонка до мобилизации.",
-    testimonial2Name: "Наталья Петрова",
-    testimonial2Role: "HR-директор",
-    testimonial3Copy: "Мы ценим Pure Talent за быстрый отклик, уважительное отношение к кандидатам и практическое понимание срочных потребностей в персонале.",
-    testimonial3Name: "Омар Хасан",
-    testimonial3Role: "Руководитель проекта",
+    deliveryEyebrow: "Система исполнения",
+    deliveryTitle: "Современная операционная система для надёжной мобилизации персонала.",
+    deliveryCopy: "Более ясный взгляд на то, как Pure Talent проходит путь от кадровой потребности до квалифицированных людей, корректных документов и готовности к выходу на объект.",
+    deliverySignalOne: "Карта реакции",
+    deliverySignalTwo: "Прозрачность исполнения",
+    processOneTitle: "Анализ потребности",
+    processOneCopy: "Роли, объём, сроки, документы и условия выхода уточняются до начала поиска.",
+    processTwoTitle: "Оценка специалистов",
+    processTwoCopy: "Кандидаты оцениваются по соответствию роли, доступности, коммуникации и практической готовности.",
+    processThreeTitle: "Контроль соответствия",
+    processThreeCopy: "Документы и этапы адаптации отслеживаются с понятной ответственностью и профессиональным сопровождением.",
+    processFourTitle: "Поддержка мобилизации",
+    processFourCopy: "Обновления по выходу, замены и координация сервиса остаются прозрачными после выбора.",
+    dashboardEyebrow: "Операционная панель",
+    dashboardTitle: "Структурированная координация без лишнего шума.",
+    dashboardCopy: "Вместо статичных витрин сервис организован вокруг живых приоритетов: срочности, готовности, соответствия и непрерывности.",
+    dashboardCardOneTitle: "Приоритетный приём",
+    dashboardCardOneCopy: "Каждый запрос превращается в понятный кадровый бриф с указанием срочности, объёма и ограничений.",
+    dashboardCardTwoTitle: "Прозрачность воронки",
+    dashboardCardTwoCopy: "Шортлисты, резервные варианты и статус документов остаются согласованными для быстрых решений.",
+    dashboardCardThreeTitle: "Контроль стабильности",
+    dashboardCardThreeCopy: "Сервисное сопровождение поддерживает стабильность выхода при изменении или росте требований.",
     applicationEyebrow: "Заявка на работу",
     applicationTitle: "Подайте заявку на следующую возможность.",
     applicationCopy: "Заполните форму — откроется почтовое приложение с готовым письмом. Прикрепите резюме перед отправкой.",
@@ -309,35 +344,47 @@ const translations = {
     chatbotTitle: "Ассистент Pure Talent",
     chatbotSub: "Поиск по базе знаний",
     chatPlaceholder: "Спросите об услугах, карьере или контактах...",
-    visaRequestPrompt: "Я открыл(а) форму запроса клиента, чтобы наша команда помогла вам с типами виз и подходящим процессом для вашего запроса.",
+    visaRequestPrompt: "Я открыл(а) форму делового запроса, чтобы наша команда помогла вам с типами виз и подходящим процессом для вашего запроса.",
     teamHeroEyebrow: "Наша команда",
     teamHeroTitle: "Лидерство, основанное на дисциплине, эмпатии и знании рынка.",
     teamHeroCopy: "Познакомьтесь с людьми, обеспечивающими качество сервиса, рекрутмента и предоставления персонала Pure Talent.",
     teamIntroTitle: "Команда, построенная на доверии и результатах.",
-    teamIntroCopy: "Наша руководящая команда объединяет дисциплину в рекрутинге, операционную точность и внимательную коммуникацию с клиентами на каждом этапе."
+    teamIntroCopy: "Наша руководящая команда объединяет дисциплину в рекрутинге, операционную точность и внимательную деловую коммуникацию на каждом этапе.",
+    teamValueOneTitle: "Фокус на соответствие",
+    teamValueOneCopy: "Понятные процессы найма, документации и обеспечения персоналом.",
+    teamValueTwoTitle: "Оперативный сервис",
+    teamValueTwoCopy: "Прямая коммуникация от запроса до мобилизации.",
+    teamValueThreeTitle: "Фокус на качество",
+    teamValueThreeCopy: "Шортлисты и кадровое планирование выстроены вокруг потребностей бизнеса.",
+    teamLinkedIn: "LinkedIn"
   }
 };
 
 /* ── Static Data ──────────────────────────────────────────── */
-const clientProfiles = [
-  { name: "Majid Al Futtaim",           logo: "assets/images/clients/Majid_Al_Futtaim_logo.svg.png",    sector: "Facilities Management", summary: "Facilities staffing, supervisory support, and operational workforce coordination for consistent site delivery." },
-  { name: "Taqa Distribution",          logo: "assets/images/clients/TAQA logo.png",                    sector: "Operations",            summary: "Volume recruitment, workforce continuity, and project staffing support for active operational teams." },
-  { name: "Siemens",                    logo: "assets/images/clients/Siemens-logo.svg.png",             sector: "Healthcare",            summary: "Screened support staff, onboarding coordination, and compliant documentation for healthcare environments." },
-  { name: "Atlas Industrial Supply",    logo: "assets/images/clients/client-atlas.jpg",                 sector: "Industrial",            summary: "Technical helpers, site teams, and manpower ramp-up planning for industrial requirements." },
-  { name: "Oasis Hospitality Network",  logo: "assets/images/clients/client-oasis.jpg",                 sector: "Hospitality",           summary: "Hospitality support, guest-service staffing, and seasonal workforce planning for service-led businesses." },
-  { name: "Prime Contracting LLC",      logo: "assets/images/clients/client-prime.jpg",                 sector: "Contracting",           summary: "Construction support manpower and project-based staffing aligned with site schedules and compliance needs." }
-];
-
-const teamMembers = [
-  { name: "Saleem Bakheet",  title: "Chief Executive Officer",  image: "assets/images/team/WhatsApp Image 2026-06-11 at 2.05.59 PM.jpeg", bio: "Leads strategic partnerships and client service standards with a focus on ethical recruitment, delivery discipline, and long-term trust.", linkedin: "#" },
-  { name: "Ravi Kumar",      title: "Head of Recruitment",      image: "assets/images/team/team-placeholder-2.jpg", bio: "Oversees sourcing, candidate assessment, and placement quality across multiple sectors and high-volume workforce programs.", linkedin: "#" },
-  { name: "Maya Perera",     title: "Operations Manager",       image: "assets/images/team/team-placeholder-3.jpg", bio: "Coordinates workforce mobilization, documentation workflows, and client communication to keep manpower delivery smooth and reliable.", linkedin: "#" },
-  { name: "Bishal Shrestha", title: "Client Relations Lead",    image: "assets/images/team/team-placeholder-4.jpg", bio: "Supports employers with responsive account management, service reviews, and practical staffing plans aligned with business needs.", linkedin: "#" }
-];
+const teamMembers = {
+  en: [
+    { name: "Saleem Bakheet",  title: "Chief Executive Officer",  image: "assets/images/team/WhatsApp Image 2026-06-11 at 2.05.59 PM.jpeg", bio: "Leads strategic partnerships and service standards with a focus on ethical recruitment, delivery discipline, and long-term trust.", linkedin: "#" },
+    { name: "Ravi Kumar",      title: "Head of Recruitment",      image: "assets/images/team/team-placeholder-2.jpg", bio: "Oversees sourcing, candidate assessment, and placement quality across multiple sectors and high-volume workforce programs.", linkedin: "#" },
+    { name: "Maya Perera",     title: "Operations Manager",       image: "assets/images/team/team-placeholder-3.jpg", bio: "Coordinates workforce mobilization, documentation workflows, and business communication to keep manpower delivery smooth and reliable.", linkedin: "#" },
+    { name: "Bishal Shrestha", title: "Business Relations Lead",  image: "assets/images/team/team-placeholder-4.jpg", bio: "Supports employers with responsive account management, service planning, and practical staffing plans aligned with business needs.", linkedin: "#" }
+  ],
+  ar: [
+    { name: "سليم بخيت",       title: "الرئيس التنفيذي",          image: "assets/images/team/WhatsApp Image 2026-06-11 at 2.05.59 PM.jpeg", bio: "يقود الشراكات الاستراتيجية ومعايير الخدمة مع تركيز واضح على التوظيف الأخلاقي والانضباط في التنفيذ وبناء الثقة طويلة الأمد.", linkedin: "#" },
+    { name: "رافي كومار",      title: "رئيس قسم التوظيف",         image: "assets/images/team/team-placeholder-2.jpg", bio: "يشرف على البحث عن الكفاءات وتقييم المرشحين وجودة التعيين عبر قطاعات متعددة وبرامج قوى عاملة كبيرة الحجم.", linkedin: "#" },
+    { name: "مايا بيريرا",     title: "مديرة العمليات",           image: "assets/images/team/team-placeholder-3.jpg", bio: "تنسق تعبئة القوى العاملة ومسارات الوثائق والتواصل المهني لضمان تنفيذ سلس وموثوق لخدمات القوى العاملة.", linkedin: "#" },
+    { name: "بيشال شريستا",    title: "مسؤول علاقات الأعمال",      image: "assets/images/team/team-placeholder-4.jpg", bio: "يدعم أصحاب العمل بإدارة حسابات سريعة الاستجابة وتخطيط خدمة عملي وحلول توظيف متوافقة مع احتياجات الأعمال.", linkedin: "#" }
+  ],
+  ru: [
+    { name: "Салим Бахит",     title: "Генеральный директор",      image: "assets/images/team/WhatsApp Image 2026-06-11 at 2.05.59 PM.jpeg", bio: "Руководит стратегическими партнёрствами и стандартами сервиса с акцентом на этичный рекрутмент, дисциплину исполнения и долгосрочное доверие.", linkedin: "#" },
+    { name: "Рави Кумар",      title: "Руководитель рекрутмента",  image: "assets/images/team/team-placeholder-2.jpg", bio: "Курирует поиск, оценку кандидатов и качество подбора в разных секторах и масштабных программах обеспечения персоналом.", linkedin: "#" },
+    { name: "Майя Перера",     title: "Операционный менеджер",     image: "assets/images/team/team-placeholder-3.jpg", bio: "Координирует мобилизацию персонала, документооборот и деловую коммуникацию, чтобы поставка персонала оставалась стабильной и надёжной.", linkedin: "#" },
+    { name: "Бишал Шрестха",   title: "Руководитель деловых отношений", image: "assets/images/team/team-placeholder-4.jpg", bio: "Поддерживает работодателей через оперативное ведение аккаунтов, планирование сервиса и практичные кадровые решения под задачи бизнеса.", linkedin: "#" }
+  ]
+};
 
 const clientRequestEmailTemplates = {
   en: {
-    subject: (company) => `Client Request / Offer - ${company || "Pure Talent"}`,
+    subject: (company) => `Business Request / Offer - ${company || "Pure Talent"}`,
     body: (data) => [
       "Dear Pure Talent Recruitment & Manpower Supply Team,",
       "",
@@ -481,70 +528,6 @@ function initLibraries() {
     });
   }
 
-  if (window.Swiper && document.querySelector(".client-slider")) {
-    new Swiper(".client-slider", {
-      slidesPerView: 1.15,
-      spaceBetween: 18,
-      loop: true,
-      autoplay: { delay: 2600, disableOnInteraction: false },
-      pagination: { el: ".client-slider .swiper-pagination", clickable: true },
-      breakpoints: {
-        640:  { slidesPerView: 2.2 },
-        900:  { slidesPerView: 3   },
-        1180: { slidesPerView: 4   }
-      }
-    });
-  }
-
-  if (window.Swiper && document.querySelector(".testimonial-slider")) {
-    new Swiper(".testimonial-slider", {
-      slidesPerView: 1,
-      spaceBetween: 18,
-      loop: true,
-      autoplay: { delay: 3200, disableOnInteraction: false },
-      pagination: { el: ".testimonial-slider .swiper-pagination", clickable: true },
-      breakpoints: {
-        780:  { slidesPerView: 2 },
-        1180: { slidesPerView: 3 }
-      }
-    });
-  }
-}
-
-/* ── Client cards ─────────────────────────────────────────── */
-function renderClients() {
-  const wrapper = document.querySelector("#clientSlides");
-  if (!wrapper) return;
-
-  wrapper.innerHTML = clientProfiles.map((client, index) => `
-    <div class="swiper-slide">
-      <article class="client-card" tabindex="0" role="button" data-client-index="${index}">
-        <img src="${client.logo}" alt="${client.name} logo" loading="lazy">
-        <p>${client.name}</p>
-      </article>
-    </div>
-  `).join("");
-
-  wrapper.addEventListener("click", (e) => {
-    const card = e.target.closest(".client-card");
-    if (card) openClientModal(Number(card.dataset.clientIndex));
-  });
-  wrapper.addEventListener("keydown", (e) => {
-    if (e.key !== "Enter") return;
-    const card = e.target.closest(".client-card");
-    if (card) openClientModal(Number(card.dataset.clientIndex));
-  });
-}
-
-function openClientModal(index) {
-  const client = clientProfiles[index];
-  if (!client || !window.bootstrap) return;
-  document.querySelector("#clientModalLabel").textContent  = client.name;
-  document.querySelector("#clientModalLogo").src           = client.logo;
-  document.querySelector("#clientModalLogo").alt           = `${client.name} logo`;
-  document.querySelector("#clientModalSector").textContent = client.sector;
-  document.querySelector("#clientModalSummary").textContent = client.summary;
-  bootstrap.Modal.getOrCreateInstance(document.querySelector("#clientModal")).show();
 }
 
 /* ── Animated counters ────────────────────────────────────── */
@@ -654,11 +637,14 @@ function openClientRequestModalFromChat(query) {
 }
 
 /* ── Team page render ─────────────────────────────────────── */
-function renderTeam() {
+function renderTeam(lang = currentLanguage()) {
   const target = document.querySelector("#teamList");
   if (!target) return;
 
-  target.innerHTML = teamMembers.map((member, index) => `
+  const dictionary = translations[lang] || translations.en;
+  const members = teamMembers[lang] || teamMembers.en;
+
+  target.innerHTML = members.map((member, index) => `
     <article class="team-row ${index % 2 ? "reversed" : ""}" data-aos="${index % 2 ? "fade-left" : "fade-right"}">
       <div class="team-photo">
         <img src="${member.image}" alt="${member.name}" loading="lazy">
@@ -669,7 +655,7 @@ function renderTeam() {
         <div class="team-title">${member.title}</div>
         <p>${member.bio}</p>
         <a class="linkedin-link" href="${member.linkedin}" aria-label="${member.name} LinkedIn profile">
-          <i data-lucide="external-link"></i> LinkedIn
+          <i data-lucide="external-link"></i> ${dictionary.teamLinkedIn || translations.en.teamLinkedIn}
         </a>
       </div>
     </article>
@@ -677,6 +663,10 @@ function renderTeam() {
 
   if (window.lucide) lucide.createIcons();
 }
+
+document.addEventListener("languagechange", (event) => {
+  renderTeam(event.detail?.lang || currentLanguage());
+});
 
 /* ── Chatbot ──────────────────────────────────────────────── */
 function initChatbot() {
@@ -754,7 +744,6 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("loading");
 
   /* Render dynamic content first */
-  renderClients();
   renderTeam();
 
   /* Apply saved (or default) language to the whole page */
