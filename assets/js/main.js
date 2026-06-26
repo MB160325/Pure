@@ -363,22 +363,158 @@ const translations = {
 /* ── Static Data ──────────────────────────────────────────── */
 const teamMembers = {
   en: [
-    { name: "Saleem Bakheet",  title: "Chief Executive Officer",  image: "assets/images/team/WhatsApp Image 2026-06-11 at 2.05.59 PM.jpeg", bio: "Leads strategic partnerships and service standards with a focus on ethical recruitment, delivery discipline, and long-term trust.", linkedin: "#" },
-    { name: "Ravi Kumar",      title: "Head of Recruitment",      image: "assets/images/team/team-placeholder-2.jpg", bio: "Oversees sourcing, candidate assessment, and placement quality across multiple sectors and high-volume workforce programs.", linkedin: "#" },
-    { name: "Maya Perera",     title: "Operations Manager",       image: "assets/images/team/team-placeholder-3.jpg", bio: "Coordinates workforce mobilization, documentation workflows, and business communication to keep manpower delivery smooth and reliable.", linkedin: "#" },
-    { name: "Bishal Shrestha", title: "Business Relations Lead",  image: "assets/images/team/team-placeholder-4.jpg", bio: "Supports employers with responsive account management, service planning, and practical staffing plans aligned with business needs.", linkedin: "#" }
+    {
+      name: "Salem Al Kathiri",
+      title: "Chief Executive Officer (CEO)",
+      image: "assets/images/team/WhatsApp Image 2026-06-11 at 2.05.59 PM.jpeg",
+      bio: "Leads the company's vision, strategic growth, and operational excellence while ensuring the highest standards of workforce solutions and client satisfaction.",
+    },
+    {
+      name: "Latifa Al Kathiri",
+      title: "General Manager",
+      image: "assets/images/team/team-placeholder-2.jpg",
+      bio: "Oversees daily business operations, corporate performance, and organizational development to achieve sustainable growth.",
+ 
+    },
+    {
+      name: "Ali Khatib",
+      title: "Operations Manager",
+      image: "assets/images/team/team-placeholder-3.jpg",
+      bio: "Manages workforce operations, mobilization, compliance, and service delivery to ensure efficient execution across all projects.",
+ 
+    },
+    {
+      name: "Sultan Al Kathiri",
+      title: "Public Relations Manager",
+      image: "assets/images/team/team-placeholder-4.jpg",
+      bio: "Builds strong relationships with government entities, partners, and stakeholders while strengthening the company's public image.",
+ 
+    },
+    {
+      name: "Sophia Anderson",
+      title: "HR Manager",
+      image: "ChatGPT Image Jun 26, 2026, 09_32_42 AM.png",
+      bio: "Leads recruitment strategies, employee relations, performance management, and talent development across the organization.",
+ 
+    },
+    {
+      name: "Emma Wilson",
+      title: "Business Development Manager",
+      image: "ChatGPT Image Jun 26, 2026, 09_33_42 AM.png",
+      bio: "Develops new business opportunities, strengthens client partnerships, and drives long-term commercial growth.",
+ 
+    },
+    {
+      name: "Olivia Carter",
+      title: "Talent Acquisition Specialist",
+      image: "ChatGPT Image Jun 26, 2026, 11_54_05 AM.png",
+      bio: "Identifies, attracts, and recruits qualified professionals while ensuring an exceptional candidate experience.",
+ 
+    }
   ],
+
   ar: [
-    { name: "سليم بخيت",       title: "الرئيس التنفيذي",          image: "assets/images/team/WhatsApp Image 2026-06-11 at 2.05.59 PM.jpeg", bio: "يقود الشراكات الاستراتيجية ومعايير الخدمة مع تركيز واضح على التوظيف الأخلاقي والانضباط في التنفيذ وبناء الثقة طويلة الأمد.", linkedin: "#" },
-    { name: "رافي كومار",      title: "رئيس قسم التوظيف",         image: "assets/images/team/team-placeholder-2.jpg", bio: "يشرف على البحث عن الكفاءات وتقييم المرشحين وجودة التعيين عبر قطاعات متعددة وبرامج قوى عاملة كبيرة الحجم.", linkedin: "#" },
-    { name: "مايا بيريرا",     title: "مديرة العمليات",           image: "assets/images/team/team-placeholder-3.jpg", bio: "تنسق تعبئة القوى العاملة ومسارات الوثائق والتواصل المهني لضمان تنفيذ سلس وموثوق لخدمات القوى العاملة.", linkedin: "#" },
-    { name: "بيشال شريستا",    title: "مسؤول علاقات الأعمال",      image: "assets/images/team/team-placeholder-4.jpg", bio: "يدعم أصحاب العمل بإدارة حسابات سريعة الاستجابة وتخطيط خدمة عملي وحلول توظيف متوافقة مع احتياجات الأعمال.", linkedin: "#" }
+    {
+      name: "سالم الكثيري",
+      title: "الرئيس التنفيذي",
+      image: "assets/images/team/WhatsApp Image 2026-06-11 at 2.05.59 PM.jpeg",
+      bio: "يقود رؤية الشركة وخططها الاستراتيجية ويشرف على تطوير الأعمال وضمان أعلى معايير الجودة في تقديم حلول الموارد البشرية.",
+ 
+    },
+    {
+      name: "لطيفة الكثيري",
+      title: "المدير العام",
+      image: "assets/images/team/team-placeholder-2.jpg",
+      bio: "تشرف على العمليات اليومية للشركة وتطوير الأداء المؤسسي وتحقيق أهداف النمو والاستدامة.",
+ 
+    },
+    {
+      name: "علي خطيب",
+      title: "مدير العمليات",
+      image: "assets/images/team/team-placeholder-3.jpg",
+      bio: "يشرف على تشغيل القوى العاملة وإدارة العمليات اليومية وضمان تنفيذ الخدمات بكفاءة وجودة عالية.",
+ 
+    },
+    {
+      name: "سلطان الكثيري",
+      title: "مدير العلاقات العامة",
+      image: "assets/images/team/team-placeholder-4.jpg",
+      bio: "يعزز العلاقات مع الجهات الحكومية والعملاء والشركاء ويساهم في بناء الصورة المؤسسية للشركة.",
+ 
+    },
+    {
+      name: "صوفيا أندرسون",
+      title: "مدير الموارد البشرية",
+      image: "ChatGPT Image Jun 26, 2026, 09_32_42 AM.png",
+      bio: "تقود عمليات التوظيف وإدارة الموظفين وتطوير الكفاءات وتحسين بيئة العمل.",
+ 
+    },
+    {
+      name: "إيما ويلسون",
+      title: "مدير تطوير الأعمال",
+      image: "ChatGPT Image Jun 26, 2026, 09_33_42 AM.png",
+      bio: "تعمل على توسيع قاعدة العملاء وبناء شراكات استراتيجية وتعزيز نمو الشركة.",
+ 
+    },
+    {
+      name: "أوليفيا كارتر",
+      title: "أخصائي استقطاب المواهب",
+      image: "ChatGPT Image Jun 26, 2026, 11_54_05 AM.png",
+      bio: "تتولى استقطاب أفضل الكفاءات وإدارة عمليات التوظيف بما يتوافق مع احتياجات الشركة والعملاء.",
+ 
+    }
   ],
+
   ru: [
-    { name: "Салим Бахит",     title: "Генеральный директор",      image: "assets/images/team/WhatsApp Image 2026-06-11 at 2.05.59 PM.jpeg", bio: "Руководит стратегическими партнёрствами и стандартами сервиса с акцентом на этичный рекрутмент, дисциплину исполнения и долгосрочное доверие.", linkedin: "#" },
-    { name: "Рави Кумар",      title: "Руководитель рекрутмента",  image: "assets/images/team/team-placeholder-2.jpg", bio: "Курирует поиск, оценку кандидатов и качество подбора в разных секторах и масштабных программах обеспечения персоналом.", linkedin: "#" },
-    { name: "Майя Перера",     title: "Операционный менеджер",     image: "assets/images/team/team-placeholder-3.jpg", bio: "Координирует мобилизацию персонала, документооборот и деловую коммуникацию, чтобы поставка персонала оставалась стабильной и надёжной.", linkedin: "#" },
-    { name: "Бишал Шрестха",   title: "Руководитель деловых отношений", image: "assets/images/team/team-placeholder-4.jpg", bio: "Поддерживает работодателей через оперативное ведение аккаунтов, планирование сервиса и практичные кадровые решения под задачи бизнеса.", linkedin: "#" }
+    {
+      name: "Салем Аль Катири",
+      title: "Генеральный директор (CEO)",
+      image: "assets/images/team/WhatsApp Image 2026-06-11 at 2.05.59 PM.jpeg",
+      bio: "Определяет стратегию развития компании и обеспечивает высокие стандарты качества услуг по подбору персонала.",
+ 
+    },
+    {
+      name: "Латифа Аль Катири",
+      title: "Генеральный менеджер",
+      image: "assets/images/team/team-placeholder-2.jpg",
+      bio: "Руководит ежедневной деятельностью компании, контролирует эффективность и устойчивое развитие бизнеса.",
+ 
+    },
+    {
+      name: "Али Хатиб",
+      title: "Операционный менеджер",
+      image: "assets/images/team/team-placeholder-3.jpg",
+      bio: "Управляет операционной деятельностью, мобилизацией персонала и качеством предоставления услуг.",
+ 
+    },
+    {
+      name: "Султан Аль Катири",
+      title: "Менеджер по связям с общественностью",
+      image: "assets/images/team/team-placeholder-4.jpg",
+      bio: "Развивает отношения с государственными органами, партнёрами и укрепляет корпоративный имидж компании.",
+ 
+    },
+    {
+      name: "София Андерсон",
+      title: "HR-менеджер",
+      image: "ChatGPT Image Jun 26, 2026, 09_32_42 AM.png",
+      bio: "Отвечает за подбор персонала, развитие сотрудников и управление кадровой политикой компании.",
+ 
+    },
+    {
+      name: "Эмма Уилсон",
+      title: "Менеджер по развитию бизнеса",
+      image: "ChatGPT Image Jun 26, 2026, 09_33_42 AM.png",
+      bio: "Развивает новые направления бизнеса, привлекает клиентов и укрепляет коммерческие партнёрства.",
+ 
+    },
+    {
+      name: "Оливия Картер",
+      title: "Специалист по подбору талантов",
+      image: "ChatGPT Image Jun 26, 2026, 11_54_05 AM.png",
+      bio: "Занимается поиском, оценкой и привлечением высококвалифицированных специалистов.",
+ 
+    }
   ]
 };
 
@@ -654,9 +790,6 @@ function renderTeam(lang = currentLanguage()) {
         <h2>${member.name}</h2>
         <div class="team-title">${member.title}</div>
         <p>${member.bio}</p>
-        <a class="linkedin-link" href="${member.linkedin}" aria-label="${member.name} LinkedIn profile">
-          <i data-lucide="external-link"></i> ${dictionary.teamLinkedIn || translations.en.teamLinkedIn}
-        </a>
       </div>
     </article>
   `).join("");
