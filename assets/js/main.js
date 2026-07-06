@@ -364,13 +364,13 @@ const translations = {
 const teamMembers = {
   en: [
     {
-      name: "Salem Al Kathiri",
+      name: "Salem Al Katheeri ",
       title: "Chief Executive Officer (CEO)",
       image: "assets/images/team/WhatsApp Image 2026-06-11 at 2.05.59 PM.jpeg",
       bio: "Leads the company's vision, strategic growth, and operational excellence while ensuring the highest standards of workforce solutions and client satisfaction.",
     },
     {
-      name: "Latifa Al Kathiri",
+      name: "Latifa Al Katheeri",
       title: "General Manager",
       image: "assets/images/team/team-placeholder-2.jpg",
       bio: "Oversees daily business operations, corporate performance, and organizational development to achieve sustainable growth.",
@@ -384,7 +384,7 @@ const teamMembers = {
  
     },
     {
-      name: "Sultan Al Kathiri",
+      name: "Sultan Saeed",
       title: "Public Relations Manager",
       image: "assets/images/team/team-placeholder-4.jpg",
       bio: "Builds strong relationships with government entities, partners, and stakeholders while strengthening the company's public image.",
@@ -400,14 +400,14 @@ const teamMembers = {
     {
       name: "Emma Wilson",
       title: "Business Development Manager",
-      image: "ChatGPT Image Jun 26, 2026, 09_33_42 AM.png",
+      image: "New folder/ChatGPT Image Jul 2, 2026, 11_25_59 AM.png",
       bio: "Develops new business opportunities, strengthens client partnerships, and drives long-term commercial growth.",
  
     },
     {
       name: "Olivia Carter",
       title: "Talent Acquisition Specialist",
-      image: "ChatGPT Image Jun 26, 2026, 11_54_05 AM.png",
+      image: "New folder/ChatGPT Image Jul 2, 2026, 11_46_16 AM.png",
       bio: "Identifies, attracts, and recruits qualified professionals while ensuring an exceptional candidate experience.",
  
     }
@@ -436,7 +436,7 @@ const teamMembers = {
  
     },
     {
-      name: "سلطان الكثيري",
+      name: "سلطان سعيد",
       title: "مدير العلاقات العامة",
       image: "assets/images/team/team-placeholder-4.jpg",
       bio: "يعزز العلاقات مع الجهات الحكومية والعملاء والشركاء ويساهم في بناء الصورة المؤسسية للشركة.",
@@ -445,14 +445,14 @@ const teamMembers = {
     {
       name: "صوفيا أندرسون",
       title: "مدير الموارد البشرية",
-      image: "ChatGPT Image Jun 26, 2026, 09_32_42 AM.png",
+      image: "New folder/ChatGPT Image Jul 2, 2026, 11_25_59 AM.png",
       bio: "تقود عمليات التوظيف وإدارة الموظفين وتطوير الكفاءات وتحسين بيئة العمل.",
  
     },
     {
       name: "إيما ويلسون",
       title: "مدير تطوير الأعمال",
-      image: "ChatGPT Image Jun 26, 2026, 09_33_42 AM.png",
+      image: "New folder/ChatGPT Image Jul 2, 2026, 11_25_59 AM.png",
       bio: "تعمل على توسيع قاعدة العملاء وبناء شراكات استراتيجية وتعزيز نمو الشركة.",
  
     },
@@ -467,14 +467,14 @@ const teamMembers = {
 
   ru: [
     {
-      name: "Салем Аль Катири",
+      name: "Салем Аль-Катхири",
       title: "Генеральный директор (CEO)",
       image: "assets/images/team/WhatsApp Image 2026-06-11 at 2.05.59 PM.jpeg",
       bio: "Определяет стратегию развития компании и обеспечивает высокие стандарты качества услуг по подбору персонала.",
  
     },
     {
-      name: "Латифа Аль Катири",
+      name: "Латифа Аль-Катхири",
       title: "Генеральный менеджер",
       image: "assets/images/team/team-placeholder-2.jpg",
       bio: "Руководит ежедневной деятельностью компании, контролирует эффективность и устойчивое развитие бизнеса.",
@@ -488,7 +488,7 @@ const teamMembers = {
  
     },
     {
-      name: "Султан Аль Катири",
+      name: "Султан Саид",
       title: "Менеджер по связям с общественностью",
       image: "assets/images/team/team-placeholder-4.jpg",
       bio: "Развивает отношения с государственными органами, партнёрами и укрепляет корпоративный имидж компании.",
@@ -497,7 +497,7 @@ const teamMembers = {
     {
       name: "София Андерсон",
       title: "HR-менеджер",
-      image: "ChatGPT Image Jun 26, 2026, 09_32_42 AM.png",
+      image: "New folder/ChatGPT Image Jul 2, 2026, 11_25_59 AM.png",
       bio: "Отвечает за подбор персонала, развитие сотрудников и управление кадровой политикой компании.",
  
     },
@@ -511,7 +511,7 @@ const teamMembers = {
     {
       name: "Оливия Картер",
       title: "Специалист по подбору талантов",
-      image: "ChatGPT Image Jun 26, 2026, 11_54_05 AM.png",
+      image: "New folder/ChatGPT Image Jul 2, 2026, 11_46_16 AM.png",
       bio: "Занимается поиском, оценкой и привлечением высококвалифицированных специалистов.",
  
     }
