@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 120" role="img" aria-labelledby="title desc">
+  <title id="title">Pure Talent Recruitment &amp; Manpower Supply</title>
+  <desc id="desc">Premium wordmark with a monogram icon.</desc>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f7d9a2"/>
+      <stop offset="0.45" stop-color="#b8783c"/>
+      <stop offset="1" stop-color="#4a2b1a"/>
+    </linearGradient>
+  </defs>
+  <rect width="420" height="120" rx="18" fill="#21140f"/>
+  <circle cx="60" cy="60" r="38" fill="url(#g)"/>
+  <path d="M44 83V37h21.5c10.1 0 17 6.2 17 15.4 0 9.5-7 15.6-17.2 15.6H55.7v15H44Zm11.7-24.9h8.2c4.6 0 7.2-2.1 7.2-5.7 0-3.5-2.6-5.6-7.2-5.6h-8.2v11.3Z" fill="#21140f"/>
+  <text x="116" y="52" fill="#fff8ee" font-family="Georgia, 'Times New Roman', serif" font-size="30" font-weight="700">Pure Talent</text>
+  <text x="118" y="78" fill="#d9b47e" font-family="Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1.6">RECRUITMENT &amp; MANPOWER SUPPLY</text>
+</svg>

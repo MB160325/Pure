@@ -1,0 +1,70 @@
+# Pure Talent — إعداد لوحة التحكم / Dashboard setup
+
+قاعدة البيانات (الجداول، الصلاحيات RLS، مخازن الملفات) **جاهزة ومُطبَّقة بالفعل** على مشروع Supabase الخاص بك.
+المتبقي 4 خطوات فقط.
+The database (tables, RLS policies, storage buckets) is **already live** in your Supabase project. Four steps remain.
+
+---
+
+## 1) أنشئ حساب المشرف / Create your admin account
+
+1. Supabase → **Authentication → Users → Add user → Create new user**.
+2. أدخل بريدك وكلمة مرور قوية (8+ أحرف)، وفعّل **Auto Confirm User**.
+3. افتح **SQL Editor** ونفّذ (غيّر البريد):
+
+```sql
+insert into public.admins (user_id)
+select id from auth.users where email = 'YOUR_EMAIL_HERE';
+```
+
+لإضافة مشرف آخر لاحقًا كرّر الخطوتين. لإزالة مشرف: `delete from public.admins where user_id = '<id>';`
+
+## 2) أغلق التسجيل العام / Disable public sign-ups
+
+Supabase → **Authentication → Sign In / Providers → Email** → عطّل **Allow new users to sign up**.
+(حتى لو سجّل شخص ما، فلن يصبح مشرفًا لأن الصلاحية من جدول `admins` فقط — لكن الإغلاق أنظف.)
+
+## 3) روابط إعادة تعيين كلمة المرور / Redirect URLs
+
+Supabase → **Authentication → URL Configuration**
+- **Site URL**: `https://YOUR-DOMAIN/`
+- **Redirect URLs**: أضف `https://YOUR-DOMAIN/admin/` (و`http://localhost:8000/admin/` للتجربة المحلية).
+
+## 4) ارفع الموقع / Deploy
+
+الموقع ثابت (HTML/CSS/JS) بلا خطوة بناء. ارفع **المجلد كله** إلى أي استضافة ثابتة (Cloudflare Pages، Netlify، Vercel، GitHub Pages، أو استضافتك الحالية).
+- الموقع: `https://YOUR-DOMAIN/`
+- الداشبورد: `https://YOUR-DOMAIN/admin/`
+- أضف رابطًا خفيًا للداشبورد فقط لنفسك؛ الصفحة غير مفهرسة (`noindex`).
+
+> **الصور والشعار**: مضمَّنة في `assets/images/` (الشعار الملوّن والأبيض، الأيقونة، الصور، وصور الفريق بعد ضغطها). لتغيير صورة عضو فريق عدّل المسار في `assets/js/data.js`؛ ومن لا صورة له تظهر له الأحرف الأولى.
+> **الدخول للوحة التحكم**: زر **Staff login** في أعلى الموقع (وفي قائمة الجوال وأسفل الصفحة)، أو مباشرة `https://YOUR-DOMAIN/admin/index.html`.
+
+---
+
+## كيف تنشر خبرًا / Publishing a news post
+
+1. افتح `/admin/` ← **News** ← **New post**.
+2. اكتب العنوان والملخص والنص بالإنجليزية و/أو العربية و/أو الروسية (لغة واحدة تكفي؛ تظهر اللغات الأخرى بالبديل).
+3. اختر التصنيف، وارفع صورة غلاف (تُصغَّر تلقائيًا)، ثم **Publish**.
+4. يظهر الخبر فورًا لكل الزوار في الصفحة الرئيسية وصفحة News.
+- **جدولة**: ضع تاريخًا مستقبليًا في *Publish date*؛ لن يظهر للزوار حتى يحين وقته.
+- **مسودة**: *Save draft* لا يظهر للزوار.
+- **صياغة النص**: سطر فارغ = فقرة · `## عنوان` · `- نقطة` · `**غامق**` · `[نص](https://رابط)` · `![وصف](https://رابط-صورة)`
+
+## طلبات التوظيف والطلبات التجارية / Inboxes
+
+- تصل النماذج من الموقع إلى **Applications** و**Business requests** (لا يراها غير المشرفين).
+- افتح أي طلب لتغيير الحالة، إضافة ملاحظات داخلية، أو فتح السيرة الذاتية (رابط مؤقت 90 ثانية).
+- **Export CSV** لتصدير القائمة المفلترة (محمي من حقن المعادلات في Excel).
+
+## الأمان / Security notes
+
+- مفتاح `anon` في `assets/js/config.js` **مفتاح عام بطبيعته**؛ الحماية الحقيقية من RLS. لا تضع مفتاح `service_role` في أي ملف.
+- الزائر يستطيع فقط: قراءة الأخبار المنشورة، وإرسال طلب/استفسار. لا يستطيع قراءة أي طلب.
+- السير الذاتية في مخزن خاص `cvs`، والصور في مخزن عام `news-media`.
+- النماذج تحتوي على حقل فخ (honeypot) وحدّ زمني، وقيود طول/صيغة في قاعدة البيانات نفسها.
+
+## تحديث نص سياسة الخصوصية / Privacy policy
+
+القسم 3 في `privacy-policy.html` يذكر أن السير الذاتية تُرسل بالبريد. بعد هذا التحديث تُخزَّن السير الذاتية في الموقع (Supabase)، فيُنصح بتعديل النص ليذكر ذلك (راجع مستشارك القانوني). لم أغيّر النص القانوني.
