@@ -174,14 +174,18 @@
       "</div></footer>";
 
     var chat =
-      '<button type="button" id="chatToggle" class="chat-toggle" aria-expanded="false" aria-controls="chatWindow" data-i18n-aria="chatOpen"><span class="ico" data-icon="message-circle"></span></button>' +
-      '<aside id="chatWindow" class="chat-window" aria-labelledby="chatTitle" hidden>' +
-      '<div class="chat-head"><div><strong id="chatTitle" data-i18n="chatbotTitle"></strong><small data-i18n="chatbotSub"></small></div>' +
-      '<button type="button" id="chatClose" class="icon-btn icon-btn-light" data-i18n-aria="chatClose"><span class="ico" data-icon="x"></span></button></div>' +
-      '<div id="chatBody" class="chat-body" role="log" aria-live="polite"></div>' +
-      '<form id="chatForm" class="chat-form"><label class="sr-only" for="chatInput" data-i18n="chatbotTitle"></label>' +
-      '<input id="chatInput" type="text" autocomplete="off" data-i18n-placeholder="chatPlaceholder">' +
-      '<button type="submit" class="chat-send" data-i18n-aria="chatSend"><span class="ico" data-icon="send"></span></button></form></aside>';
+      '<button type="button" id="chatToggle" class="chat-toggle" aria-expanded="false" aria-controls="chatWindow" data-i18n-aria="chatOpen">' +
+      '<span class="chat-toggle-icon"><span class="ico" data-icon="message-circle"></span></span><span class="chat-toggle-label" data-i18n="chatLauncher"></span><i class="chat-toggle-dot" aria-hidden="true"></i></button>' +
+      '<section id="chatWindow" class="chat-window" role="dialog" aria-labelledby="chatTitle" hidden>' +
+      '<header class="chat-head"><span class="chat-avatar" aria-hidden="true"><img src="' + (C.favicon || "assets/images/favicon.png") + '" alt=""></span>' +
+      '<div class="chat-id"><strong id="chatTitle" data-i18n="chatbotTitle"></strong><small><i class="chat-online" aria-hidden="true"></i><span data-i18n="chatbotSub"></span></small></div>' +
+      '<button type="button" id="chatClose" class="icon-btn icon-btn-light" data-i18n-aria="chatClose"><span class="ico" data-icon="x"></span></button></header>' +
+      '<div id="chatBody" class="chat-body" role="log" aria-live="polite" aria-relevant="additions"></div>' +
+      '<div id="chatChips" class="chat-chips" role="group" data-i18n-aria="chatSuggestions"></div>' +
+      '<form id="chatForm" class="chat-form" autocomplete="off"><label class="sr-only" for="chatInput" data-i18n="chatbotTitle"></label>' +
+      '<input id="chatInput" type="text" maxlength="300" enterkeyhint="send" autocomplete="off" autocapitalize="sentences" data-i18n-placeholder="chatPlaceholder">' +
+      '<button type="submit" class="chat-send" data-i18n-aria="chatSend" disabled><span class="ico flip-rtl" data-icon="send"></span></button></form>' +
+      '<p class="chat-foot" data-i18n="chatFootnote"></p></section>';
 
     var dialog =
       '<dialog id="bizDialog" class="dialog" aria-labelledby="bizTitle"><div class="dialog-inner">' +
@@ -405,103 +409,6 @@
     });
   }
 
-  /* ---------- chatbot ---------- */
-  function normalize(s) {
-    return String(s || "").toLowerCase()
-      .replace(/[ً-ٰٟـ]/g, "")
-      .replace(/[أإآٱ]/g, "ا").replace(/ى/g, "ي").replace(/ة/g, "ه").replace(/ё/g, "е");
-  }
-  function tokens(s) { return (s.match(/[\p{L}\p{N}]+/gu) || []); }
-  function stemEq(a, b) { return a.length >= 5 && b.length >= 5 && a.slice(0, -2) === b.slice(0, -2); }
-
-  var VISA_TERMS = ["visa", "work permit", "فيزا", "تاشيره", "تاشيرات", "تاشيرة", "виза", "визы", "виз", "разрешение на работу"];
-  var TYPE_TERMS = ["type", "types", "kind", "category", "نوع", "انواع", "типы", "тип", "вид", "виды", "категори"];
-
-  function initChatbot() {
-    var toggle = document.getElementById("chatToggle");
-    var win = document.getElementById("chatWindow");
-    var body = document.getElementById("chatBody");
-    var form = document.getElementById("chatForm");
-    var input = document.getElementById("chatInput");
-    var close = document.getElementById("chatClose");
-    var data = window.PT_CHATBOT_DATA;
-    if (!toggle || !win || !body || !form || !input || !data) return;
-
-    var prepared = data.entries.map(function (en) {
-      return { entry: en, kws: en.keywords.map(normalize).filter(function (k) { return k.length >= 2; }) };
-    });
-
-    function add(text, who, links) {
-      var node = PT.h("div", { class: "chat-message " + (who === "user" ? "user" : "bot") }, [PT.h("span", { text: text })]);
-      (links || []).forEach(function (l) { node.appendChild(PT.h("a", { class: "chat-link", href: l.href }, [l.label])); });
-      body.appendChild(node);
-      body.scrollTop = body.scrollHeight;
-    }
-    function welcome() { body.innerHTML = ""; add(data.welcome[current] || data.welcome.en, "bot"); }
-
-    function match(query) {
-      var q = normalize(query);
-      var toks = tokens(q);
-      var best = null, bestScore = 0;
-      prepared.forEach(function (p) {
-        var score = 0;
-        p.kws.forEach(function (kw) {
-          var multi = kw.indexOf(" ") > -1;
-          if (!multi && kw.length <= 3) { if (toks.indexOf(kw) > -1) score += 3; return; }
-          if (q.indexOf(kw) > -1) { score += kw.length; return; }
-          if (!multi && toks.some(function (t) { return stemEq(t, kw); })) score += kw.length - 2;
-        });
-        if (score > bestScore) { bestScore = score; best = p.entry; }
-      });
-      return best;
-    }
-
-    function reply(query) {
-      var q = normalize(query);
-      if (VISA_TERMS.some(function (v) { return q.indexOf(v) > -1; }) && TYPE_TERMS.some(function (v) { return q.indexOf(v) > -1; })) {
-        PT.openBusiness(query);
-        add(PT.t("visaRequestPrompt"), "bot");
-        return;
-      }
-      var entry = match(query);
-      if (!entry) { add(data.noResult[current] || data.noResult.en, "bot"); return; }
-      var links = entry.link ? [{ href: entry.link.href, label: entry.link.label[current] || entry.link.label.en }] : [];
-      var text = entry.answers[current] || entry.answers.en;
-
-      if (entry.id === "news" && PT.news && PT.news.latest) {
-        PT.news.latest(3).then(function (rows) {
-          if (rows && rows.length) {
-            text += " " + PT.t("chatLatestNews");
-            links = rows.map(function (r) { return { href: "article.html?slug=" + encodeURIComponent(r.slug), label: PT.pick(r.title) }; }).concat(links);
-          }
-          add(text, "bot", links);
-        }, function () { add(text, "bot", links); });
-        return;
-      }
-      add(text, "bot", links);
-    }
-
-    function setOpen(open) {
-      win.hidden = !open;
-      toggle.setAttribute("aria-expanded", String(open));
-      toggle.setAttribute("aria-label", PT.t(open ? "chatClose" : "chatOpen"));
-      if (open) { if (!body.children.length) welcome(); setTimeout(function () { input.focus(); }, 30); }
-    }
-    toggle.addEventListener("click", function () { setOpen(win.hidden); });
-    close.addEventListener("click", function () { setOpen(false); toggle.focus(); });
-    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !win.hidden) { setOpen(false); toggle.focus(); } });
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var q = input.value.trim();
-      if (!q) return;
-      add(q, "user");
-      input.value = "";
-      setTimeout(function () { reply(q); }, 160);
-    });
-    PT.onLang(function () { if (body.children.length) welcome(); });
-  }
-
   /* ---------- boot ---------- */
   function boot() {
     document.documentElement.classList.add("js");
@@ -509,7 +416,6 @@
     initHeader();
     initBusinessDialog();
     initApplicationForm();
-    initChatbot();
     PT.applyLang(current);
     PT.paintIcons(document);
     initCounters();

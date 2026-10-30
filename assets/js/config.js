@@ -10,5 +10,6 @@ window.PT_CONFIG = {
   phoneHref: "+97126660935",
   newsPageSize: 9,
   logo: "assets/images/logo-white.png",
+  favicon: "assets/images/favicon.png",
   logoDark: "assets/images/logo.png"
 };

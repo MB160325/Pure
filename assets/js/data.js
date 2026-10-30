@@ -89,6 +89,8 @@ window.PT_CHATBOT_DATA = {
   entries: [
     {
       id: "company",
+      label: { en: "About the company", ar: "عن الشركة", ru: "О компании" },
+      suggest: false,
       keywords: [
         "company", "about us", "about pure talent", "pure talent", "who are you", "what do you do", "company profile",
         "overview", "who we are", "recruitment agency", "manpower agency", "staffing agency", "hr company", "employment agency",
@@ -104,6 +106,8 @@ window.PT_CHATBOT_DATA = {
     },
     {
       id: "services",
+      label: { en: "Services", ar: "الخدمات", ru: "Услуги" },
+      suggest: true,
       keywords: [
         "service", "services", "what services", "what do you offer", "your services", "staffing", "outsourcing", "placement",
         "permanent recruitment", "contract staffing", "temporary staffing", "executive search", "headhunting", "onboarding",
@@ -120,6 +124,8 @@ window.PT_CHATBOT_DATA = {
     },
     {
       id: "careers",
+      label: { en: "Apply for a job", ar: "التقديم على وظيفة", ru: "Подать заявку" },
+      suggest: true,
       keywords: [
         "career", "careers", "job", "jobs", "apply", "how to apply", "submit cv", "submit resume", "send cv", "send resume",
         "vacancy", "vacancies", "open positions", "job openings", "application", "hiring", "are you hiring", "join your team",
@@ -136,6 +142,8 @@ window.PT_CHATBOT_DATA = {
     },
     {
       id: "news",
+      label: { en: "Latest news", ar: "آخر الأخبار", ru: "Новости" },
+      suggest: true,
       keywords: [
         "news", "latest news", "announcement", "announcements", "updates", "press", "blog",
         "أخبار", "الأخبار", "اخبار", "آخر الأخبار", "مستجدات", "إعلانات",
@@ -150,6 +158,8 @@ window.PT_CHATBOT_DATA = {
     },
     {
       id: "contact",
+      label: { en: "Contact us", ar: "تواصل معنا", ru: "Контакты" },
+      suggest: true,
       keywords: [
         "contact", "contact us", "phone", "phone number", "telephone", "call", "email", "email address", "location", "address",
         "where are you located", "where is your office", "map", "directions", "office address", "opening hours", "working hours",

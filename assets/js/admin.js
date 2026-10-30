@@ -51,6 +51,24 @@
       en_new: "New", en_replied: "Replied", en_closed: "Closed",
       delAppTitle: "Delete this application?", delAppCopy: "The application from {name} and the attached CV will be removed permanently.",
       delEnqTitle: "Delete this request?", delEnqCopy: "The request from {name} will be removed permanently.",
+      botTitle: "Chatbot", botSub: "The answers the website assistant gives. Changes go live for every visitor within a few minutes.",
+      botAnswers: "Answers", botUnanswered: "Unanswered questions", botNew: "New answer", botEmpty: "No answers yet. Add the first one.",
+      botTopic: "Topic", botAnswerCol: "Answer", botOrder: "Order", botActive: "Active", botOff: "Hidden", botEnable: "Turn on", botDisable: "Hide from chatbot",
+      botDelTitle: "Delete this answer?", botDelCopy: "“{name}” will be removed permanently.",
+      botBack: "Back to chatbot", botEdNew: "New answer", botEdEdit: "Edit answer",
+      botLabel: "Button text", botLabelHelp: "Short question shown as a suggestion chip, e.g. “How do I apply?”",
+      botAnswerField: "Answer", botKeywords: "Keywords", botKeywordsHelp: "Words or phrases people may type. One per line (or separated by commas). The more variations, the better the match.",
+      botLinkLabel: "Link button text", botPreview: "How it looks in the chat",
+      botTopicHelp: "Internal name, only you see it.", botAction: "Special action", botActionHelp: "Optional. Adds something extra to the answer.",
+      botAct_none: "None", botAct_latest_news: "Show the latest news", botAct_open_business: "Offer the business request form",
+      botLink: "Link", botLinkHelp: "Optional. A page on this site (index.html#careers), https://, tel: or mailto:.",
+      botOrderHelp: "Lower numbers come first among suggestions.", botSuggest: "Show as a suggestion chip", botActiveLabel: "Active (the chatbot can use this answer)",
+      botNeedTopic: "Give the answer a topic name (at least 2 characters).", botNeedAnswer: "Write the answer in at least one language.",
+      botBadLink: "The link must start with https://, mailto:, tel: or be a page on this site.", botNeedLabel: "A suggestion chip needs button text in at least one language.",
+      botNeedKeywords: "Add at least one keyword so the chatbot can find this answer.",
+      botUnSub: "Questions visitors asked that the chatbot could not answer. Turn the useful ones into answers. Contact details are never stored.",
+      botQuestion: "Question", botMakeAnswer: "Create answer", botMarkHandled: "Mark as handled", botReopen: "Reopen", botOpen: "Open", botHandled: "Handled",
+      botUnEmpty: "No unanswered questions. The chatbot is keeping up.", navBot: "Chatbot",
       cvFail: "Could not open the CV. {msg}", total: "{n} total"
     },
     ar: {
@@ -91,6 +109,24 @@
       en_new: "جديد", en_replied: "تم الرد", en_closed: "مغلق",
       delAppTitle: "حذف هذا الطلب؟", delAppCopy: "سيتم حذف طلب {name} والسيرة الذاتية المرفقة نهائيًا.",
       delEnqTitle: "حذف هذا الطلب؟", delEnqCopy: "سيتم حذف طلب {name} نهائيًا.",
+      botTitle: "الشات بوت", botSub: "الإجابات التي يقدّمها مساعد الموقع. تظهر التعديلات لجميع الزوار خلال دقائق.",
+      botAnswers: "الإجابات", botUnanswered: "أسئلة بلا إجابة", botNew: "إجابة جديدة", botEmpty: "لا توجد إجابات بعد. أضف أول إجابة.",
+      botTopic: "الموضوع", botAnswerCol: "الإجابة", botOrder: "الترتيب", botActive: "مفعّلة", botOff: "مخفية", botEnable: "تفعيل", botDisable: "إخفاء من الشات بوت",
+      botDelTitle: "حذف هذه الإجابة؟", botDelCopy: "سيتم حذف «{name}» نهائيًا.",
+      botBack: "العودة إلى الشات بوت", botEdNew: "إجابة جديدة", botEdEdit: "تعديل الإجابة",
+      botLabel: "نص الزر", botLabelHelp: "سؤال قصير يظهر كزر اقتراح، مثل «كيف أتقدم لوظيفة؟»",
+      botAnswerField: "الإجابة", botKeywords: "الكلمات المفتاحية", botKeywordsHelp: "كلمات أو عبارات قد يكتبها الزائر. واحدة في كل سطر (أو مفصولة بفواصل). كلما زادت الصيغ كانت المطابقة أفضل.",
+      botLinkLabel: "نص زر الرابط", botPreview: "شكلها داخل الشات",
+      botTopicHelp: "اسم داخلي تراه أنت فقط.", botAction: "إجراء خاص", botActionHelp: "اختياري. يضيف شيئًا إضافيًا إلى الإجابة.",
+      botAct_none: "بدون", botAct_latest_news: "عرض آخر الأخبار", botAct_open_business: "عرض نموذج الطلب التجاري",
+      botLink: "الرابط", botLinkHelp: "اختياري. صفحة من هذا الموقع (index.html#careers) أو https:// أو tel: أو mailto:.",
+      botOrderHelp: "الأرقام الأصغر تظهر أولًا بين الاقتراحات.", botSuggest: "عرضها كزر اقتراح", botActiveLabel: "مفعّلة (يمكن للشات بوت استخدام هذه الإجابة)",
+      botNeedTopic: "أعطِ الإجابة اسم موضوع (حرفان على الأقل).", botNeedAnswer: "اكتب الإجابة بلغة واحدة على الأقل.",
+      botBadLink: "يجب أن يبدأ الرابط بـ https:// أو mailto: أو tel: أو يكون صفحة من هذا الموقع.", botNeedLabel: "زر الاقتراح يحتاج إلى نص بلغة واحدة على الأقل.",
+      botNeedKeywords: "أضف كلمة مفتاحية واحدة على الأقل ليتمكن الشات بوت من إيجاد هذه الإجابة.",
+      botUnSub: "أسئلة سألها الزوار ولم يستطع الشات بوت الإجابة عنها. حوّل المفيد منها إلى إجابات. لا تُحفظ بيانات التواصل أبدًا.",
+      botQuestion: "السؤال", botMakeAnswer: "إنشاء إجابة", botMarkHandled: "تحديد كمعالَج", botReopen: "إعادة فتح", botOpen: "مفتوحة", botHandled: "معالَجة",
+      botUnEmpty: "لا توجد أسئلة بلا إجابة. الشات بوت يواكب الأسئلة.", navBot: "الشات بوت",
       cvFail: "تعذّر فتح السيرة الذاتية. {msg}", total: "الإجمالي {n}"
     }
   };
@@ -139,6 +175,7 @@
     return h("button", { type: "button", class: "icon-btn " + (cls || ""), "aria-label": label, title: label, onclick: onclick }, [ico(icon)]);
   }
   function $(sel, root) { return (root || document).querySelector(sel); }
+  function $$(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
   function pick(obj) {
     if (!obj || typeof obj !== "object") return "";
     var order = [lang, "en", "ar", "ru"];
@@ -198,7 +235,7 @@
 
   /* ---------------------------------------------------------------- state */
   var sb = null;
-  var state = { ready: false, user: null, isAdmin: false, recovery: false, dirty: false, badges: { apps: 0, enq: 0 } };
+  var state = { ready: false, user: null, isAdmin: false, recovery: false, dirty: false, badges: { apps: 0, enq: 0, bot: 0 } };
   var app;
 
   function client() {
@@ -280,15 +317,16 @@
     ["#/", "navOverview", "layout-dashboard", "overview"],
     ["#/news", "navNews", "newspaper", "news"],
     ["#/applications", "navApps", "users", "applications"],
-    ["#/enquiries", "navEnq", "inbox", "enquiries"]
+    ["#/enquiries", "navEnq", "inbox", "enquiries"],
+    ["#/chatbot", "navBot", "messages-square", "chatbot"]
   ];
 
   function shell() {
     var nav = h("nav", { class: "side-nav", "aria-label": "Dashboard" });
     NAV.forEach(function (n) {
       var a = h("a", { href: n[0], "data-route": n[3], onclick: guardNav }, [ico(n[2]), h("span", { text: t(n[1]) })]);
-      if (n[3] === "applications" || n[3] === "enquiries") {
-        var count = n[3] === "applications" ? state.badges.apps : state.badges.enq;
+      if (n[3] === "applications" || n[3] === "enquiries" || n[3] === "chatbot") {
+        var count = n[3] === "applications" ? state.badges.apps : n[3] === "enquiries" ? state.badges.enq : state.badges.bot;
         a.appendChild(h("span", { class: "nav-badge", "data-badge": n[3], hidden: count ? null : true, text: String(count) }));
       }
       nav.appendChild(a);
@@ -311,14 +349,32 @@
     if (state.dirty && !window.confirm(t("unsaved"))) { e.preventDefault(); return; }
     state.dirty = false;
   }
+  function countOpenQuestions() {
+    return sb.from("chatbot_unanswered").select("id", { count: "exact", head: true }).eq("handled", false).then(function (r) { if (r.error) throw r.error; return r.count || 0; });
+  }
   function refreshBadges() {
-    return Promise.all([countRows("applications", "new"), countRows("enquiries", "new")]).then(function (r) {
-      state.badges.apps = r[0]; state.badges.enq = r[1];
-      [["applications", r[0]], ["enquiries", r[1]]].forEach(function (p) {
-        var b = $('[data-badge="' + p[0] + '"]');
-        if (b) { b.textContent = String(p[1]); b.hidden = !p[1]; }
+    return Promise.all([countRows("applications", "new"), countRows("enquiries", "new"), countOpenQuestions().catch(function () { return 0; })]).then(function (r) {
+      state.badges.apps = r[0]; state.badges.enq = r[1]; state.badges.bot = r[2];
+      [["applications", r[0]], ["enquiries", r[1]], ["chatbot", r[2]]].forEach(function (p) {
+        $$('[data-badge="' + p[0] + '"]').forEach(function (b) { b.textContent = String(p[1]); b.hidden = !p[1]; });
       });
     }).catch(function () { /* badges are optional */ });
+  }
+
+  /* Label every table cell with its column title so tables can render as cards on phones. */
+  function labelTables(root) {
+    $$("table.table", root).forEach(function (tb) {
+      var heads = $$("thead th", tb).map(function (th) { return th.textContent; });
+      $$("tbody tr", tb).forEach(function (tr) {
+        Array.prototype.forEach.call(tr.children, function (td, i) { if (!td.hasAttribute("data-label") && heads[i]) td.setAttribute("data-label", heads[i]); });
+      });
+    });
+  }
+  var labelTimer = 0;
+  function watchTables(view) {
+    if (view._watch) return;
+    view._watch = new MutationObserver(function () { if (labelTimer) return; labelTimer = requestAnimationFrame(function () { labelTimer = 0; labelTables(view); }); });
+    view._watch.observe(view, { childList: true, subtree: true });
   }
 
   function route() {
@@ -332,10 +388,15 @@
       if (a) { a.classList.toggle("is-active", n[3] === name); if (n[3] === name) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); }
     });
     view.textContent = "";
+    watchTables(view);
     try {
       if (name === "news" && parts[1] === "new") viewEditor(view, null);
       else if (name === "news" && parts[1] === "edit" && parts[2]) viewEditor(view, parts[2]);
       else if (name === "news") viewNews(view);
+      else if (name === "chatbot" && parts[1] === "new") viewBotEditor(view, null);
+      else if (name === "chatbot" && parts[1] === "edit" && parts[2]) viewBotEditor(view, parts[2]);
+      else if (name === "chatbot" && parts[1] === "unanswered") viewBotUnanswered(view);
+      else if (name === "chatbot") viewBot(view);
       else if (name === "applications") viewInbox(view, INBOX.applications);
       else if (name === "enquiries") viewInbox(view, INBOX.enquiries);
       else viewOverview(view);
@@ -813,6 +874,290 @@
       status.focus();
     }
     load();
+  }
+
+  /* ---------------------------------------------------------------- chatbot management */
+  var BOT_ACTIONS = ["", "latest_news", "open_business"];
+  var BOT_LINK_OK = /^(https:\/\/\S+|mailto:\S+|tel:[+0-9()\-\s]+|[A-Za-z0-9_\-./#?=&%]+)$/;
+
+  function botTabs(active) {
+    return h("div", { class: "seg-group bot-switch", role: "group" }, [
+      h("a", { class: "seg" + (active === "answers" ? " is-active" : ""), href: "#/chatbot", onclick: guardNav, text: t("botAnswers") }),
+      h("a", { class: "seg" + (active === "unanswered" ? " is-active" : ""), href: "#/chatbot/unanswered", onclick: guardNav }, [
+        h("span", { text: t("botUnanswered") }), h("span", { class: "nav-badge seg-badge", "data-badge": "chatbot", hidden: state.badges.bot ? null : true, text: String(state.badges.bot || 0) })
+      ])
+    ]);
+  }
+
+  function viewBot(view) {
+    var rows = [], q = "";
+    var body = h("div", { class: "table-wrap" });
+    var count = h("span", { class: "muted" });
+    var search = h("input", { type: "search", id: "bSearch", "aria-label": t("search"), placeholder: t("search"), oninput: function () { q = search.value.trim().toLowerCase(); paint(); } });
+    view.appendChild(pageHead(t("botTitle"), [
+      btn(t("refresh"), { cls: "btn-quiet", icon: "loader", onclick: load }),
+      btn(t("botNew"), { cls: "btn-primary", icon: "plus", href: "#/chatbot/new", onclick: guardNav })
+    ], t("botSub")));
+    view.appendChild(botTabs("answers"));
+    view.appendChild(h("div", { class: "toolbar" }, [h("div", { class: "search-box" }, [ico("search"), search]), count]));
+    view.appendChild(body);
+
+    function hay(r) {
+      var parts = [r.topic];
+      ["label", "answer"].forEach(function (k) { Object.keys(r[k] || {}).forEach(function (l) { parts.push(r[k][l]); }); });
+      Object.keys(r.keywords || {}).forEach(function (l) { parts.push((r.keywords[l] || []).join(" ")); });
+      return parts.join(" ").toLowerCase();
+    }
+    function paint() {
+      body.textContent = "";
+      var list = rows.filter(function (r) { return !q || hay(r).indexOf(q) > -1; });
+      count.textContent = t("total", { n: list.length });
+      if (!list.length) { body.appendChild(h("p", { class: "empty", text: rows.length ? t("noResults") : t("botEmpty") })); return; }
+      var thead = h("thead", {}, [h("tr", {}, [t("botTopic"), t("botAnswerCol"), t("colStatus"), t("botOrder"), t("colActions")].map(function (c, i) {
+        return h("th", { scope: "col", class: i === 4 ? "col-actions" : "", text: c });
+      }))]);
+      var tbody = h("tbody");
+      list.forEach(function (r) {
+        var a = pick(r.answer);
+        var topic = h("td", { class: "cell-title" }, [
+          h("a", { href: "#/chatbot/edit/" + r.id, onclick: guardNav, text: r.topic }),
+          r.show_suggestion ? h("span", { class: "feat", title: t("botSuggest") }, [ico("star")]) : null
+        ]);
+        var actions = h("td", { class: "col-actions" }, [h("div", { class: "row-actions" }, [
+          iconBtn("pencil", t("edit"), function () { location.hash = "#/chatbot/edit/" + r.id; }),
+          iconBtn(r.is_active ? "download" : "upload", r.is_active ? t("botDisable") : t("botEnable"), function () { toggle(r); }),
+          iconBtn("trash", t("del"), function () { remove(r); }, "is-danger")
+        ])]);
+        tbody.appendChild(h("tr", { class: r.is_active ? "" : "is-off" }, [
+          topic, h("td", { class: "cell-snip", text: a.length > 110 ? a.slice(0, 110) + "…" : a }),
+          h("td", {}, [badge(r.is_active ? "published" : "draft", r.is_active ? t("botActive") : t("botOff"))]),
+          h("td", { class: "nowrap", dir: "ltr", text: String(r.sort_order) }), actions
+        ]));
+      });
+      body.appendChild(h("table", { class: "table" }, [thead, tbody]));
+    }
+    function load() {
+      body.textContent = ""; body.appendChild(h("p", { class: "empty", text: t("loading") }));
+      sb.from("chatbot_entries").select("*").order("sort_order", { ascending: true }).order("created_at", { ascending: true }).limit(500).then(function (r) {
+        if (r.error) throw r.error;
+        rows = r.data || []; paint(); refreshBadges();
+      }).catch(function (e) { body.textContent = ""; body.appendChild(errorBox(e)); });
+    }
+    function toggle(r) {
+      sb.from("chatbot_entries").update({ is_active: !r.is_active }).eq("id", r.id).select("id,is_active").single().then(function (x) {
+        if (x.error) throw x.error;
+        r.is_active = x.data.is_active; toast(t("saved"), "ok"); paint();
+      }).catch(function (e) { toast(t("saveFail", { msg: errMsg(e) }), "error"); });
+    }
+    function remove(r) {
+      confirmBox(t("botDelTitle"), t("botDelCopy", { name: r.topic })).then(function (ok) {
+        if (!ok) return;
+        sb.from("chatbot_entries").delete().eq("id", r.id).then(function (x) {
+          if (x.error) throw x.error;
+          rows = rows.filter(function (y) { return y.id !== r.id; }); toast(t("deleted"), "ok"); paint();
+        }).catch(function (e) { toast(t("saveFail", { msg: errMsg(e) }), "error"); });
+      });
+    }
+    load();
+  }
+
+  /* ---- unanswered questions */
+  function viewBotUnanswered(view) {
+    var rows = [], st = "open";
+    var body = h("div", { class: "table-wrap" });
+    var count = h("span", { class: "muted" });
+    var sel = h("select", { id: "uStatus", "aria-label": t("colStatus"), onchange: function () { st = sel.value; paint(); } }, [
+      h("option", { value: "open", text: t("botOpen") }), h("option", { value: "handled", text: t("botHandled") }), h("option", { value: "all", text: t("allStatuses") })
+    ]);
+    view.appendChild(pageHead(t("botTitle"), [btn(t("refresh"), { cls: "btn-quiet", icon: "loader", onclick: load })], t("botUnSub")));
+    view.appendChild(botTabs("unanswered"));
+    view.appendChild(h("div", { class: "toolbar" }, [sel, count]));
+    view.appendChild(body);
+
+    function paint() {
+      body.textContent = "";
+      var list = rows.filter(function (r) { return st === "all" || (st === "open" ? !r.handled : r.handled); });
+      count.textContent = t("total", { n: list.length });
+      if (!list.length) { body.appendChild(h("p", { class: "empty", text: rows.length ? t("noResults") : t("botUnEmpty") })); return; }
+      var thead = h("thead", {}, [h("tr", {}, [t("cReceived"), t("botQuestion"), t("cLang"), t("colActions")].map(function (c, i) {
+        return h("th", { scope: "col", class: i === 3 ? "col-actions" : "", text: c });
+      }))]);
+      var tbody = h("tbody");
+      list.forEach(function (r) {
+        var actions = h("td", { class: "col-actions" }, [h("div", { class: "row-actions" }, [
+          btn(t("botMakeAnswer"), { cls: "btn-outline btn-sm", icon: "plus", onclick: function () {
+            state.prefill = { lang: r.lang, question: r.question, unansweredId: r.id }; location.hash = "#/chatbot/new";
+          } }),
+          iconBtn(r.handled ? "clock" : "check", r.handled ? t("botReopen") : t("botMarkHandled"), function () { mark(r, !r.handled); }),
+          iconBtn("trash", t("del"), function () { remove(r); }, "is-danger")
+        ])]);
+        tbody.appendChild(h("tr", { class: r.handled ? "is-off" : "" }, [
+          h("td", { class: "nowrap", text: fmtDate(r.created_at, true) }),
+          h("td", { class: "cell-title", dir: "auto", text: r.question }),
+          h("td", { text: (r.lang || "").toUpperCase() }), actions
+        ]));
+      });
+      body.appendChild(h("table", { class: "table" }, [thead, tbody]));
+    }
+    function load() {
+      body.textContent = ""; body.appendChild(h("p", { class: "empty", text: t("loading") }));
+      sb.from("chatbot_unanswered").select("*").order("created_at", { ascending: false }).limit(500).then(function (r) {
+        if (r.error) throw r.error;
+        rows = r.data || []; paint(); refreshBadges();
+      }).catch(function (e) { body.textContent = ""; body.appendChild(errorBox(e)); });
+    }
+    function mark(r, v) {
+      sb.from("chatbot_unanswered").update({ handled: v }).eq("id", r.id).select("id,handled").single().then(function (x) {
+        if (x.error) throw x.error;
+        r.handled = x.data.handled; toast(t("saved"), "ok"); paint(); refreshBadges();
+      }).catch(function (e) { toast(t("saveFail", { msg: errMsg(e) }), "error"); });
+    }
+    function remove(r) {
+      sb.from("chatbot_unanswered").delete().eq("id", r.id).then(function (x) {
+        if (x.error) throw x.error;
+        rows = rows.filter(function (y) { return y.id !== r.id; }); toast(t("deleted"), "ok"); paint(); refreshBadges();
+      }).catch(function (e) { toast(t("saveFail", { msg: errMsg(e) }), "error"); });
+    }
+    load();
+  }
+
+  /* ---- answer editor */
+  function viewBotEditor(view, id) {
+    var LANGS = POST_LANGS;
+    var ed = { topic: "", label: {}, answer: {}, kw: {}, link_url: "", link_label: {}, action: "", show_suggestion: false, is_active: true, sort_order: 100, tab: lang === "ar" ? "ar" : "en" };
+    LANGS.forEach(function (l) { ed.label[l] = ""; ed.answer[l] = ""; ed.kw[l] = ""; ed.link_label[l] = ""; });
+    var prefill = id ? null : state.prefill; state.prefill = null;
+    state.dirty = false;
+
+    view.appendChild(h("p", { class: "empty", text: t("loading") }));
+    var start = id
+      ? sb.from("chatbot_entries").select("*").eq("id", id).maybeSingle().then(function (r) {
+          if (r.error) throw r.error;
+          if (!r.data) { location.hash = "#/chatbot"; return false; }
+          var p = r.data;
+          ed.topic = p.topic || ""; ed.link_url = p.link_url || ""; ed.action = p.action || ""; ed.show_suggestion = !!p.show_suggestion; ed.is_active = p.is_active !== false; ed.sort_order = p.sort_order == null ? 100 : p.sort_order;
+          LANGS.forEach(function (l) {
+            ed.label[l] = (p.label || {})[l] || ""; ed.answer[l] = (p.answer || {})[l] || ""; ed.link_label[l] = (p.link_label || {})[l] || "";
+            ed.kw[l] = ((p.keywords || {})[l] || []).join("\n");
+          });
+          return true;
+        })
+      : sb.from("chatbot_entries").select("sort_order").order("sort_order", { ascending: false }).limit(1).then(function (r) {
+          ed.sort_order = ((r.data && r.data[0] && r.data[0].sort_order) || 0) + 10;
+          if (prefill) { ed.tab = LANGS.indexOf(prefill.lang) > -1 ? prefill.lang : ed.tab; ed.kw[ed.tab] = prefill.question; ed.topic = prefill.question.slice(0, 60); }
+          return true;
+        });
+    start.then(function (ok) { if (ok) build(); }).catch(function (e) { view.textContent = ""; view.appendChild(errorBox(e)); });
+
+    function build() {
+      view.textContent = "";
+      var dirty = function () { state.dirty = true; if (msg && msg.className.indexOf("is-error") > -1) { msg.className = "form-msg"; msg.textContent = ""; } };
+      var msg;
+      var panels = {}, tabs = {}, langName = { en: "English", ar: "العربية", ru: "Русский" };
+      var tabBar = h("div", { class: "tabs", role: "tablist" }), panelHost = h("div", { class: "panels" });
+      var bubble = h("div", { class: "bot-bubble" }), bubbleLink = h("span", { class: "bot-bubble-link" });
+
+      LANGS.forEach(function (l) {
+        var dirAttr = l === "ar" ? "rtl" : "ltr";
+        var label = h("input", { id: "bl_" + l, maxlength: 60, dir: dirAttr, lang: l, oninput: function () { ed.label[l] = label.value; dirty(); markTabs(); } }); label.value = ed.label[l];
+        var answer = h("textarea", { id: "ba_" + l, rows: 6, maxlength: 1200, dir: dirAttr, lang: l, oninput: function () { ed.answer[l] = answer.value; dirty(); markTabs(); paintBubble(); } }); answer.value = ed.answer[l];
+        var kw = h("textarea", { id: "bk_" + l, rows: 6, dir: dirAttr, lang: l, oninput: function () { ed.kw[l] = kw.value; dirty(); markTabs(); } }); kw.value = ed.kw[l];
+        var ll = h("input", { id: "bll_" + l, maxlength: 40, dir: dirAttr, lang: l, oninput: function () { ed.link_label[l] = ll.value; dirty(); paintBubble(); } }); ll.value = ed.link_label[l];
+        panels[l] = h("div", { class: "panel", role: "tabpanel", "aria-labelledby": "btab_" + l, hidden: ed.tab === l ? null : true }, [
+          field(t("botLabel"), label, t("botLabelHelp")), field(t("botAnswerField"), answer), field(t("botKeywords"), kw, t("botKeywordsHelp")), field(t("botLinkLabel"), ll)
+        ]);
+        panelHost.appendChild(panels[l]);
+        tabs[l] = h("button", { type: "button", role: "tab", id: "btab_" + l, class: "tab", "aria-selected": String(ed.tab === l), onclick: function () { setTab(l); } }, [h("span", { text: langName[l] }), h("i", { class: "dot", "aria-hidden": "true" })]);
+        tabBar.appendChild(tabs[l]);
+      });
+      function markTabs() { LANGS.forEach(function (l) { tabs[l].classList.toggle("is-filled", !!(ed.answer[l].trim() || ed.kw[l].trim())); }); }
+      function setTab(l) { ed.tab = l; LANGS.forEach(function (x) { panels[x].hidden = x !== l; tabs[x].setAttribute("aria-selected", String(x === l)); }); paintBubble(); }
+      function paintBubble() {
+        var l = ed.tab; bubble.dir = l === "ar" ? "rtl" : "ltr"; bubble.lang = l;
+        bubble.textContent = ed.answer[l].trim() || "…";
+        var lab = ed.link_label[l].trim() || ed.link_url;
+        if (ed.link_url && lab) bubble.appendChild(h("span", { class: "bot-bubble-link", text: lab }));
+      }
+      markTabs();
+
+      var topic = h("input", { id: "bTopic", value: ed.topic, maxlength: 80, oninput: function () { ed.topic = topic.value; dirty(); } });
+      var action = h("select", { id: "bAction", onchange: function () { ed.action = action.value; dirty(); } }, BOT_ACTIONS.map(function (a) { return h("option", { value: a, text: t("botAct_" + (a || "none")) }); }));
+      action.value = ed.action;
+      var link = h("input", { id: "bLink", value: ed.link_url, dir: "ltr", maxlength: 300, placeholder: "index.html#careers  ·  https://…  ·  tel:  ·  mailto:", oninput: function () { ed.link_url = link.value.trim(); dirty(); paintBubble(); } });
+      var sugg = h("input", { type: "checkbox", id: "bSugg", onchange: function () { ed.show_suggestion = sugg.checked; dirty(); } }); sugg.checked = ed.show_suggestion;
+      var active = h("input", { type: "checkbox", id: "bActive", onchange: function () { ed.is_active = active.checked; dirty(); } }); active.checked = ed.is_active;
+      var order = h("input", { type: "number", id: "bOrder", value: String(ed.sort_order), dir: "ltr", min: "0", max: "100000", step: "10", oninput: function () { ed.sort_order = parseInt(order.value, 10); dirty(); } });
+
+      msg = h("p", { class: "form-msg", role: "alert" });
+      var saveBtn = btn(t("saveChanges"), { cls: "btn-primary", icon: "save", onclick: save });
+      var actions = h("div", { class: "editor-actions" }, [saveBtn]);
+      if (id) actions.appendChild(btn(t("del"), { cls: "btn-danger-quiet", icon: "trash", onclick: function () {
+        confirmBox(t("botDelTitle"), t("botDelCopy", { name: ed.topic })).then(function (ok) {
+          if (!ok) return;
+          sb.from("chatbot_entries").delete().eq("id", id).then(function (r) {
+            if (r.error) throw r.error;
+            state.dirty = false; toast(t("deleted"), "ok"); location.hash = "#/chatbot";
+          }).catch(function (e) { toast(t("saveFail", { msg: errMsg(e) }), "error"); });
+        });
+      } }));
+
+      function parseKw(text) {
+        var seen = {}, out = [];
+        String(text || "").split(/[\n,;،؛]+/).forEach(function (k) {
+          k = k.replace(/\s+/g, " ").trim().slice(0, 60);
+          if (k.length >= 2 && !seen[k.toLowerCase()]) { seen[k.toLowerCase()] = 1; out.push(k); }
+        });
+        return out.slice(0, 80);
+      }
+      function fail(text, el) { msg.className = "form-msg is-error"; msg.textContent = text; if (el) { var l = el.id.split("_")[1]; if (l) setTab(l); el.focus(); } }
+      function save() {
+        msg.className = "form-msg"; msg.textContent = "";
+        var tp = ed.topic.trim();
+        if (tp.length < 2) return fail(t("botNeedTopic"), topic);
+        var answers = {}, labels = {}, kws = {}, links = {};
+        LANGS.forEach(function (l) { answers[l] = ed.answer[l].trim(); labels[l] = ed.label[l].trim(); kws[l] = parseKw(ed.kw[l]); links[l] = ed.link_label[l].trim(); });
+        if (!LANGS.some(function (l) { return answers[l]; }) && !ed.action) return fail(t("botNeedAnswer"), $("#ba_" + ed.tab));
+        if (ed.link_url && !BOT_LINK_OK.test(ed.link_url)) return fail(t("botBadLink"), link);
+        if (ed.show_suggestion && !LANGS.some(function (l) { return labels[l]; })) return fail(t("botNeedLabel"), $("#bl_" + ed.tab));
+        if (!LANGS.some(function (l) { return kws[l].length; })) return fail(t("botNeedKeywords"), $("#bk_" + ed.tab));
+        var so = isFinite(ed.sort_order) ? ed.sort_order : 100;
+        var payload = {
+          topic: tp, label: labels, answer: answers, keywords: kws,
+          link_url: ed.link_url || null, link_label: ed.link_url ? links : {}, action: ed.action || null,
+          show_suggestion: ed.show_suggestion, is_active: ed.is_active, sort_order: so
+        };
+        saveBtn.disabled = true;
+        var op = id
+          ? sb.from("chatbot_entries").update(payload).eq("id", id).select("id").single()
+          : sb.from("chatbot_entries").insert(payload).select("id").single();
+        op.then(function (r) {
+          if (r.error) throw r.error;
+          state.dirty = false;
+          var un = prefill && prefill.unansweredId;
+          var done = function () { toast(t("saved"), "ok"); if (!id) location.hash = "#/chatbot/edit/" + r.data.id; else saveBtn.disabled = false; };
+          if (un) sb.from("chatbot_unanswered").update({ handled: true }).eq("id", un).then(done, done); else done();
+        }).catch(function (e) { saveBtn.disabled = false; fail(t("saveFail", { msg: errMsg(e) })); });
+      }
+
+      view.appendChild(h("a", { class: "back", href: "#/chatbot", onclick: guardNav }, [ico("arrow-left"), h("span", { text: t("botBack") })]));
+      view.appendChild(pageHead(id ? t("botEdEdit") : t("botEdNew"), []));
+      view.appendChild(h("div", { class: "editor" }, [
+        h("section", { class: "card editor-main" }, [tabBar, panelHost, h("div", { class: "bot-preview" }, [h("span", { class: "label", text: t("botPreview") }), bubble])]),
+        h("aside", { class: "editor-side" }, [
+          h("section", { class: "card" }, [
+            field(t("botTopic"), topic, t("botTopicHelp")),
+            field(t("botAction"), action, t("botActionHelp")),
+            field(t("botLink"), link, t("botLinkHelp")),
+            field(t("botOrder"), order, t("botOrderHelp")),
+            h("label", { class: "check" }, [sugg, h("span", { text: t("botSuggest") })]),
+            h("label", { class: "check" }, [active, h("span", { text: t("botActiveLabel") })])
+          ]),
+          h("section", { class: "card" }, [msg, actions])
+        ])
+      ]));
+      paintBubble();
+      window.onbeforeunload = function (e) { if (state.dirty) { e.preventDefault(); e.returnValue = ""; return ""; } };
+    }
   }
 
   /* ---------------------------------------------------------------- session + boot */
