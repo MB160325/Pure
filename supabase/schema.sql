@@ -263,3 +263,69 @@ drop policy if exists "admins delete cvs" on storage.objects;
 create policy "admins delete cvs"
   on storage.objects for delete to authenticated
   using (bucket_id = 'cvs' and (select private.is_admin()));
+
+-- ---------------------------------------------------------------------
+-- 6. "Start your business in the UAE" requests (public insert only, admin read/manage)
+-- ---------------------------------------------------------------------
+create table if not exists public.startup_requests (
+  id               uuid primary key default gen_random_uuid(),
+  created_at       timestamptz not null default now(),
+  full_name        text not null,
+  age              smallint not null,
+  nationality      text not null,
+  country          text not null,
+  email            text not null,
+  phone            text not null,
+  sector           text not null,
+  stage            text not null,
+  start_timeline   text not null,
+  team_size        text not null,
+  project_idea     text not null,
+  lang             text,
+  status           text not null default 'new',
+  admin_notes      text,
+
+  constraint su_full_name_len check (char_length(full_name) between 2 and 120),
+  constraint su_age_range check (age between 18 and 100),
+  constraint su_nationality_len check (char_length(nationality) between 2 and 80),
+  constraint su_country_len check (char_length(country) between 2 and 80),
+  constraint su_email_format check (char_length(email) <= 254 and email ~* '^[^@\s]+@[^@\s]+\.[^@\s]+$'),
+  constraint su_phone_len check (char_length(phone) between 5 and 30),
+  constraint su_sector_len check (char_length(sector) between 2 and 120),
+  constraint su_stage_valid check (stage in ('idea', 'planning', 'running')),
+  constraint su_timeline_valid check (start_timeline in ('asap', '1_3_months', '3_6_months', '6_plus_months', 'not_sure')),
+  constraint su_team_valid check (team_size in ('none', '1_5', '6_20', '21_plus')),
+  constraint su_idea_len check (char_length(project_idea) between 10 and 4000),
+  constraint su_lang_valid check (lang is null or lang in ('en', 'ar', 'ru')),
+  constraint su_status_valid check (status in ('new', 'contacted', 'qualified', 'closed')),
+  constraint su_notes_len check (admin_notes is null or char_length(admin_notes) <= 5000)
+);
+
+create index if not exists startup_requests_created_idx on public.startup_requests (created_at desc);
+create index if not exists startup_requests_status_idx on public.startup_requests (status);
+
+alter table public.startup_requests enable row level security;
+revoke all on public.startup_requests from anon, authenticated;
+grant insert on public.startup_requests to anon;
+grant select, insert, update, delete on public.startup_requests to authenticated;
+
+drop policy if exists "anyone can submit a startup request" on public.startup_requests;
+create policy "anyone can submit a startup request"
+  on public.startup_requests for insert to anon, authenticated
+  with check (status = 'new' and admin_notes is null);
+
+drop policy if exists "admins read startup requests" on public.startup_requests;
+create policy "admins read startup requests"
+  on public.startup_requests for select to authenticated
+  using ((select private.is_admin()));
+
+drop policy if exists "admins update startup requests" on public.startup_requests;
+create policy "admins update startup requests"
+  on public.startup_requests for update to authenticated
+  using ((select private.is_admin()))
+  with check ((select private.is_admin()));
+
+drop policy if exists "admins delete startup requests" on public.startup_requests;
+create policy "admins delete startup requests"
+  on public.startup_requests for delete to authenticated
+  using ((select private.is_admin()));

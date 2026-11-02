@@ -22,7 +22,10 @@
 
   <main id="main">
     <section id="home" class="hero">
-      <div class="hero-bg" aria-hidden="true"><img src="assets/images/photos/meeting-three.jpg" alt="" fetchpriority="high" onerror="this.remove()"></div>
+      <div class="hero-bg" aria-hidden="true">
+        <img src="assets/images/photos/meeting-three.jpg" alt="" fetchpriority="high" onerror="this.remove()">
+        <video class="hero-video" muted autoplay loop playsinline webkit-playsinline preload="metadata" disablepictureinpicture disableremoteplayback controlslist="nodownload noremoteplayback" tabindex="-1" data-mp4="assets/video/hero.mp4" data-mp4-sm="assets/video/hero-sm.mp4" data-webm="assets/video/hero.webm"></video>
+      </div>
       <div class="container hero-grid">
         <div class="hero-copy">
           <p class="hero-eyebrow" data-i18n="heroEyebrow">Recruitment and manpower supply in the UAE</p>
@@ -127,6 +130,17 @@
           <div class="commit"><span class="ico" data-icon="clock"></span><h3 data-i18n="commitOneTitle"></h3><p data-i18n="commitOneCopy"></p></div>
           <div class="commit"><span class="ico" data-icon="layout-dashboard"></span><h3 data-i18n="commitTwoTitle"></h3><p data-i18n="commitTwoCopy"></p></div>
           <div class="commit"><span class="ico" data-icon="shield-check"></span><h3 data-i18n="commitThreeTitle"></h3><p data-i18n="commitThreeCopy"></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark su-final su-teaser" aria-labelledby="suTeaserT">
+      <div class="container su-final-inner">
+        <h2 class="section-title" id="suTeaserT" data-i18n="suTeaserTitle">Dreaming of a business in the UAE?</h2>
+        <p class="section-copy" data-i18n="suTeaserCopy"></p>
+        <div class="su-cta-wrap">
+          <button type="button" class="su-cta" data-open-startup><span class="su-cta-label"><span class="ico flip-rtl" data-icon="send"></span><span data-i18n="suTeaserBtn">Start your business</span></span></button>
+          <a class="su-more" href="startup.html" data-i18n="suMore">Learn more</a>
         </div>
       </div>
     </section>

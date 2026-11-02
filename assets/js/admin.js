@@ -69,6 +69,13 @@
       botUnSub: "Questions visitors asked that the chatbot could not answer. Turn the useful ones into answers. Contact details are never stored.",
       botQuestion: "Question", botMakeAnswer: "Create answer", botMarkHandled: "Mark as handled", botReopen: "Reopen", botOpen: "Open", botHandled: "Handled",
       botUnEmpty: "No unanswered questions. The chatbot is keeping up.", navBot: "Chatbot",
+      navSu: "Startup requests", suInboxTitle: "Business startup requests", ovNewSu: "New startup requests",
+      cCountry: "Country now", cAge: "Age", cSector: "Business field", cStage: "Project stage", cTimeline: "Planned start", cTeam: "Team size", cIdea: "Project idea",
+      su_new: "New", su_contacted: "Contacted", su_qualified: "Qualified", su_closed: "Closed",
+      stage_idea: "Just an idea", stage_planning: "Planning in detail", stage_running: "Running outside the UAE",
+      tl_asap: "As soon as possible", tl_1_3_months: "In 1–3 months", tl_3_6_months: "In 3–6 months", tl_6_plus_months: "In 6+ months", tl_not_sure: "Not sure yet",
+      tm_none: "Just them", tm_1_5: "1–5 people", tm_6_20: "6–20 people", tm_21_plus: "20+ people",
+      delSuTitle: "Delete this request?", delSuCopy: "The startup request from {name} will be removed permanently.",
       cvFail: "Could not open the CV. {msg}", total: "{n} total"
     },
     ar: {
@@ -127,6 +134,13 @@
       botUnSub: "أسئلة سألها الزوار ولم يستطع الشات بوت الإجابة عنها. حوّل المفيد منها إلى إجابات. لا تُحفظ بيانات التواصل أبدًا.",
       botQuestion: "السؤال", botMakeAnswer: "إنشاء إجابة", botMarkHandled: "تحديد كمعالَج", botReopen: "إعادة فتح", botOpen: "مفتوحة", botHandled: "معالَجة",
       botUnEmpty: "لا توجد أسئلة بلا إجابة. الشات بوت يواكب الأسئلة.", navBot: "الشات بوت",
+      navSu: "طلبات المشاريع", suInboxTitle: "طلبات بدء المشاريع", ovNewSu: "طلبات مشاريع جديدة",
+      cCountry: "الدولة الحالية", cAge: "العمر", cSector: "مجال المشروع", cStage: "مرحلة المشروع", cTimeline: "موعد البدء", cTeam: "حجم الفريق", cIdea: "فكرة المشروع",
+      su_new: "جديد", su_contacted: "تم التواصل", su_qualified: "مؤهَّل", su_closed: "مغلق",
+      stage_idea: "مجرد فكرة", stage_planning: "يخطط بالتفصيل", stage_running: "يعمل خارج الإمارات",
+      tl_asap: "في أقرب وقت", tl_1_3_months: "خلال 1–3 أشهر", tl_3_6_months: "خلال 3–6 أشهر", tl_6_plus_months: "بعد أكثر من 6 أشهر", tl_not_sure: "لم يحدد بعد",
+      tm_none: "هو وحده", tm_1_5: "1–5 أشخاص", tm_6_20: "6–20 شخصًا", tm_21_plus: "أكثر من 20 شخصًا",
+      delSuTitle: "حذف هذا الطلب؟", delSuCopy: "سيتم حذف طلب المشروع من {name} نهائيًا.",
       cvFail: "تعذّر فتح السيرة الذاتية. {msg}", total: "الإجمالي {n}"
     }
   };
@@ -235,7 +249,7 @@
 
   /* ---------------------------------------------------------------- state */
   var sb = null;
-  var state = { ready: false, user: null, isAdmin: false, recovery: false, dirty: false, badges: { apps: 0, enq: 0, bot: 0 } };
+  var state = { ready: false, user: null, isAdmin: false, recovery: false, dirty: false, badges: { apps: 0, enq: 0, su: 0, bot: 0 } };
   var app;
 
   function client() {
@@ -318,6 +332,7 @@
     ["#/news", "navNews", "newspaper", "news"],
     ["#/applications", "navApps", "users", "applications"],
     ["#/enquiries", "navEnq", "inbox", "enquiries"],
+    ["#/startup", "navSu", "briefcase", "startup"],
     ["#/chatbot", "navBot", "messages-square", "chatbot"]
   ];
 
@@ -325,8 +340,8 @@
     var nav = h("nav", { class: "side-nav", "aria-label": "Dashboard" });
     NAV.forEach(function (n) {
       var a = h("a", { href: n[0], "data-route": n[3], onclick: guardNav }, [ico(n[2]), h("span", { text: t(n[1]) })]);
-      if (n[3] === "applications" || n[3] === "enquiries" || n[3] === "chatbot") {
-        var count = n[3] === "applications" ? state.badges.apps : n[3] === "enquiries" ? state.badges.enq : state.badges.bot;
+      if (n[3] === "applications" || n[3] === "enquiries" || n[3] === "startup" || n[3] === "chatbot") {
+        var count = { applications: state.badges.apps, enquiries: state.badges.enq, startup: state.badges.su, chatbot: state.badges.bot }[n[3]];
         a.appendChild(h("span", { class: "nav-badge", "data-badge": n[3], hidden: count ? null : true, text: String(count) }));
       }
       nav.appendChild(a);
@@ -353,9 +368,9 @@
     return sb.from("chatbot_unanswered").select("id", { count: "exact", head: true }).eq("handled", false).then(function (r) { if (r.error) throw r.error; return r.count || 0; });
   }
   function refreshBadges() {
-    return Promise.all([countRows("applications", "new"), countRows("enquiries", "new"), countOpenQuestions().catch(function () { return 0; })]).then(function (r) {
-      state.badges.apps = r[0]; state.badges.enq = r[1]; state.badges.bot = r[2];
-      [["applications", r[0]], ["enquiries", r[1]], ["chatbot", r[2]]].forEach(function (p) {
+    return Promise.all([countRows("applications", "new"), countRows("enquiries", "new"), countRows("startup_requests", "new").catch(function () { return 0; }), countOpenQuestions().catch(function () { return 0; })]).then(function (r) {
+      state.badges.apps = r[0]; state.badges.enq = r[1]; state.badges.su = r[2]; state.badges.bot = r[3];
+      [["applications", r[0]], ["enquiries", r[1]], ["startup", r[2]], ["chatbot", r[3]]].forEach(function (p) {
         $$('[data-badge="' + p[0] + '"]').forEach(function (b) { b.textContent = String(p[1]); b.hidden = !p[1]; });
       });
     }).catch(function () { /* badges are optional */ });
@@ -399,6 +414,7 @@
       else if (name === "chatbot") viewBot(view);
       else if (name === "applications") viewInbox(view, INBOX.applications);
       else if (name === "enquiries") viewInbox(view, INBOX.enquiries);
+      else if (name === "startup") viewInbox(view, INBOX.startup);
       else viewOverview(view);
     } catch (e) { console.error(e); view.appendChild(h("p", { class: "form-msg is-error", text: errMsg(e) })); }
     window.scrollTo(0, 0);
@@ -437,7 +453,8 @@
       ["ovPublished", "news_posts", "published", "#/news", "newspaper"],
       ["ovDrafts", "news_posts", "draft", "#/news", "pencil"],
       ["ovNewApps", "applications", "new", "#/applications", "users"],
-      ["ovNewEnq", "enquiries", "new", "#/enquiries", "inbox"]
+      ["ovNewEnq", "enquiries", "new", "#/enquiries", "inbox"],
+      ["ovNewSu", "startup_requests", "new", "#/startup", "briefcase"]
     ];
     cards.forEach(function (c) {
       var num = h("strong", { text: "…" });
@@ -739,6 +756,16 @@
       csv: ["created_at", "full_name", "nationality", "phone", "email", "position", "status", "lang", "message", "admin_notes"],
       delTitle: "delAppTitle", delCopy: "delAppCopy"
     },
+    startup: {
+      table: "startup_requests", title: "suInboxTitle", statuses: ["new", "contacted", "qualified", "closed"], prefix: "su_", nameField: "full_name",
+      cols: [["cReceived", function (r) { return fmtDate(r.created_at, true); }], ["cName", function (r) { return r.full_name; }, "strong"], ["cCountry", function (r) { return r.country; }],
+        ["cSector", function (r) { return r.sector; }], ["cTimeline", function (r) { return t("tl_" + r.start_timeline); }]],
+      search: ["full_name", "email", "phone", "country", "nationality", "sector", "project_idea"],
+      details: [["cName", "full_name"], ["cAge", "age"], ["cNationality", "nationality"], ["cCountry", "country"], ["cPhone", "phone", "tel"], ["cEmail", "email", "mail"],
+        ["cSector", "sector"], ["cStage", "stage", "enum:stage_"], ["cTimeline", "start_timeline", "enum:tl_"], ["cTeam", "team_size", "enum:tm_"], ["cLang", "lang"], ["cReceived", "created_at", "date"], ["cIdea", "project_idea", "long"]],
+      csv: ["created_at", "full_name", "age", "nationality", "country", "email", "phone", "sector", "stage", "start_timeline", "team_size", "project_idea", "status", "lang", "admin_notes"],
+      delTitle: "delSuTitle", delCopy: "delSuCopy"
+    },
     enquiries: {
       table: "enquiries", title: "enqTitle", statuses: ["new", "replied", "closed"], prefix: "en_", nameField: "company_name",
       cols: [["cReceived", function (r) { return fmtDate(r.created_at, true); }], ["cCompany", function (r) { return r.company_name; }, "strong"], ["cEmail", function (r) { return r.email; }], ["cMessage", function (r) { return (r.message || "").replace(/\s+/g, " ").slice(0, 90); }]],
@@ -822,6 +849,7 @@
         if (d[2] === "mail") dd.appendChild(h("a", { href: "mailto:" + v, text: v, dir: "ltr" }));
         else if (d[2] === "tel") dd.appendChild(h("a", { href: "tel:" + String(v).replace(/[^0-9+]/g, ""), text: v, dir: "ltr" }));
         else if (d[2] === "date") dd.textContent = fmtDate(v, true);
+        else if (d[2] && d[2].indexOf("enum:") === 0) dd.textContent = t(d[2].slice(5) + v);
         else dd.textContent = v;
         info.appendChild(h("dt", { text: t(d[0]) })); info.appendChild(dd);
       });

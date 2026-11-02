@@ -121,6 +121,7 @@
   var NAV = [
     ["index.html#about", "navAbout", ""],
     ["index.html#services", "navServices", ""],
+    ["startup.html", "navStartup", "startup"],
     ["news.html", "navNews", "news"],
     ["index.html#careers", "navCareers", ""],
     ["team.html", "navTeam", "team"],
@@ -166,7 +167,7 @@
       '<a href="mailto:' + C.email + '">' + C.email + "</a>" +
       '<span data-i18n="address"></span></div></div>' +
       '<div><h2 class="footer-title" data-i18n="footerLinks"></h2><div class="footer-links">' +
-      '<a href="news.html" data-i18n="navNews"></a><a href="team.html" data-i18n="navTeam"></a><a href="index.html#careers" data-i18n="navCareers"></a>' +
+      '<a href="startup.html" data-i18n="navStartup"></a><a href="news.html" data-i18n="navNews"></a><a href="team.html" data-i18n="navTeam"></a><a href="index.html#careers" data-i18n="navCareers"></a>' +
       '<a href="privacy-policy.html" data-i18n="privacy"></a><a href="terms.html" data-i18n="terms"></a></div></div>' +
       "</div>" +
       '<div class="footer-bottom"><small>© ' + year + ' Pure Talent Recruitment &amp; Manpower Supply. <span data-i18n="rights"></span></small>' +
@@ -200,11 +201,46 @@
       '<div class="form-actions"><button type="submit" class="btn btn-primary"><span class="ico" data-icon="send"></span><span data-i18n="sendBusiness"></span></button></div>' +
       "</form></div></dialog>";
 
+    function opt(v, key) { return '<option value="' + v + '" data-i18n="' + key + '"></option>'; }
+    var startup =
+      '<dialog id="suDialog" class="dialog dialog-wide su-dialog" aria-labelledby="suTitle"><div class="dialog-inner">' +
+      '<div class="dialog-head"><div><h2 id="suTitle" data-i18n="suFormTitle"></h2><p data-i18n="suFormCopy"></p></div>' +
+      '<button type="button" class="icon-btn" data-close-startup data-i18n-aria="close"><span class="ico" data-icon="x"></span></button></div>' +
+      '<ol class="su-progress" id="suProgress"><li class="is-on" data-dot="1"><b>1</b><span data-i18n="suPart1"></span></li><li data-dot="2"><b>2</b><span data-i18n="suPart2"></span></li></ol>' +
+      '<form id="suForm" class="form" novalidate>' +
+      '<fieldset class="su-step" data-step="1"><legend class="sr-only" data-i18n="suPart1"></legend><div class="form-grid">' +
+      '<div class="field"><label for="suFullName" data-i18n="suFullName"></label><input id="suFullName" name="full_name" required minlength="2" maxlength="120" autocomplete="name"></div>' +
+      '<div class="field"><label for="suAge" data-i18n="suAge"></label><input id="suAge" name="age" type="number" inputmode="numeric" required min="18" max="100" step="1" autocomplete="off" dir="ltr"></div>' +
+      '<div class="field"><label for="suNationality" data-i18n="suNationality"></label><input id="suNationality" name="nationality" required minlength="2" maxlength="80" autocomplete="country-name"></div>' +
+      '<div class="field"><label for="suCountry" data-i18n="suCountry"></label><input id="suCountry" name="country" required minlength="2" maxlength="80" autocomplete="country-name"></div>' +
+      '<div class="field"><label for="suEmail" data-i18n="suEmail"></label><input id="suEmail" name="email" type="email" required maxlength="254" autocomplete="email" dir="ltr"></div>' +
+      '<div class="field"><label for="suPhone" data-i18n="suPhone"></label><input id="suPhone" name="phone" type="tel" required minlength="5" maxlength="30" autocomplete="tel" dir="ltr"></div>' +
+      '</div></fieldset>' +
+      '<fieldset class="su-step" data-step="2" hidden><legend class="sr-only" data-i18n="suPart2"></legend>' +
+      '<div class="field"><label for="suSector" data-i18n="suSector"></label><input id="suSector" name="sector" required minlength="2" maxlength="120" data-i18n-placeholder="suSectorPh"></div>' +
+      '<div class="form-grid">' +
+      '<div class="field"><label for="suStage" data-i18n="suStage"></label><select id="suStage" name="stage" required><option value="" data-i18n="suChoose"></option>' + opt("idea", "suStageIdea") + opt("planning", "suStagePlanning") + opt("running", "suStageRunning") + '</select></div>' +
+      '<div class="field"><label for="suTimeline" data-i18n="suTimeline"></label><select id="suTimeline" name="start_timeline" required><option value="" data-i18n="suChoose"></option>' + opt("asap", "suTl_asap") + opt("1_3_months", "suTl_1_3_months") + opt("3_6_months", "suTl_3_6_months") + opt("6_plus_months", "suTl_6_plus_months") + opt("not_sure", "suTl_not_sure") + '</select></div>' +
+      '</div>' +
+      '<div class="field"><label for="suTeam" data-i18n="suTeam"></label><select id="suTeam" name="team_size" required><option value="" data-i18n="suChoose"></option>' + opt("none", "suTm_none") + opt("1_5", "suTm_1_5") + opt("6_20", "suTm_6_20") + opt("21_plus", "suTm_21_plus") + '</select></div>' +
+      '<div class="field"><label for="suIdea" data-i18n="suIdea"></label><textarea id="suIdea" name="project_idea" rows="5" required minlength="10" maxlength="4000"></textarea><span class="field-help" data-i18n="suIdeaHelp"></span></div>' +
+      '<label class="check"><input type="checkbox" id="suConsent" required><span><span data-i18n="suConsent"></span> <a href="privacy-policy.html" target="_blank" rel="noopener" data-i18n="privacy"></a>.</span></label>' +
+      '</fieldset>' +
+      '<div class="hp" aria-hidden="true"><label>Website<input name="website" tabindex="-1" autocomplete="off"></label></div>' +
+      '<p class="form-status" role="status" aria-live="polite"></p>' +
+      '<div class="form-actions su-actions"><button type="button" class="btn btn-outline" id="suBack" hidden><span class="ico flip-rtl" data-icon="arrow-left"></span><span data-i18n="suBack"></span></button>' +
+      '<button type="button" class="btn btn-primary" id="suNext"><span data-i18n="suNext"></span><span class="ico flip-rtl" data-icon="arrow-right"></span></button>' +
+      '<button type="submit" class="btn btn-gold" id="suSubmit" hidden><span class="ico" data-icon="send"></span><span data-i18n="suSend"></span></button></div>' +
+      '</form>' +
+      '<div id="suDone" class="done" hidden tabindex="-1"><span class="ico" data-icon="circle-check"></span><h3 data-i18n="suDoneTitle"></h3><p id="suDoneText"></p>' +
+      '<button type="button" class="btn btn-primary" data-close-startup data-i18n="suClose"></button></div>' +
+      "</div></dialog>";
+
     var slot = function (id, html) { var n = document.getElementById(id); if (n) n.innerHTML = html; };
     slot("site-header", header);
     slot("site-footer", footer);
     var tail = document.createElement("div");
-    tail.innerHTML = chat + dialog + '<div id="toasts" class="toasts" aria-live="polite"></div>';
+    tail.innerHTML = chat + dialog + startup + '<div id="toasts" class="toasts" aria-live="polite"></div>';
     while (tail.firstChild) document.body.appendChild(tail.firstChild);
   }
 
@@ -230,7 +266,7 @@
     if (btn) btn.addEventListener("click", function () { setMenu(menu.hidden); });
     if (menu) menu.addEventListener("click", function (e) { if (e.target.closest("a, button")) setMenu(false); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && menu && !menu.hidden) { setMenu(false); btn.focus(); } });
-    window.matchMedia("(min-width: 981px)").addEventListener("change", function (m) { if (m.matches) setMenu(false); });
+    window.matchMedia("(min-width: 1281px)").addEventListener("change", function (m) { if (m.matches) setMenu(false); });
 
     document.querySelectorAll(".lang-select").forEach(function (s) {
       s.addEventListener("change", function () { PT.applyLang(s.value); });
@@ -337,6 +373,127 @@
     });
   }
 
+  function initStartupDialog() {
+    var dlg = document.getElementById("suDialog");
+    var form = document.getElementById("suForm");
+    if (!dlg || !form) return;
+    var steps = [].slice.call(form.querySelectorAll(".su-step"));
+    var dots = [].slice.call(document.querySelectorAll("#suProgress li"));
+    var progress = document.getElementById("suProgress");
+    var back = document.getElementById("suBack"), next = document.getElementById("suNext"), submit = document.getElementById("suSubmit");
+    var done = document.getElementById("suDone");
+    var step = 1;
+
+    function show(n) {
+      step = n;
+      steps.forEach(function (f, i) { f.hidden = i + 1 !== n; });
+      dots.forEach(function (d, i) { d.classList.toggle("is-on", i + 1 === n); d.classList.toggle("is-done", i + 1 < n); });
+      back.hidden = n === 1; next.hidden = n === 2; submit.hidden = n !== 2;
+      progress.setAttribute("aria-label", PT.t("suStepOf", { n: n }));
+      status(form, "", "");
+      var first = steps[n - 1].querySelector("input, select, textarea");
+      if (first && dlg.open && !(window.matchMedia && window.matchMedia("(pointer: coarse)").matches)) first.focus();
+      var inner = dlg.querySelector(".dialog-inner"); dlg.scrollTop = 0; if (inner) inner.scrollTop = 0;
+    }
+    function stepValid() {
+      var fields = [].slice.call(steps[step - 1].querySelectorAll("input, select, textarea"));
+      for (var i = 0; i < fields.length; i++) {
+        var f = fields[i];
+        if (f.name === "age") {
+          var a = parseInt(f.value, 10);
+          if (!(a >= 18 && a <= 100)) { f.setCustomValidity(PT.t("suAgeError")); f.reportValidity(); f.setCustomValidity(""); return false; }
+        }
+        if (!f.checkValidity()) { f.reportValidity(); return false; }
+      }
+      return true;
+    }
+    PT.openStartup = function () {
+      done.hidden = true; form.hidden = false; progress.hidden = false; show(1);
+      if (typeof dlg.showModal === "function") dlg.showModal(); else dlg.setAttribute("open", "");
+      show(1);
+    };
+    document.addEventListener("click", function (e) {
+      if (e.target.closest("[data-open-startup]")) { e.preventDefault(); PT.openStartup(); }
+      if (e.target.closest("[data-close-startup]")) dlg.close();
+    });
+    dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+    next.addEventListener("click", function () { if (stepValid()) show(2); });
+    back.addEventListener("click", function () { show(1); });
+    /* Enter on step 1 moves forward instead of submitting */
+    form.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" && step === 1 && e.target.tagName !== "TEXTAREA") { e.preventDefault(); if (stepValid()) show(2); }
+    });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      if (step === 1) { if (stepValid()) show(2); return; }
+      if (!stepValid()) return;
+      var data = Object.fromEntries(new FormData(form).entries());
+      var okShow = function () {
+        form.hidden = true; progress.hidden = true; done.hidden = false;
+        document.getElementById("suDoneText").textContent = PT.t("suDone", { name: clean(data.full_name), email: clean(data.email) });
+        done.focus();
+      };
+      if (data.website) { okShow(); return; } /* honeypot */
+      if (tooSoon(form)) return;
+      var sb = PT.sb();
+      if (!sb) { status(form, "error", PT.t("suError")); return; }
+      busy(form, true); status(form, "", PT.t("sending"));
+      sb.from("startup_requests").insert({
+        full_name: clean(data.full_name), age: parseInt(data.age, 10), nationality: clean(data.nationality), country: clean(data.country),
+        email: clean(data.email), phone: clean(data.phone), sector: clean(data.sector), stage: data.stage, start_timeline: data.start_timeline,
+        team_size: data.team_size, project_idea: clean(data.project_idea), lang: current
+      }).then(function (res) {
+        busy(form, false);
+        if (res.error) { console.error(res.error); status(form, "error", PT.t("suError")); return; }
+        store.set("pt_last_submit", String(Date.now()));
+        okShow(); form.reset();
+      }, function (err) { busy(form, false); console.error(err); status(form, "error", PT.t("suError")); });
+    });
+    if (location.hash === "#apply") setTimeout(function () { PT.openStartup(); }, 400);
+  }
+
+  /* Background video in the home hero. Plays automatically (muted, inline) with no controls.
+     Falls back to the photo when the file is missing or too slow, on reduced-motion / data-saver / slow networks.
+     Pauses off-screen to save battery. If the phone blocks autoplay (e.g. iOS Low Power Mode) it starts on the first touch. */
+  function initHeroVideo() {
+    var v = document.querySelector(".hero-video");
+    if (!v) return;
+    var dead = false;
+    var drop = function () { dead = true; if (v.parentNode) v.remove(); document.documentElement.classList.remove("has-hero-video"); };
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var conn = navigator.connection || {};
+    if (reduce || conn.saveData || /(^|-)(2g|3g)$/.test(conn.effectiveType || "")) { drop(); return; }
+
+    v.muted = true; v.defaultMuted = true; v.setAttribute("muted", ""); v.playsInline = true; v.setAttribute("playsinline", "");
+    var small = window.matchMedia && window.matchMedia("(max-width: 768px)").matches;
+    var list = [];
+    if (v.dataset.webm && v.canPlayType('video/webm; codecs="vp9"') && !small) list.push([v.dataset.webm, "video/webm"]);
+    list.push([small && v.dataset.mp4Sm ? v.dataset.mp4Sm : v.dataset.mp4, "video/mp4"]);
+    list.forEach(function (x) { var s = document.createElement("source"); s.src = x[0]; s.type = x[1]; v.appendChild(s); });
+    v.lastChild.addEventListener("error", drop);
+    v.addEventListener("error", drop);
+
+    var visible = true, started = false;
+    function sync() {
+      if (dead) return;
+      var want = visible && !document.hidden;
+      if (want && v.paused) { var p = v.play(); if (p && p.catch) p.catch(function () { /* blocked until the first touch */ }); }
+      else if (!want && !v.paused) v.pause();
+    }
+    v.addEventListener("playing", function () { started = true; v.classList.add("is-ready"); document.documentElement.classList.add("has-hero-video"); });
+    document.addEventListener("visibilitychange", sync);
+    if ("IntersectionObserver" in window) {
+      new IntersectionObserver(function (es) { visible = es[0].isIntersecting; sync(); }, { threshold: 0.05 }).observe(v.parentNode);
+    }
+    ["touchstart", "pointerdown", "keydown", "scroll"].forEach(function (ev) {
+      window.addEventListener(ev, function () { if (!started) sync(); }, { once: true, passive: true });
+    });
+    /* nothing arrived in 12 s (file missing, too big, unsupported): keep the photo and stop wasting data */
+    setTimeout(function () { if (!started && v.readyState === 0) drop(); }, 12000);
+    v.load(); sync();
+  }
+
   function initApplicationForm() {
     var form = document.getElementById("applicationForm");
     if (!form) return;
@@ -415,6 +572,8 @@
     mountLayout();
     initHeader();
     initBusinessDialog();
+    initStartupDialog();
+    initHeroVideo();
     initApplicationForm();
     PT.applyLang(current);
     PT.paintIcons(document);

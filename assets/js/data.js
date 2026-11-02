@@ -141,6 +141,22 @@ window.PT_CHATBOT_DATA = {
       link: { href: "index.html#careers", label: { en: "Open the careers form", ar: "فتح نموذج الوظائف", ru: "Открыть форму" } }
     },
     {
+      id: "startup",
+      label: { en: "Start a business in the UAE", ar: "ابدأ مشروعك في الإمارات", ru: "Бизнес в ОАЭ" },
+      suggest: true,
+      keywords: [
+        "start a business", "start business", "open a business", "business setup", "set up a company", "company formation", "new company", "startup", "start up", "my project", "my business idea", "invest in uae", "business in uae", "launch my project", "entrepreneur",
+        "ابدأ مشروعي", "بدء مشروع", "بدء عمل", "تأسيس شركة", "تأسيس", "فتح شركة", "مشروع جديد", "مشروعي", "فكرة مشروع", "استثمار", "ريادة اعمال", "ريادة الأعمال", "ابدأ عملي", "افتح شركة",
+        "начать бизнес", "открыть бизнес", "открыть компанию", "регистрация компании", "мой проект", "стартап", "бизнес в оаэ", "инвестиции", "предприниматель"
+      ],
+      answers: {
+        en: "Want to start your business in the UAE from anywhere in the world? Share your idea and details through the short form and our team will review it and contact you.",
+        ar: "تريد بدء مشروعك في الإمارات من أي مكان في العالم؟ شاركنا فكرتك وبياناتك عبر النموذج القصير وسيراجعه فريقنا ويتواصل معك.",
+        ru: "Хотите начать бизнес в ОАЭ, где бы вы ни находились? Расскажите об идее в короткой форме, и наша команда рассмотрит запрос и свяжется с вами."
+      },
+      link: { href: "startup.html", label: { en: "Start your business", ar: "ابدأ مشروعك", ru: "Начать бизнес" } }
+    },
+    {
       id: "news",
       label: { en: "Latest news", ar: "آخر الأخبار", ru: "Новости" },
       suggest: true,
