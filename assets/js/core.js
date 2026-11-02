@@ -453,35 +453,94 @@
     if (location.hash === "#apply") setTimeout(function () { PT.openStartup(); }, 400);
   }
 
-  /* Background video in the home hero. Plays automatically (muted, inline) with no controls.
-     Falls back to the photo when the file is missing or too slow, on reduced-motion / data-saver / slow networks.
-     Pauses off-screen to save battery. If the phone blocks autoplay (e.g. iOS Low Power Mode) it starts on the first touch. */
+  /* Background video in the home hero. Plays automatically (muted, inline, no controls).
+     It protects the page from heavy files: it checks the file size and resolution first, watches for dropped frames
+     and stalls while playing, and quietly falls back to the photo if the video would make the page lag.
+     Add ?herodebug=1 to the address to see why the video is (not) playing. */
   function initHeroVideo() {
     var v = document.querySelector(".hero-video");
     if (!v) return;
+    var debug = /[?&]herodebug\b/.test(location.search), box = null, notes = [];
+    function note(m) {
+      notes.push(m);
+      try { console.info("[hero-video] " + m); } catch (e) { /* ignore */ }
+      if (!debug) return;
+      if (!box) {
+        box = document.createElement("pre");
+        box.style.cssText = "position:fixed;z-index:99999;inset-inline:8px;bottom:8px;margin:0;padding:10px 12px;border-radius:10px;background:rgba(0,0,0,.86);color:#9fe870;font:12px/1.5 ui-monospace,Menlo,monospace;white-space:pre-wrap;pointer-events:none;max-height:45vh;overflow:auto";
+        document.body.appendChild(box);
+      }
+      box.textContent = notes.join("\n");
+    }
     var dead = false;
-    var drop = function () { dead = true; if (v.parentNode) v.remove(); document.documentElement.classList.remove("has-hero-video"); };
+    function drop(reason) {
+      if (dead) return; dead = true; note("PHOTO ONLY: " + reason);
+      document.documentElement.classList.remove("has-hero-video");
+      v.classList.remove("is-ready"); v.pause();
+      setTimeout(function () { if (v.parentNode) v.remove(); }, 900);
+    }
+
     var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var conn = navigator.connection || {};
-    if (reduce || conn.saveData || /(^|-)(2g|3g)$/.test(conn.effectiveType || "")) { drop(); return; }
+    note("network: " + (conn.effectiveType || "unknown") + (conn.saveData ? " (data saver)" : ""));
+    if (reduce) return drop("reduced-motion is on");
+    if (conn.saveData) return drop("data saver is on");
+    if (/(^|-)2g$/.test(conn.effectiveType || "")) return drop("very slow network");
 
     v.muted = true; v.defaultMuted = true; v.setAttribute("muted", ""); v.playsInline = true; v.setAttribute("playsinline", "");
     var small = window.matchMedia && window.matchMedia("(max-width: 768px)").matches;
-    var list = [];
-    if (v.dataset.webm && v.canPlayType('video/webm; codecs="vp9"') && !small) list.push([v.dataset.webm, "video/webm"]);
-    list.push([small && v.dataset.mp4Sm ? v.dataset.mp4Sm : v.dataset.mp4, "video/mp4"]);
-    list.forEach(function (x) { var s = document.createElement("source"); s.src = x[0]; s.type = x[1]; v.appendChild(s); });
-    v.lastChild.addEventListener("error", drop);
-    v.addEventListener("error", drop);
+    var MAX_MB = small ? 8 : 20, MAX_PIXELS = 2.2e6;
+    var cands = [];
+    if (!small && v.dataset.webm && v.canPlayType('video/webm; codecs="vp9"')) cands.push(v.dataset.webm);
+    if (small && v.dataset.mp4Sm) cands.push(v.dataset.mp4Sm);
+    if (v.dataset.mp4) cands.push(v.dataset.mp4);
+    note("screen: " + (small ? "phone" : "desktop") + " | limit " + MAX_MB + " MB");
 
-    var visible = true, started = false;
+    /* choose the first file that exists and is light enough (HEAD request, nothing is downloaded) */
+    function pick(i) {
+      if (i >= cands.length) return Promise.resolve(null);
+      var url = cands[i];
+      return fetch(url, { method: "HEAD", cache: "no-cache" }).then(function (r) {
+        if (!r.ok) { note(url + " -> HTTP " + r.status); return pick(i + 1); }
+        var mb = (parseInt(r.headers.get("content-length"), 10) || 0) / 1048576;
+        note(url + " -> " + (mb ? mb.toFixed(1) + " MB" : "size unknown") + (r.headers.get("accept-ranges") ? "" : " (no range support: iOS may refuse it)"));
+        if (mb > MAX_MB) { note("too big: compress it below " + MAX_MB + " MB"); return pick(i + 1); }
+        return url;
+      }, function () { note(url + " -> could not check, trying anyway"); return url; });
+    }
+
+    var visible = true, started = false, stalls = 0;
     function sync() {
-      if (dead) return;
+      if (dead || !v.src) return;
       var want = visible && !document.hidden;
-      if (want && v.paused) { var p = v.play(); if (p && p.catch) p.catch(function () { /* blocked until the first touch */ }); }
+      if (want && v.paused) { var p = v.play(); if (p && p.catch) p.catch(function (e) { note("autoplay waits for first touch (" + (e && e.name) + ")"); }); }
       else if (!want && !v.paused) v.pause();
     }
-    v.addEventListener("playing", function () { started = true; v.classList.add("is-ready"); document.documentElement.classList.add("has-hero-video"); });
+    pick(0).then(function (url) {
+      if (!url) return drop("no usable video file");
+      v.addEventListener("error", function () { drop("browser cannot play this file (codec?)"); });
+      v.addEventListener("loadedmetadata", function () {
+        var px = v.videoWidth * v.videoHeight;
+        note("video: " + v.videoWidth + "x" + v.videoHeight + ", " + (v.duration ? v.duration.toFixed(1) + " s" : "?"));
+        if (px > MAX_PIXELS) drop("resolution too high (" + v.videoWidth + "x" + v.videoHeight + "); use 1280x720");
+      });
+      v.addEventListener("playing", function () {
+        if (dead) return;
+        if (!started) {
+          started = true; note("playing");
+          v.classList.add("is-ready"); document.documentElement.classList.add("has-hero-video");
+          /* quality watchdog: stop if the device cannot keep up */
+          var checks = 0, iv = setInterval(function () {
+            if (dead || ++checks > 6) return clearInterval(iv);
+            var q = v.getVideoPlaybackQuality && v.getVideoPlaybackQuality();
+            if (q && q.totalVideoFrames > 40 && q.droppedVideoFrames / q.totalVideoFrames > 0.2) { clearInterval(iv); drop("dropping frames (" + q.droppedVideoFrames + "/" + q.totalVideoFrames + ")"); }
+          }, 2000);
+        }
+      });
+      v.addEventListener("waiting", function () { if (started && !dead && ++stalls >= 4) drop("keeps buffering"); });
+      v.preload = "auto"; v.src = url; v.load(); note("loading " + url); sync();
+      setTimeout(function () { if (!started && !dead && v.readyState === 0) drop("nothing loaded after 25 s"); }, 25000);
+    });
     document.addEventListener("visibilitychange", sync);
     if ("IntersectionObserver" in window) {
       new IntersectionObserver(function (es) { visible = es[0].isIntersecting; sync(); }, { threshold: 0.05 }).observe(v.parentNode);
@@ -489,9 +548,6 @@
     ["touchstart", "pointerdown", "keydown", "scroll"].forEach(function (ev) {
       window.addEventListener(ev, function () { if (!started) sync(); }, { once: true, passive: true });
     });
-    /* nothing arrived in 12 s (file missing, too big, unsupported): keep the photo and stop wasting data */
-    setTimeout(function () { if (!started && v.readyState === 0) drop(); }, 12000);
-    v.load(); sync();
   }
 
   function initApplicationForm() {
