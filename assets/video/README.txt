@@ -1,20 +1,9 @@
-Hero background video (home page)
-=================================
-Put these files in this folder and the home page uses them automatically:
+HERO VIDEO (installed)
+hero.mp4     1280x408, H.264, no audio, faststart, ~0.6 MB  (desktop + fallback)
+hero-sm.mp4  1130x360, H.264, no audio, faststart, ~0.4 MB  (phones)
+hero.webm    1280x408, VP9, ~0.4 MB                          (desktop browsers that support it)
 
-  hero.mp4      1280x720, H.264, no audio, under 20 MB   (laptops)
-  hero-sm.mp4   720x406 or smaller, H.264, under 8 MB    (phones)
-  hero.webm     optional VP9 version                      (laptops, even smaller)
-
-The page protects itself: a file that is too big, too high-resolution (4K), cannot be played, or makes the
-device drop frames is skipped and the photo stays. Nothing breaks, but the video will not show.
-
-To see exactly why the video is or is not playing, open the site with  ?herodebug=1  at the end of the address,
-for example  https://your-site.com/?herodebug=1  and read the green box at the bottom of the screen.
-
-Convert your own file with HandBrake (free): preset "Fast 720p30", tick "Web Optimized", set Audio to none,
-Quality RF 27. Or with ffmpeg:
-
-  ffmpeg -i source.mp4 -an -r 30 -vf "scale=1280:-2" -c:v libx264 -preset slow -crf 27 -pix_fmt yuv420p -movflags +faststart hero.mp4
-  ffmpeg -i source.mp4 -an -r 30 -vf "scale=720:-2"  -c:v libx264 -preset slow -crf 29 -pix_fmt yuv420p -movflags +faststart hero-sm.mp4
-  ffmpeg -i source.mp4 -an -r 30 -vf "scale=1280:-2" -c:v libvpx-vp9 -b:v 0 -crf 36 hero.webm
+To replace: keep the same file names, no audio, under 20 MB (phone file under 8 MB), 1280x720 or smaller.
+  ffmpeg -i in.mp4 -an -vf "scale=-2:720,format=yuv420p" -c:v libx264 -crf 24 -r 30 -movflags +faststart hero.mp4
+Your web host must support HTTP Range requests (all normal hosts do; iPhone needs this).
+Diagnose on a phone: open the page with ?herodebug=1
